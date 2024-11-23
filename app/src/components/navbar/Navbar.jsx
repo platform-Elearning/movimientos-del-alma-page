@@ -29,7 +29,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Button text="Contactanos" /> {/* El botón ahora dirá PLATAFORMA */}
+            <Button text="Plataforma" /> {/* El botón ahora dirá PLATAFORMA */}
           </li>
         </ul>
       </div>
