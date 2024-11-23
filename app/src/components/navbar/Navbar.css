@@ -67,7 +67,6 @@ body {
 
 .navbar-links a:hover {
   text-decoration: underline;
-  color: #007bff; /* Cambia el color al pasar el ratón */
   transform: scale(1.1); /* Escala el enlace ligeramente */
 }
 
@@ -76,7 +75,6 @@ body {
   position: absolute;
   width: 100%;
   height: 3px;
-  background-color: #007bff; /* Barra de color en el hover */
   bottom: -5px;
   left: 0;
   transform: scaleX(0);
@@ -96,10 +94,6 @@ body {
   font-size: 2rem;
   cursor: pointer;
   transition: color 0.3s ease;
-}
-
-.menu-toggle:hover {
-  color: #007bff; /* Color del botón cuando pasa el ratón */
 }
 
 /* Media query para pantallas pequeñas */
