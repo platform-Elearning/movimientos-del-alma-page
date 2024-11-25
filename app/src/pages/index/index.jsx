@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import Home from "../../components/Home/Home"; // Importa el nuevo componente Home
-import Button from "../../components/button/Button";
+import Login from "../login/login";
 import VideoSection from "../../sections/videoSection/videoSection";
 import danceVideo from "../../assets/dancevideo.mp4";
 import ImgVideoSection from "../../assets/ImgVideoSection.png";
@@ -22,6 +22,7 @@ const Index = () => {
       <div className="containerIndex">
         {/* Reemplaza el contenido aquí por el nuevo componente Home */}
         <Home />
+        <Login />
 
         {/* Sección del video */}
         <div className="video-section-container">
