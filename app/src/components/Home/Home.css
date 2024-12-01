@@ -31,9 +31,13 @@
 .home-title {
   font-size: 5rem;
   font-weight: bold;
-  color: #a37300; /* Color dorado */
+  color: #a37300; /* Color de respaldo para navegadores antiguos */
+  background: linear-gradient(to right, #83711B, #FFBB80,#83711B); /* Degradado horizontal */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destacar el texto */
   margin-bottom: 2rem; /* Ajusta el espacio debajo del título */
+  display: inline-block; /* Asegura que el degradado cubra toda la frase */
 }
 
 /* Botón */
