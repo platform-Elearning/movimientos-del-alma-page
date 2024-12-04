@@ -1,0 +1,47 @@
+.card-course {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .card-course-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-course-info {
+    padding: 15px;
+  }
+  
+  .card-course-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-course-duration,
+  .card-course-modality {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .card-course-button {
+    padding: 10px 15px;
+    background-color: #f4d03f; /* Puedes cambiar este color */
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .card-course-button:hover {
+    background-color: #e0c32e; /* Color de hover */
+  }
+  

@@ -15,7 +15,9 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="navbar-logo">
           {" "}
-          <img src={logo} alt="Logo" />
+          <a href="/">
+  <img src={logo} alt="Logo" />
+</a>
         </div>
         <button className="menu-toggle" onClick={toggleMenu}>
           ☰

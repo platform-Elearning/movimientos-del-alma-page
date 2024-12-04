@@ -1,8 +1,9 @@
+/* Estilos base */
 .conocenos-container {
   width: 100%;
   height: auto;
   color: white;
-  padding: 0px;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -32,8 +33,10 @@
   max-width: 100%;
   height: auto;
   margin: 0 auto;
-  padding:  0;
+  padding: 0;
+  flex-wrap: wrap; /* Permite que los eventos se apilen en pantallas pequeñas */
 }
+
 
 .timeline::before {
   content: '';
@@ -42,7 +45,7 @@
   left: 5%;
   right: 5%;
   height: 2px;
-  background-color: #f4d03f;
+  background: linear-gradient(to right, #b8860b, #f4d03f, #b8860b);
   z-index: 1;
 }
 
@@ -55,6 +58,8 @@
   z-index: 2;
   flex: 1;
   padding: 20px 0;
+  min-width: 200px; /* Evita que los eventos se encojan demasiado */
+  margin-bottom: 20px;
 }
 
 .timeline-event::before {
@@ -62,27 +67,27 @@
   position: absolute;
   left: 50%;
   top: 0;
-  width: 2px; /* Grosor de la línea vertical */
-  height: 100%; /* Altura de la línea */
-  background-color: #f4d03f; /* Color de la línea */
-  transform: translateX(-50%); /* Centra la línea en el marcador */
-  z-index: -1; /* Coloca la línea detrás del evento */
+  width: 2px;
+  height: 30%;
+  background: linear-gradient(to right, #b8860b, #f4d03f, #b8860b);
+  transform: translateX(-50%);
+  z-index: -1;
 }
 
 .timeline-event:first-child::before {
-  display: none; /* Oculta la línea en el primer elemento */
+  display: none;
 }
 
 .timeline-event:not(:last-child)::after {
   content: '';
   position: absolute;
-  top: 0%; /* Coloca la línea debajo del evento */
+  top: 0%;
   left: 50%;
-  width: 2px; /* Grosor de la línea */
-  height: 100px; /* Altura de la línea entre eventos */
-  background-color: #f4d03f; /* Color de la línea */
-  transform: translateX(-50%); /* Centra la línea en el evento */
-  z-index: -1; /* Coloca la línea detrás del evento */
+  width: 2px;
+  height: 20%;
+  background: linear-gradient(to right, #b8860b, #f4d03f, #b8860b);
+  transform: translateX(-50%);
+  z-index: -1;
 }
 
 .timeline-dot {
@@ -94,16 +99,11 @@
   border: 2px solid white;
 }
 
-.timeline-image1 {
-  width: 15rem;
+.timeline-image {
+  width: 100%; /* Cambiado a 100% para asegurar que se ajuste a la pantalla */
+  max-width: 15rem; /* Limita el ancho máximo */
   object-fit: cover;
-  margin-top: 0;
-}
-
-.timeline-image2 {
-  width: 25rem;
-  object-fit: cover;
-  margin-top: 0;
+  margin: 10px 0; /* Añade margen para separación */
 }
 
 .timeline-content h3 {
@@ -116,4 +116,93 @@
   font-size: 1.1rem;
   color: rgb(0, 0, 0);
   margin: 0;
+}
+
+/* Media Queries para hacerlo responsivo */
+@media (max-width: 1024px) {
+  .conocenos-title {
+    font-size: 1.8rem;
+    padding: 30px;
+   
+  }
+
+  .conocenos-content {
+    margin: 20px;
+    font-size: 0.9rem;
+  }
+
+  .timeline {
+    flex-direction: column;
+  }
+
+  .timeline-event {
+    min-width: 100%;
+    padding: 10px 0;
+  }
+
+  .timeline-image {
+    width: 100%; /* Asegura que las imágenes se adapten */
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .conocenos-title {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+
+  .conocenos-content {
+    margin: 10px;
+    font-size: 0.8rem;
+  }
+
+  .timeline::before {
+    left: 10%;
+    right: 10%;
+  }
+
+  .timeline-dot {
+    width: 15px;
+    height: 15px;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .timeline-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .conocenos-title {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  .conocenos-content {
+    margin: 5px;
+    font-size: 0.7rem;
+  }
+
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-image {
+    width: 100%; /* Asegura que las imágenes se adapten */
+    max-width: 100%; /* No limita el ancho de las imágenes */
+  }
+
+  .timeline-content h3 {
+    font-size: 1rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.9rem;
+  }
 }
