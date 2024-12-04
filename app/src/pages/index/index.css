@@ -93,24 +93,12 @@ button:focus-visible {
 /* Contenedor de la sección de video */
 .video-section-container {
   width: 100%;
-  margin-top: 3rem;
-  padding: 2rem;
   background-color: #ffffff; /* Fondo blanco */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
-/* Texto descriptivo */
-.containerIndex p {
-  font-size: 1.2rem; /* Tamaño de fuente */
-  line-height: 1.5; /* Altura de línea */
-  color: black;
-  margin: 1.5em 0;
-  max-width: 800px; /* Limita la anchura del texto */
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1rem;
-}
+
 
 /* Logo (si aplica) */
 .logo {
