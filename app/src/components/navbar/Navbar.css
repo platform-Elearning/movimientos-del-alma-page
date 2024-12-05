@@ -31,7 +31,13 @@ body {
   width: 100px; /* Ajusta el tamaño a 100px de ancho */
   height: auto; /* Mantiene la relación de aspecto */
   opacity: 0;
+  cursor: pointer;
   animation: fadeIn 1s forwards; /* Animación para que el logo aparezca */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transición suave */
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.1); /* Escala el enlace ligeramente */
 }
 
 @keyframes fadeIn {

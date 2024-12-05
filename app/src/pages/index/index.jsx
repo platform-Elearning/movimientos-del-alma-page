@@ -2,8 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import Home from "../../components/Home/Home"; // Importa el nuevo componente Home
-import Button from "../../components/button/Button";
 import VideoSection from "../../sections/videoSection/videoSection";
+import Cursos from "../../sections/Cursos/Cursos";
+import Conocenos from "../../sections/Conocenos/Conocenos";
 import danceVideo from "../../assets/dancevideo.mp4";
 import ImgVideoSection from "../../assets/ImgVideoSection.png";
 import "./index.css";
@@ -31,6 +32,16 @@ const Index = () => {
             videoSrc={danceVideo}
           />
         </div>
+        <div className="video-section-container">
+          <Conocenos
+           
+          />
+        </div>
+        <div className="video-section-container">
+        <div className="Cursos">
+      <Cursos />
+    </div>
+    </div>
       </div>
     </div>
   );

@@ -1,0 +1,52 @@
+.card-course {
+  border-radius:4rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border: 1px #d3a15f solid;
+  overflow: hidden;
+  width: 280px;
+  margin: 15px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-course-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-course-info {
+  padding: 20px;
+}
+
+.card-course-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: rgb(0, 0, 0);
+}
+
+.card-course-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-course-detail {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  font-size: 1.2rem;
+}

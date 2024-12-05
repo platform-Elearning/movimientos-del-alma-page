@@ -7,6 +7,7 @@ const Home = () => {
     <div className="home-container">
       <div className="home-background">
         <h1 className="home-title">Dancemos con el alma</h1>
+        <h2>Instituto de formacion internacional</h2>
         <Button text="Mas informacion" /> {/* El botón ahora dirá PLATAFORMA */}
       </div>
     </div>

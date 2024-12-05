@@ -1,0 +1,27 @@
+/* Estilo general del contenedor */
+.cursos-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Título */
+  .cursos-title {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: white;
+  }
+  
+  /* Contenedor de las cartas */
+  .cursos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las cartas */
+    justify-content: center;
+  }
+  
+  /* Estilos de las cartas (puedes ajustar los estilos si es necesario) */
+  .card-course {
+    flex: 1 1 300px; /* Toma el 100% del ancho disponible pero nunca menos de 300px */
+    max-width: 300px;
+  }
+  
