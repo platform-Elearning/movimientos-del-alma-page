@@ -2,56 +2,91 @@ import React from 'react';
 import CardCourse from '../../components/CardCourse/CardCourse';
 import './Cursos.css'; // Para tus estilos específicos de Cursos
 
+// Importa las imágenes locales
+import img1 from '../../assets/ImagenesCursos/1.png';
+import img2 from '../../assets/ImagenesCursos/2.png';
+import img3 from '../../assets/ImagenesCursos/3.png';
+import img4 from '../../assets/ImagenesCursos/4.png';
+import img5 from '../../assets/ImagenesCursos/5.png';
+import img6 from '../../assets/ImagenesCursos/6.png';
+import img7 from '../../assets/ImagenesCursos/7.png';
+import img8 from '../../assets/ImagenesCursos/8.png';
+import img9 from '../../assets/ImagenesCursos/9.png';
+
 const Cursos = () => {
-  // Datos de ejemplo para las cartas
+  // Datos con las rutas locales de las imágenes
   const courses = [
     {
-      imageSrc: 'https://via.placeholder.com/300x200',
-      title: 'Curso de React',
-      duration: '4 semanas',
-      modality: 'Online',
+      imageSrc: img1,
+      title: 'Instructurado de Ritmos latinos o caribeños',
+      duration: '7 meses de formación.',
+      modality: '100% Online',
       buttonText: 'Ver más',
-      onButtonClick: () => alert('Curso de React clickeado'),
+      onButtonClick: () => alert('Curso de Ritmos clickeado'),
     },
     {
-      imageSrc: 'https://via.placeholder.com/300x200',
-      title: 'Curso de JavaScript',
-      duration: '6 semanas',
-      modality: 'Presencial',
+      imageSrc: img2,
+      title: 'Instructorado en Danzas de Matriz Afro',
+      duration: '10 meses de formación.',
+      modality: '100% Online',
       buttonText: 'Inscribirse',
-      onButtonClick: () => alert('Curso de JavaScript clickeado'),
+      onButtonClick: () => alert('Curso de Danzas Afro clickeado'),
     },
     {
-      imageSrc: 'https://via.placeholder.com/300x200',
-      title: 'Curso de Python',
-      duration: '8 semanas',
-      modality: 'Online',
+      imageSrc: img3,
+      title: 'Profesorado de Danza Tap',
+      duration: '7 meses de formación.',
+      modality: '100% Online',
       buttonText: 'Más info',
-      onButtonClick: () => alert('Curso de Python clickeado'),
+      onButtonClick: () => alert('Curso de Tap clickeado'),
     },
     {
-      imageSrc: 'https://via.placeholder.com/300x200',
-      title: 'Curso de Diseño',
-      duration: '5 semanas',
-      modality: 'Presencial',
+      imageSrc: img4,
+      title: 'Profesorado de Danza Contemporánea',
+      duration: '2 meses de formación.',
+      modality: '100% Online',
       buttonText: 'Ver detalles',
-      onButtonClick: () => alert('Curso de Diseño clickeado'),
+      onButtonClick: () => alert('Curso de Contemporánea clickeado'),
     },
     {
-      imageSrc: 'https://via.placeholder.com/300x200',
-      title: 'Curso de Inglés',
-      duration: '10 semanas',
-      modality: 'Online',
+      imageSrc: img5,
+      title: 'Profesorado de Danza Jazz',
+      duration: '7 meses de formación.',
+      modality: '100% Online',
       buttonText: 'Inscripción',
-      onButtonClick: () => alert('Curso de Inglés clickeado'),
+      onButtonClick: () => alert('Curso de Jazz clickeado'),
     },
     {
-      imageSrc: 'https://via.placeholder.com/300x200',
-      title: 'Curso de Fotografía',
-      duration: '3 semanas',
-      modality: 'Presencial',
+      imageSrc: img6,
+      title: 'Profesorado de Danza Clásica',
+      duration: '2 meses de formación.',
+      modality: '100% Online',
       buttonText: 'Más detalles',
-      onButtonClick: () => alert('Curso de Fotografía clickeado'),
+      onButtonClick: () => alert('Curso de Clásica clickeado'),
+    },
+    {
+      imageSrc: img7,
+      title: 'Composición Coreográfica',
+      duration: '2 meses de formación.',
+      modality: '100% Online',
+      buttonText: 'Más detalles',
+      onButtonClick: () => alert('Curso de Coreografía clickeado'),
+    },
+    {
+      imageSrc: img8,
+      title: 'Facilitador/a Danza Transpersonal-Nivel I',
+      duration: '2 meses de formación.',
+      modality: '100% Online',
+      buttonText: 'Más detalles',
+      onButtonClick: () => alert('Curso Transpersonal clickeado'),
+    },
+    {
+      imageSrc: img9,
+      title: 'Flexibilidad',
+      duration: '2 meses de formación.',
+      modality: '100% Online',
+      buttonText: 'Más detalles',
+      onButtonClick: () => alert('Curso de Flexibilidad clickeado'),
     },
   ];
 

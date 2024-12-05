@@ -148,3 +148,11 @@ button:focus-visible {
     font-size: 0.9rem;
   }
 }
+
+
+.Cursos{
+  width: 100%;
+  height: auto;
+  display: flex;
+  background-color: #333;
+}
