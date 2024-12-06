@@ -40,7 +40,7 @@ body {
   align-items: center;
 }
 
-/* Título principal */
+/* Título principal    */
 .Titulo-Home {
   font-size: 4rem; /* Tamaño del texto */
   background: linear-gradient(
@@ -147,4 +147,12 @@ button:focus-visible {
     padding: 0.6em 1.2em;
     font-size: 0.9rem;
   }
+}
+
+
+.Cursos{
+  width: 100%;
+  height: auto;
+  display: flex;
+  background-color: #333;
 }
