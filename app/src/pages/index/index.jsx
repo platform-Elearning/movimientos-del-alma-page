@@ -7,6 +7,7 @@ import Cursos from "../../sections/Cursos/Cursos";
 import Conocenos from "../../sections/Conocenos/Conocenos";
 import danceVideo from "../../assets/dancevideo.mp4";
 import ImgVideoSection from "../../assets/ImgVideoSection.png";
+import AlumnosMaestros from "../../sections/AlumnosMaestros/AlumnosMaestros";
 import "./index.css";
 
 const Index = () => {
@@ -32,16 +33,23 @@ const Index = () => {
             videoSrc={danceVideo}
           />
         </div>
+        
+        {/* Sección Conócenos */}
         <div className="video-section-container">
-          <Conocenos
-           
-          />
+          <Conocenos />
         </div>
+
+        {/* Sección Alumnos a Maestros */}
+        <div className="AlumnosMaestros">
+          <AlumnosMaestros />
+        </div>
+
+        {/* Sección Cursos */}
         <div className="video-section-container">
-        <div className="Cursos">
-      <Cursos />
-    </div>
-    </div>
+          <div className="Cursos">
+            <Cursos />
+          </div>
+        </div>
       </div>
     </div>
   );
