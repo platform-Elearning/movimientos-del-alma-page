@@ -46,7 +46,7 @@ const Index = () => {
 
         {/* Sección Cursos */}
         <div className="video-section-container">
-          <div className="Cursos">
+          <div className="Cursos" id="cursos">
             <Cursos />
           </div>
         </div>
