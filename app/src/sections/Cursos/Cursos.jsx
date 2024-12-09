@@ -1,4 +1,3 @@
-// components/Cursos/Cursos.jsx
 import React from 'react';
 import CardCourse from '../../components/CardCourse/CardCourse';
 import './Cursos.css';
@@ -17,12 +16,14 @@ const Cursos = () => {
   const courses = [
     {
       imageSrc: img1,
-      title: 'Instructurado de Ritmos Latinos o Caribeños',
+      title: 'Instructorado de Ritmos Latinos o Caribeños',
       duration: '7 meses de formación.',
       modality: '100% Online',
       description: 'Aprende ritmos latinos desde cero con instructores expertos.',
-      buttonText: 'Ver más',
-      onButtonClick: () => alert('Curso de Ritmos clickeado'),
+      modules: 10,
+      recordedClasses: 8,
+      liveClasses: 2,
+      personalizedAdvice: 'Asesoramiento personalizado cada semana.',
     },
     {
       imageSrc: img2,
@@ -30,8 +31,10 @@ const Cursos = () => {
       duration: '10 meses de formación.',
       modality: '100% Online',
       description: 'Sumérgete en la cultura afro a través de sus danzas.',
-      buttonText: 'Inscribirse',
-      onButtonClick: () => alert('Curso de Danzas Afro clickeado'),
+      modules: 12,
+      recordedClasses: 10,
+      liveClasses: 3,
+      personalizedAdvice: 'Sesión mensual con un instructor.',
     },
     {
       imageSrc: img3,
@@ -39,8 +42,10 @@ const Cursos = () => {
       duration: '7 meses de formación.',
       modality: '100% Online',
       description: 'Conviértete en profesor de Tap y domina el ritmo.',
-      buttonText: 'Más info',
-      onButtonClick: () => alert('Curso de Tap clickeado'),
+      modules: 8,
+      recordedClasses: 6,
+      liveClasses: 2,
+      personalizedAdvice: 'Revisión personalizada de tu técnica.',
     },
     {
       imageSrc: img4,
@@ -48,8 +53,10 @@ const Cursos = () => {
       duration: '8 meses de formación.',
       modality: 'Presencial y Online',
       description: 'Domina las técnicas clásicas de ballet con expertos.',
-      buttonText: 'Detalles',
-      onButtonClick: () => alert('Curso de Ballet clickeado'),
+      modules: 15,
+      recordedClasses: 12,
+      liveClasses: 4,
+      personalizedAdvice: 'Clases personalizadas según tu nivel.',
     },
     {
       imageSrc: img5,
@@ -57,8 +64,10 @@ const Cursos = () => {
       duration: '6 meses de formación.',
       modality: '100% Online',
       description: 'Explora la libertad de la danza contemporánea.',
-      buttonText: 'Inscribirse',
-      onButtonClick: () => alert('Curso de Danza Contemporánea clickeado'),
+      modules: 9,
+      recordedClasses: 7,
+      liveClasses: 1,
+      personalizedAdvice: 'Plan personalizado para desarrollo artístico.',
     },
     {
       imageSrc: img6,
@@ -66,8 +75,10 @@ const Cursos = () => {
       duration: '12 meses de formación.',
       modality: 'Presencial',
       description: 'Aprende las danzas tradicionales de varios países latinoamericanos.',
-      buttonText: 'Más info',
-      onButtonClick: () => alert('Curso de Danzas Folklóricas clickeado'),
+      modules: 20,
+      recordedClasses: 15,
+      liveClasses: 5,
+      personalizedAdvice: 'Guía práctica sobre tradiciones culturales.',
     },
     {
       imageSrc: img7,
@@ -75,8 +86,10 @@ const Cursos = () => {
       duration: '4 meses de formación.',
       modality: 'Presencial y Online',
       description: 'Lleva tus habilidades de hip-hop al siguiente nivel.',
-      buttonText: 'Ver detalles',
-      onButtonClick: () => alert('Curso de Hip-Hop clickeado'),
+      modules: 6,
+      recordedClasses: 4,
+      liveClasses: 2,
+      personalizedAdvice: 'Evaluación mensual de progresos.',
     },
     {
       imageSrc: img8,
@@ -84,8 +97,10 @@ const Cursos = () => {
       duration: '5 meses de formación.',
       modality: '100% Online',
       description: 'Perfecciona tu técnica y postura en la danza.',
-      buttonText: 'Más información',
-      onButtonClick: () => alert('Curso de Técnica de Baile clickeado'),
+      modules: 10,
+      recordedClasses: 8,
+      liveClasses: 2,
+      personalizedAdvice: 'Correcciones técnicas detalladas.',
     },
     {
       imageSrc: img9,
@@ -93,9 +108,11 @@ const Cursos = () => {
       duration: '2 meses de formación.',
       modality: 'Presencial',
       description: 'Participa en un seminario intensivo de danzas urbanas.',
-      buttonText: 'Inscribirse',
-      onButtonClick: () => alert('Seminario de Danzas Urbanas clickeado'),
-    }
+      modules: 4,
+      recordedClasses: 3,
+      liveClasses: 1,
+      personalizedAdvice: 'Retroalimentación grupal después de cada sesión.',
+    },
   ];
 
   return (
@@ -110,8 +127,10 @@ const Cursos = () => {
             duration={course.duration}
             modality={course.modality}
             description={course.description}
-            buttonText={course.buttonText}
-            onButtonClick={course.onButtonClick}
+            modules={course.modules}
+            recordedClasses={course.recordedClasses}
+            liveClasses={course.liveClasses}
+            personalizedAdvice={course.personalizedAdvice}
           />
         ))}
       </div>
