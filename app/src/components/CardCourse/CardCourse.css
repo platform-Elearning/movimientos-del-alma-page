@@ -1,55 +1,88 @@
 .card-course {
-  border-radius:4rem;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
-  border: 1px #d3a15f solid;
-  overflow: hidden;
-  width: 280px;
-  margin: 15px;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  color: #333;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-course-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-course.flipped .card-course-inner {
+  transform: rotateY(180deg);
+}
+
+.card-course-front,
+.card-course-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: start;
+  border:2px solid #fcc309;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4rem;
 }
 
-.card-course-img {
+.card-course-front {
+  z-index: 2;
+}
+
+.card-course-back {
+  transform: rotateY(180deg);
+  background-color: #f8f9fa;
+}
+
+.card-course-image {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
-  position: relative;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
-}
-
-.card-course-info {
-  padding: 20px;
+  height: auto;
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
+    
+ 
 }
 
 .card-course-title {
+  margin: 10px 0;
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 15px;
-  color: rgb(0, 0, 0);
+  text-align: center;
 }
 
-.card-course-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
+.card-course-duration,
+.card-course-modality {
+  font-size: 0.9rem;
+  color: #555;
 }
 
-.card-course-detail {
-  font-size: 0.95rem;
-  color: #666;
-  margin: 5px 0;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.card-course-description {
+  margin: 20px;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #333;
 }
 
-.icon {
-  font-size: 1.2rem;
+.card-course-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card-course-button:hover {
+  background-color: #0056b3;
 }
