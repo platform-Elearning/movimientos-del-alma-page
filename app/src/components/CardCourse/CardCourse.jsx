@@ -1,23 +1,30 @@
-import React from 'react';
-import Button from '../button/Button'; // Asegúrate de que la ruta sea correcta
+// components/CardCourse/CardCourse.jsx
+import React, { useState } from 'react';
 import './CardCourse.css';
 
-const CardCourse = ({ imageSrc, title, duration, modality, buttonText, onButtonClick }) => {
+const CardCourse = ({ imageSrc, title, duration, modality, description, buttonText, onButtonClick }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleFlip = () => setIsFlipped(!isFlipped);
+
   return (
-    <div className="card-course">
-      <img src={imageSrc} alt={title} className="card-course-img" />
-      <div className="card-course-info">
-        <h2 className="card-course-title">{title}</h2>
-        <div className="card-course-details">
-          <p className="card-course-detail">
-            <span className="icon">🕒</span> {duration}
-          </p>
-          <p className="card-course-detail">
-            <span className="icon">💻</span> {modality}
-          </p>
+    <div className={`card-course ${isFlipped ? 'flipped' : ''}`} onClick={handleFlip}>
+      <div className="card-course-inner">
+        {/* Front Side */}
+        <div className="card-course-front">
+          <img src={imageSrc} alt={title} className="card-course-image" />
+          <h3 className="card-course-title">{title}</h3>
+          <p className="card-course-duration">{duration}</p>
+          <p className="card-course-modality">{modality}</p>
         </div>
-        {/* Usando el componente Button */}
-        <Button text={buttonText} onClick={onButtonClick} />
+
+        {/* Back Side */}
+        <div className="card-course-back">
+          <p className="card-course-description">{description}</p>
+          <button className="card-course-button" onClick={onButtonClick}>
+            {buttonText}
+          </button>
+        </div>
       </div>
     </div>
   );

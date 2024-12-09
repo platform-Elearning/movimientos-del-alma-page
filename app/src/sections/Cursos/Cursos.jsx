@@ -1,8 +1,8 @@
+// components/Cursos/Cursos.jsx
 import React from 'react';
 import CardCourse from '../../components/CardCourse/CardCourse';
-import './Cursos.css'; // Para tus estilos específicos de Cursos
+import './Cursos.css';
 
-// Importa las imágenes locales
 import img1 from '../../assets/ImagenesCursos/1.png';
 import img2 from '../../assets/ImagenesCursos/2.png';
 import img3 from '../../assets/ImagenesCursos/3.png';
@@ -14,13 +14,13 @@ import img8 from '../../assets/ImagenesCursos/8.png';
 import img9 from '../../assets/ImagenesCursos/9.png';
 
 const Cursos = () => {
-  // Datos con las rutas locales de las imágenes
   const courses = [
     {
       imageSrc: img1,
-      title: 'Instructurado de Ritmos latinos o caribeños',
+      title: 'Instructurado de Ritmos Latinos o Caribeños',
       duration: '7 meses de formación.',
       modality: '100% Online',
+      description: 'Aprende ritmos latinos desde cero con instructores expertos.',
       buttonText: 'Ver más',
       onButtonClick: () => alert('Curso de Ritmos clickeado'),
     },
@@ -29,6 +29,7 @@ const Cursos = () => {
       title: 'Instructorado en Danzas de Matriz Afro',
       duration: '10 meses de formación.',
       modality: '100% Online',
+      description: 'Sumérgete en la cultura afro a través de sus danzas.',
       buttonText: 'Inscribirse',
       onButtonClick: () => alert('Curso de Danzas Afro clickeado'),
     },
@@ -37,57 +38,64 @@ const Cursos = () => {
       title: 'Profesorado de Danza Tap',
       duration: '7 meses de formación.',
       modality: '100% Online',
+      description: 'Conviértete en profesor de Tap y domina el ritmo.',
       buttonText: 'Más info',
       onButtonClick: () => alert('Curso de Tap clickeado'),
     },
     {
       imageSrc: img4,
-      title: 'Profesorado de Danza Contemporánea',
-      duration: '2 meses de formación.',
-      modality: '100% Online',
-      buttonText: 'Ver detalles',
-      onButtonClick: () => alert('Curso de Contemporánea clickeado'),
+      title: 'Curso de Ballet Clásico',
+      duration: '8 meses de formación.',
+      modality: 'Presencial y Online',
+      description: 'Domina las técnicas clásicas de ballet con expertos.',
+      buttonText: 'Detalles',
+      onButtonClick: () => alert('Curso de Ballet clickeado'),
     },
     {
       imageSrc: img5,
-      title: 'Profesorado de Danza Jazz',
-      duration: '7 meses de formación.',
+      title: 'Técnicas de Danza Contemporánea',
+      duration: '6 meses de formación.',
       modality: '100% Online',
-      buttonText: 'Inscripción',
-      onButtonClick: () => alert('Curso de Jazz clickeado'),
+      description: 'Explora la libertad de la danza contemporánea.',
+      buttonText: 'Inscribirse',
+      onButtonClick: () => alert('Curso de Danza Contemporánea clickeado'),
     },
     {
       imageSrc: img6,
-      title: 'Profesorado de Danza Clásica',
-      duration: '2 meses de formación.',
-      modality: '100% Online',
-      buttonText: 'Más detalles',
-      onButtonClick: () => alert('Curso de Clásica clickeado'),
+      title: 'Danzas Folklóricas de América Latina',
+      duration: '12 meses de formación.',
+      modality: 'Presencial',
+      description: 'Aprende las danzas tradicionales de varios países latinoamericanos.',
+      buttonText: 'Más info',
+      onButtonClick: () => alert('Curso de Danzas Folklóricas clickeado'),
     },
     {
       imageSrc: img7,
-      title: 'Composición Coreográfica',
-      duration: '2 meses de formación.',
-      modality: '100% Online',
-      buttonText: 'Más detalles',
-      onButtonClick: () => alert('Curso de Coreografía clickeado'),
+      title: 'Curso de Hip-Hop Avanzado',
+      duration: '4 meses de formación.',
+      modality: 'Presencial y Online',
+      description: 'Lleva tus habilidades de hip-hop al siguiente nivel.',
+      buttonText: 'Ver detalles',
+      onButtonClick: () => alert('Curso de Hip-Hop clickeado'),
     },
     {
       imageSrc: img8,
-      title: 'Facilitador/a Danza Transpersonal-Nivel I',
-      duration: '2 meses de formación.',
+      title: 'Entrenamiento de Técnica de Baile',
+      duration: '5 meses de formación.',
       modality: '100% Online',
-      buttonText: 'Más detalles',
-      onButtonClick: () => alert('Curso Transpersonal clickeado'),
+      description: 'Perfecciona tu técnica y postura en la danza.',
+      buttonText: 'Más información',
+      onButtonClick: () => alert('Curso de Técnica de Baile clickeado'),
     },
     {
       imageSrc: img9,
-      title: 'Flexibilidad',
+      title: 'Seminario de Danzas Urbanas',
       duration: '2 meses de formación.',
-      modality: '100% Online',
-      buttonText: 'Más detalles',
-      onButtonClick: () => alert('Curso de Flexibilidad clickeado'),
-    },
+      modality: 'Presencial',
+      description: 'Participa en un seminario intensivo de danzas urbanas.',
+      buttonText: 'Inscribirse',
+      onButtonClick: () => alert('Seminario de Danzas Urbanas clickeado'),
+    }
   ];
 
   return (
@@ -101,6 +109,7 @@ const Cursos = () => {
             title={course.title}
             duration={course.duration}
             modality={course.modality}
+            description={course.description}
             buttonText={course.buttonText}
             onButtonClick={course.onButtonClick}
           />
