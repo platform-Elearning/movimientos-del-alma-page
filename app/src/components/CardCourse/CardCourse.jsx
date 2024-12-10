@@ -39,7 +39,6 @@ const CardCourse = ({
           <Button  text="Más información" onClick={handleFlip} />
         </div>
 
-        {/* Lado Trasero */}
         <div className="card-course-back">
           <p className="card-course-description">{description}</p>
           <ul className="card-course-details">
