@@ -1,6 +1,7 @@
 .card-course {
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 500px;
+  max-height: 600px;
   perspective: 1000px;
   cursor: pointer;
 }
@@ -27,7 +28,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  border:2px solid #fcc309;
+  border:1px solid #fcc309;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -71,7 +72,7 @@
   border-top-right-radius: 4rem;
   color: white;
   padding: 30px;
-  font-size: 1rem;
+  font-size:16px;
   text-align: center;
   background-color: #333;
 }
@@ -90,6 +91,36 @@
 .card-course-button:hover {
   background-color: #0056b3;
 }
-.card-course-details{
+.card-course-details {
   text-align: start;
+  list-style: none;
+  padding: 0;
+  margin: 10px;
 }
+
+.card-course-details li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Espaciado entre los elementos */
+}
+
+.card-course-icon {
+  width: 20px; /* Ajusta el tamaño de la imagen */
+  height: 20px; /* Ajusta el tamaño de la imagen */
+  margin-right: 10px; /* Espaciado entre la imagen y el texto */
+}
+
+.card-course-duration,
+.card-course-modality {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Espaciado entre los elementos */
+}
+
+.card-course-duration .card-course-icon,
+.card-course-modality .card-course-icon {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
