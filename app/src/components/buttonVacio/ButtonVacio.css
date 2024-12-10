@@ -1,0 +1,20 @@
+.button-vacio {
+    border: 2px solid #c5a953; /* Color dorado */
+    background-color: transparent;
+    color: #c5a953; /* Color dorado */
+    padding: 12px 36px; /* Ajuste de tamaño según imagen */
+    border-radius: 15px; /* Bordes redondeados */
+    font-family: 'Arial', sans-serif; /* Fuente básica */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .button-vacio:hover {
+    background-image: linear-gradient(to right, #83711B, #FFBB80, #83711B);
+    color: white;
+    border: solid 1px black;
+  }
+  
