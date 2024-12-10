@@ -13,7 +13,6 @@ const CardCourse = ({
   duration,
   modality,
   description,
-  buttonText,
   modules,
   recordedClasses,
   liveClasses,
