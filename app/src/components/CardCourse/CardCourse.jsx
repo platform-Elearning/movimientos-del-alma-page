@@ -57,8 +57,8 @@ const CardCourse = ({
             </li>
           </ul>
           <Button text="Inscribirme " onClick={handleFlip} />
-          <ButtonVacio text="Descargar info" onClick={handleFlip} />
-        </div>
+          <ButtonVacio text="Descargar info" />
+          </div>
       </div>
     </div>
   );
