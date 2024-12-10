@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CardCourse.css';
 import Button from '../button/Button';
-import ButtonVacio from '../buttonVacio/buttonVacio';
+import ButtonVacio from '../buttonVacio/ButtonVacio';
 import liveImage from '../../assets/live.png';
 import book from '../../assets/book.png';
 import person from '../../assets/person.png';
