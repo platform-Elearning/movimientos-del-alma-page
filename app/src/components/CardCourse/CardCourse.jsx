@@ -35,7 +35,8 @@ const CardCourse = ({
           <p className="card-course-modality">
             <img src={liveImage} alt="Modality" className="card-course-icon" /> {modality}
           </p>
-          <Button  text="Más información" onClick={handleFlip} />
+          <div className='buttonDiv'>          <Button  text="Más información" onClick={handleFlip} />
+          </div>
         </div>
 
         {/* Lado Trasero */}
