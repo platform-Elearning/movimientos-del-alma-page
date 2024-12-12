@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './CardCourse.css';
 import Button from '../button/Button';
 import ButtonVacio from '../buttonVacio/ButtonVacio';
@@ -18,12 +18,8 @@ const CardCourse = ({
   liveClasses,
   personalizedAdvice,
 }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  const handleFlip = () => setIsFlipped(!isFlipped);
-
   return (
-    <div className={`card-course ${isFlipped ? 'flipped' : ''}`}>
+    <div className="card-course">
       <div className="card-course-inner">
         {/* Lado Frontal */}
         <div className="card-course-front">
@@ -35,7 +31,8 @@ const CardCourse = ({
           <p className="card-course-modality">
             <img src={liveImage} alt="Modality" className="card-course-icon" /> {modality}
           </p>
-          <div className='buttonDiv'>          <Button  text="Más información" onClick={handleFlip} />
+          <div className="buttonDiv">
+            <Button text="Leer más" />
           </div>
         </div>
 
@@ -56,9 +53,9 @@ const CardCourse = ({
               <img src={person} alt="Personalized Advice" className="card-course-icon" /> {personalizedAdvice}
             </li>
           </ul>
-          <Button text="Inscribirme " onClick={handleFlip} />
+          <Button text="Inscribirme" />
           <ButtonVacio text="Descargar info" />
-          </div>
+        </div>
       </div>
     </div>
   );
