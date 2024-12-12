@@ -1,48 +1,120 @@
 .alumnos-maestros-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    background-color: #f2f2f2;
-    border-radius: 8px;
-  }
-  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.alumnos-maestros-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #a37300;
+  background: linear-gradient(to right, #83711B, #FFBB80, #83711B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  text-align: center;
+  display: inline-block;
+}
+
+.alumnos-maestros-card {
+  width: 90%;
+  background-color: #5e5b5b;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  margin-bottom: 20px;
+}
+
+.alumnos-maestros-play-button {
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.play-icon {
+  color: white;
+  font-size: 24px;
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 1024px) {
   .alumnos-maestros-title {
-    font-size: 5rem;
-    font-weight: bold;
-    color: #a37300; /* Color de respaldo para navegadores antiguos */
-    background: linear-gradient(to right, #83711B, #FFBB80,#83711B); /* Degradado horizontal */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destacar el texto */
-    margin-bottom: 2rem; /* Ajusta el espacio debajo del título */
-    display: inline-block; /* Asegura que el degradado cubra toda la frase */
+    font-size: 3rem;
   }
-  
+
   .alumnos-maestros-card {
-    width: 90%;
-    height: 70%;
-    background-color: #5e5b5b;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 40%;
   }
-  
+
   .alumnos-maestros-play-button {
-    width: 50px;
-    height: 50px;
-    background-color: #000;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    width: 40px;
+    height: 40px;
   }
-  
+
   .play-icon {
-    color: white;
-    font-size: 24px;
+    font-size: 20px;
   }
-  
+}
+
+@media (max-width: 1000px) {
+  .alumnos-maestros-card {
+    width: 100%; /* Solo para pantallas menores a 1000px */
+    height: auto; /* Ajusta la altura de acuerdo con el contenido */
+  }
+}
+
+@media (max-width: 768px) {
+  .alumnos-maestros-title {
+    font-size: 2.5rem;
+  }
+
+  .alumnos-maestros-card {
+    height: 35%;
+  }
+
+  .alumnos-maestros-play-button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .play-icon {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .alumnos-maestros-card{}
+  .alumnos-maestros-container {
+    align-items: center;
+  }
+
+  .alumnos-maestros-title {
+    font-size: 2rem;
+  }
+
+  .alumnos-maestros-card {
+    width: 100%;
+    height: 30%;
+  }
+
+  .alumnos-maestros-play-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .play-icon {
+    font-size: 16px;
+  }
+}

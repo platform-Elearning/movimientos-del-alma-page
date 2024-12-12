@@ -27,7 +27,7 @@ const Navbar = () => {
             <a href="#home">Conocenos</a>
           </li>
           <li>
-            <a href="#about">Nuestros cursos</a>
+            <a href="#cursos">Nuestros cursos</a>
           </li>
 
           <li>
