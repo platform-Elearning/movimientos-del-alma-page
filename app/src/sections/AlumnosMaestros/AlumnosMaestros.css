@@ -1,15 +1,16 @@
 .alumnos-maestros-container {
   width: 100%;
+  height: 670px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  justify-content: center;
   background-color: #f2f2f2;
   border-radius: 8px;
-  padding: 20px;
 }
 
 .alumnos-maestros-title {
-  font-size: 4rem;
+  font-size: 4rem; /* Ajustado para pantallas más pequeñas */
   font-weight: bold;
   color: #a37300;
   background: linear-gradient(to right, #83711B, #FFBB80, #83711B);
@@ -17,19 +18,17 @@
   -webkit-text-fill-color: transparent;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 2rem;
-  text-align: center;
   display: inline-block;
 }
 
 .alumnos-maestros-card {
   width: 90%;
+  height: 80%; /* Ajuste menor para pantallas más pequeñas */
   background-color: #5e5b5b;
   border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50%;
-  margin-bottom: 20px;
 }
 
 .alumnos-maestros-play-button {
@@ -55,7 +54,7 @@
   }
 
   .alumnos-maestros-card {
-    height: 40%;
+    height: 50%; /* Reduce la altura de las tarjetas */
   }
 
   .alumnos-maestros-play-button {
@@ -68,20 +67,13 @@
   }
 }
 
-@media (max-width: 1000px) {
-  .alumnos-maestros-card {
-    width: 100%; /* Solo para pantallas menores a 1000px */
-    height: auto; /* Ajusta la altura de acuerdo con el contenido */
-  }
-}
-
 @media (max-width: 768px) {
   .alumnos-maestros-title {
     font-size: 2.5rem;
   }
 
   .alumnos-maestros-card {
-    height: 35%;
+    height: 40%; /* Aún más pequeña para pantallas móviles */
   }
 
   .alumnos-maestros-play-button {
@@ -95,17 +87,17 @@
 }
 
 @media (max-width: 480px) {
-  .alumnos-maestros-card{}
   .alumnos-maestros-container {
-    align-items: center;
+    align-items: center; /* Centra el contenido */
   }
 
   .alumnos-maestros-title {
     font-size: 2rem;
+    text-align: center; /* Centra el texto */
   }
 
   .alumnos-maestros-card {
-    width: 100%;
+    width: 100%; /* Usa todo el ancho disponible */
     height: 30%;
   }
 
@@ -118,3 +110,4 @@
     font-size: 16px;
   }
 }
+

@@ -150,8 +150,8 @@ button:focus-visible {
 }
 .AlumnosMaestros{
   width: 100%;
-  height: 100vh;
-  margin-bottom: 100px;
+  height: 100%;
+  margin-bottom: 50px;
 }
 
 .Cursos{
