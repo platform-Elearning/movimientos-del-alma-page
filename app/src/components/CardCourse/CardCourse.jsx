@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CardCourse.css';
 import Button from '../button/Button';
 import ButtonVacio from '../buttonVacio/ButtonVacio';
@@ -18,9 +18,17 @@ const CardCourse = ({
   liveClasses,
   personalizedAdvice,
 }) => {
+  // Estado para controlar si la tarjeta está volteada
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  // Alternar el estado de volteo
+  const toggleFlip = () => {
+    setIsFlipped((prev) => !prev);
+  };
+
   return (
-    <div className="card-course">
-      <div className="card-course-inner">
+    <div className="card-course" onClick={toggleFlip}>
+      <div className={`card-course-inner ${isFlipped ? 'flipped' : ''}`}>
         {/* Lado Frontal */}
         <div className="card-course-front">
           <img src={imageSrc} alt={title} className="card-course-image" />
