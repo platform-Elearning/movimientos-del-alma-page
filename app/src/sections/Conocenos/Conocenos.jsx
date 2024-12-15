@@ -8,7 +8,8 @@ import conocenos2 from '../../assets/conocenos2.png';
 const Conocenos = () => {
   return (
     <div className="conocenos-container">
-      <h1 className="conocenos-title">Conócenos</h1>
+      <div className='conocenosTittleContenedor'>      <h1 className="conocenos-title">Conócenos</h1>
+      </div>
       <div className="conocenos-content">
         <p className="conocenos-paragraph">
           <strong>MOVIMIENTOS DEL ALMA</strong> fue fundado en el año 2000 en Córdoba por Jimena de la Fuente. Con el tiempo, expandió su presencia a Río Ceballos (2010) y La Calera (2019), siempre renovándose con nuevas actividades y sumando profesionales especializados. Ofrecemos clases adaptadas a distintas edades y niveles, brindando una formación de calidad en cada área.

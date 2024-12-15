@@ -122,3 +122,14 @@
   justify-content: center;
   align-items: center;
 }
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .card-course {
+    perspective: 1000px;
+  }
+  
+  .card-course:hover .card-course-inner {
+    transform: rotateY(180deg);
+  }
+}
