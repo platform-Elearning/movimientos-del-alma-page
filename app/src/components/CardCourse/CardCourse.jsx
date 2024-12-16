@@ -23,7 +23,7 @@ const CardCourse = ({
   const handleFlip = () => setIsFlipped(!isFlipped);
 
   return (
-    <div className={`card-course ${isFlipped ? 'flipped' : ''}`}>
+    <div className={`card-course ${isFlipped ? 'flipped' : ''}`}> 
       <div className="card-course-inner">
         {/* Lado Frontal */}
         <div className="card-course-front">
