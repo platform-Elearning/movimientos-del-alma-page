@@ -28,7 +28,7 @@ const Index = () => {
         {/* Sección del video */}
         <div className="video-section-container">
           <VideoSection
-            title="Alma en movimiento"
+            title="Movimientos del Alma"
             imageSrc={ImgVideoSection}
             videoSrc={danceVideo}
           />
