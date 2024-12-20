@@ -30,8 +30,8 @@ const Index = () => {
           <VideoSection
             title="Movimientos del Alma"
             imageSrc={ImgVideoSection}
-            videoSrc={danceVideo}
-          />
+            videoSrc="https://www.youtube.com/embed/9JesM3x4rRk"
+            />
         </div>
         
         {/* Sección Conócenos */}
