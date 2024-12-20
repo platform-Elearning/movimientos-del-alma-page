@@ -116,7 +116,7 @@ const Cursos = () => {
   ];
 
   return (
-    <div className="cursos-container">
+    <div className="cursos-container" id='cursos'>
       <h1 className="cursos-title">Formaciones - Instituto de Formación Internacional</h1>
       <div className="cursos-grid">
         {courses.map((course, index) => (

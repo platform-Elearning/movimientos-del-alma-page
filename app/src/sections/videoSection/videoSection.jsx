@@ -24,15 +24,14 @@ const VideoSection = ({ title, imageSrc, videoSrc }) => {
               ▶
             </button>
           ) : (
-            <video
+            <iframe
               className="video-player"
-              controls
-              autoPlay
-              onClick={(e) => e.stopPropagation()} // Evitar que se detenga al hacer clic
-            >
-              <source src={videoSrc} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+              src={`${videoSrc}?autoplay=1`}
+              title="YouTube video"
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            ></iframe>
           )}
         </div>
       </div>
