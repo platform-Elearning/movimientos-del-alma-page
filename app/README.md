@@ -209,7 +209,7 @@ export default App;
 ---
 
 ### Estructura
-div.video-section: Contenedor principal del componente.
+- div.video-section: Contenedor principal del componente.
   - h1.video-section-title: Título de la sección de video.
   - div.video-section-content: Contenedor del contenido de la sección de video.
     - img.video-section-image: Imagen que se muestra antes de reproducir el video.
