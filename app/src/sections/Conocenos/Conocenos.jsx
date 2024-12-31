@@ -7,7 +7,7 @@ import conocenos2 from '../../assets/conocenos2.png';
 
 const Conocenos = () => {
   return (
-    <div className="conocenos-container">
+    <div className="conocenos-container" id='conocenos'>
       <h1 className="conocenos-title">Conócenos</h1>
       <div className="conocenos-content">
         <p className="conocenos-paragraph">

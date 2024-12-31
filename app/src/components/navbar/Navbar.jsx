@@ -24,7 +24,7 @@ const Navbar = () => {
         </button>
         <ul className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
           <li>
-            <a href="#home">Conocenos</a>
+            <a href="#conocenos">Conocenos</a>
           </li>
           <li>
             <a href="#cursos">Nuestros cursos</a>
