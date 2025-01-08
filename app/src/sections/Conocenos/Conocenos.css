@@ -5,14 +5,14 @@
   height: auto;
   color: white;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 .conocenosTittleContenedor{
   width: 100%;
   height: auto;
   background-color: #333;
-  margin: 0;
-  padding: 50px;
+  padding:50px;
 }
 .conocenos-title {
   font-size: 4rem; /* Ajustado para pantallas más pequeñas */
@@ -22,8 +22,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  margin-bottom: 2rem;
-  display: inline-block;
+    display: inline-block;
+  margin-top: 80px;
 }
 
 .conocenos-content {
