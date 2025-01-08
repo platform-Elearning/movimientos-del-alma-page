@@ -49,7 +49,7 @@ const Index = () => {
 
         <div className="video-section-container">
           <VideoSection
-            title="Alma en movimiento"
+            title="Movimientos del alma"
             imageSrc={ImgVideoSection}
             videoSrc={danceVideo}
           />
