@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import Home from "../../components/Home/Home"; // Importa el nuevo componente Home
@@ -17,15 +17,36 @@ const Index = () => {
     navigate("/register");
   };
 
+  useEffect(() => {
+    const handleScrollToSection = () => {
+      document.querySelectorAll('nav ul li a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault(); // Evita el comportamiento por defecto del enlace
+          
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Scroll suave
+          }
+        });
+      });
+    };
+
+    handleScrollToSection(); // Llamar a la función al cargar el componente
+
+    // Limpiar el evento cuando el componente se desmonta
+    return () => {
+      document.querySelectorAll('nav ul li a').forEach(anchor => {
+        anchor.removeEventListener('click', handleScrollToSection);
+      });
+    };
+  }, []);
+
   return (
     <div className="page-container">
-      {/* Contenedor principal */}
       <Navbar />
       <div className="containerIndex">
-        {/* Reemplaza el contenido aquí por el nuevo componente Home */}
         <Home />
 
-        {/* Sección del video */}
         <div className="video-section-container">
           <VideoSection
             title="Alma en movimiento"
@@ -34,17 +55,14 @@ const Index = () => {
           />
         </div>
         
-        {/* Sección Conócenos */}
         <div className="video-section-container">
           <Conocenos />
         </div>
 
-        {/* Sección Alumnos a Maestros */}
         <div className="AlumnosMaestros">
           <AlumnosMaestros />
         </div>
 
-        {/* Sección Cursos */}
         <div className="video-section-container">
           <div className="Cursos" id="cursos">
             <Cursos />
