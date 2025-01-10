@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import Button from "../../components/button/Button"; // Importa el componente Button
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo2.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
