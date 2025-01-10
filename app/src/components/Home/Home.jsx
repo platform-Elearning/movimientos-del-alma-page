@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css"; // Archivo CSS para estilos
-import Button from "../button/Button"; // Asegúrate de que esta ruta sea correcta
+import Button from "../button/Button"; 
 
 const Home = () => {
   return (
