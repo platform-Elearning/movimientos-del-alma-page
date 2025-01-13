@@ -117,7 +117,7 @@ const Cursos = () => {
 
   return (
     <div className="cursos-container">
-      <h1 className="cursos-title">Formaciones - Instituto de Formación Internacional</h1>
+      <h1 className="cursos-title">Formaciones</h1>
       <div className="cursos-grid">
         {courses.map((course, index) => (
           <CardCourse

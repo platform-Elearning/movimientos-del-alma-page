@@ -1,14 +1,14 @@
 import React from "react";
 import "./Home.css"; // Archivo CSS para estilos
-import Button from "../button/Button"; // Asegúrate de que esta ruta sea correcta
+import Button from "../button/Button"; 
 
 const Home = () => {
   return (
     <div className="home-container">
       <div className="home-background">
         <h1 className="home-title">Dancemos con el alma</h1>
-        <h2>Instituto de formacion internacional</h2>
-        <Button text="Mas informacion" /> {/* El botón ahora dirá PLATAFORMA */}
+        <h2>Instituto de Formación Internacional</h2>
+        <Button text="Mas informacion" /> 
       </div>
     </div>
   );
