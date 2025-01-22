@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../sections/footer/Footer";
 import Home from "../../components/Home/Home"; // Importa el nuevo componente Home
 import VideoSection from "../../sections/videoSection/videoSection";
 import Cursos from "../../sections/Cursos/Cursos";
@@ -8,6 +9,7 @@ import Conocenos from "../../sections/Conocenos/Conocenos";
 import danceVideo from "../../assets/dancevideo.mp4";
 import ImgVideoSection from "../../assets/ImgVideoSection.png";
 import AlumnosMaestros from "../../sections/AlumnosMaestros/AlumnosMaestros";
+import FloatingButton from "../../components/FloatingButton/FloatingButton";
 import "./index.css";
 
 const Index = () => {
@@ -69,6 +71,10 @@ const Index = () => {
           </div>
         </div>
       </div>
+      <Footer />
+      <FloatingButton />
+      <div>
+    </div>
     </div>
   );
 };

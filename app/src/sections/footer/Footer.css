@@ -1,0 +1,48 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 160px;
+    background-color: #242323;
+    color: #ffffff;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    padding-right:276px ;
+  }
+  
+  .footer-section {
+    max-width: 500px;
+  }
+  
+  .footer-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  
+  .footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* Ajusta la posición del subrayado */
+    width: 100%;
+    height: 2px; /* Grosor del subrayado */
+    background: linear-gradient(90deg, #83711B, #FFBB80, #83711B);
+    border-radius: 2px; /* Opcional: redondear bordes */
+  }
+  
+  .footer-info {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-icon {
+    margin-right: 8px;
+    font-size: 16px;
+  }
+  
