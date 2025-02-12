@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import Home from "../../components/Home/Home"; // Importa el nuevo componente Home
+import Testimonials from "../../sections/testimonials/testimonials"; // Importa el nuevo componente Testimonials
 import VideoSection from "../../sections/videoSection/videoSection";
+import Team from "../../sections/team/team"; // Corrige la importación de Team
 import Cursos from "../../sections/Cursos/Cursos";
 import Conocenos from "../../sections/Conocenos/Conocenos";
 import danceVideo from "../../assets/dancevideo.mp4";
@@ -46,23 +48,15 @@ const Index = () => {
       <Navbar />
       <div className="containerIndex">
         <Home />
-
-        <div className="video-section-container">
-          <VideoSection
-            title="Movimientos del alma"
-            imageSrc={ImgVideoSection}
-            videoSrc={danceVideo}
-          />
-        </div>
-        
+        <Testimonials />
+        <VideoSection />
+        <Team /> {/* Usando correctamente el componente Team */}
         <div className="video-section-container">
           <Conocenos />
         </div>
-
         <div className="AlumnosMaestros">
           <AlumnosMaestros />
         </div>
-
         <div className="video-section-container">
           <div className="Cursos" id="cursos">
             <Cursos />
