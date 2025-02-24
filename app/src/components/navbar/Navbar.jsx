@@ -9,6 +9,7 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  
 
   return (
     <nav className="navbar">
@@ -16,8 +17,8 @@ const Navbar = () => {
         <div className="navbar-logo">
           {" "}
           <a href="/">
-  <img src={logo} alt="Logo" />
-</a>
+            <img src={logo} alt="Logo" />
+          </a>
         </div>
         <button className="menu-toggle" onClick={toggleMenu}>
           ☰
@@ -31,7 +32,12 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Button text="Plataforma" /> {/* El botón ahora dirá PLATAFORMA */}
+            <Button
+              text="Plataforma"
+              onClick={() =>
+                window.open("https://platform.mda-ifi.com")
+              }
+            />
           </li>
         </ul>
       </div>
