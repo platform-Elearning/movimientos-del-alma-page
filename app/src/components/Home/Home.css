@@ -29,12 +29,13 @@
 
 /* Título */
 .home-title {
-  font-size: 5rem;
+  margin-top: 13rem;
+  font-size: 3rem;
   font-weight: bold;
-  color: #a37300; /* Color de respaldo para navegadores antiguos */
-  background: linear-gradient(to right, #83711B, #FFBB80,#83711B); /* Degradado horizontal */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #252422; /* Color de respaldo para navegadores antiguos */
+  padding: 10px;
+  border-radius: 2rem;
+  background-color: #ffffff54;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destacar el texto */
   margin-bottom: 2rem; /* Ajusta el espacio debajo del título */
   display: inline-block; /* Asegura que el degradado cubra toda la frase */
@@ -42,7 +43,7 @@
 
 /* Botón */
 .home-button {
-  background-color: #a37300; /* Fondo dorado */
+  background-color: #000000; /* Fondo dorado */
   color: white;
   font-size: 1.2rem;
   padding: 0.8em 2em;
@@ -84,3 +85,4 @@
     padding: 0.6em 1.5em; /* Ajusta aún más el tamaño del botón */
   }
 }
+
