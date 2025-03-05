@@ -5,11 +5,9 @@ import Home from "../../components/Home/Home"; // Importa el nuevo componente Ho
 import Testimonials from "../../sections/testimonials/testimonials"; // Importa el nuevo componente Testimonials
 import VideoSection from "../../sections/videoSection/videoSection";
 import Team from "../../sections/team/team"; // Corrige la importación de Team
+import DanceBanner from "../../sections/DanceBanner/DanceBanner";
 import Cursos from "../../sections/Cursos/Cursos";
-import Conocenos from "../../sections/Conocenos/Conocenos";
-import danceVideo from "../../assets/dancevideo.mp4";
-import ImgVideoSection from "../../assets/ImgVideoSection.png";
-import AlumnosMaestros from "../../sections/AlumnosMaestros/AlumnosMaestros";
+
 import "./index.css";
 
 const Index = () => {
@@ -50,18 +48,9 @@ const Index = () => {
         <Home />
         <Testimonials />
         <VideoSection />
-        <Team /> {/* Usando correctamente el componente Team */}
-        <div className="video-section-container">
-          <Conocenos />
-        </div>
-        <div className="AlumnosMaestros">
-          <AlumnosMaestros />
-        </div>
-        <div className="video-section-container">
-          <div className="Cursos" id="cursos">
-            <Cursos />
-          </div>
-        </div>
+        <Team />
+        <DanceBanner />
+
       </div>
     </div>
   );
