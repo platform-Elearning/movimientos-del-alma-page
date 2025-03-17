@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import Button from "../../components/button/Button"; // Importa el componente Button
 import logo from "../../assets/logo2.png";
@@ -14,10 +15,9 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          {" "}
-          <a href="/">
-  <img src={logo} alt="Logo" />
-</a>
+          <Link to="/">
+            <img src={logo} alt="Logo" />
+          </Link>
         </div>
         <button className="menu-toggle" onClick={toggleMenu}>
           ☰
@@ -29,7 +29,9 @@ const Navbar = () => {
           <li>
             <a href="#cursos">Nuestros cursos</a>
           </li>
-
+          <li>
+            <Link to="/nosotros">Nosotros</Link> {/* Cambia el enlace a "nosotros" */}
+          </li>
           <li>
             <Button text="Plataforma" /> {/* El botón ahora dirá PLATAFORMA */}
           </li>

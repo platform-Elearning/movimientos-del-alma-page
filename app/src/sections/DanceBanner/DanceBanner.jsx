@@ -5,7 +5,7 @@ import DanceBannerImg from '../../assets/danceBannerImg.png'; // Reemplázalo po
 const DanceBanner = () => {
   return (
     <div className="dance-banner">
-      <h2>Desarrolla tu pasión por la danza con nuestras</h2>
+      <h2 >Desarrolla tu pasión por la danza con nuestras</h2>
       <div className="dance-banner-container">
         <div className="dance-banner-image">
           <img src={DanceBannerImg} alt="Clases de danza" className="dance-img" />
