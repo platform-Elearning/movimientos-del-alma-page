@@ -22,7 +22,7 @@ const Navbar = () => {
         <button className="menu-toggle" onClick={toggleMenu}>
           ☰
         </button>
-        <ul className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
+        <ul className={`navbar-links {isMenuOpen ? "open" : ""}`}>
           <li>
             <a href="#conocenos">Conocenos</a>
           </li>
