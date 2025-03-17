@@ -1,5 +1,5 @@
 import React from 'react';
-import './VideoSection.css';  // Importamos el archivo CSS
+import './videoSection.css';  // Importamos el archivo CSS
 import ButtonVacio from '../../components/buttonVacio/ButtonVacio';
 const VideoSection = () => {
   return (

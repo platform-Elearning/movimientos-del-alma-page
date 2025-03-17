@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+mport React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import Button from "../../components/button/Button"; // Importa el componente Button
@@ -22,7 +22,7 @@ const Navbar = () => {
         <button className="menu-toggle" onClick={toggleMenu}>
           ☰
         </button>
-        <ul className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
+        <ul className={navbar-links ${isMenuOpen ? "open" : ""}}>
           <li>
             <a href="#conocenos">Conocenos</a>
           </li>
