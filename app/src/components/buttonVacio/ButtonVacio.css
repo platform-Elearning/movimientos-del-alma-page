@@ -1,7 +1,7 @@
 .button-vacio {
     border: 2px solid #c5a953; /* Color dorado */
-    background-color: transparent;
-    color: #c5a953; /* Color dorado */
+    background-color: #ffffff;
+    color: #000000; /* Color dorado */
     padding: 12px 36px; /* Ajuste de tamaño según imagen */
     border-radius: 15px; /* Bordes redondeados */
     font-family: 'Arial', sans-serif; /* Fuente básica */

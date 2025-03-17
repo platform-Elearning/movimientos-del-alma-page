@@ -20,7 +20,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Asegura que la página ocupe toda la altura */
-  background-color: #f9f9f9; /* Fondo claro */
 }
 
 /* Contenedor general de la sección de inicio */
@@ -159,4 +158,5 @@ button:focus-visible {
   height: auto;
   display: flex;
   background-color: #333;
-}
+} 
+
