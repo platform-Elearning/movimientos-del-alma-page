@@ -1,0 +1,72 @@
+.faqs-container {
+    width: 100%;
+    margin: 0 auto;
+    margin: 50px;
+    background-color: #252422;
+    height: 100vh;
+    border-radius: 50px; /* Redondea el borde superior izquierdo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faqs-container h1 {
+    color: #fffbfb;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faqs-container a {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.faqs-container a:hover {
+    background-color: #0056b3;
+}
+
+.faqs-container .faq-item {
+    width: 70%;
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: flex; /* Usar Flexbox */
+    align-items: flex-start; /* Alinear ícono y contenido al inicio */
+}
+
+.faqs-container .faq-item .icon {
+    width: 20px; /* Ajusta el tamaño del ícono */
+    height: 20px; /* Ajusta el tamaño del ícono */
+    margin-right: 10px; /* Espacio entre el ícono y el contenido */
+    flex-shrink: 0; /* Evita que el ícono se reduzca */
+}
+
+.faqs-container .faq-item .content {
+    flex: 1; /* Hace que el contenido ocupe el espacio restante */
+    display: flex;
+    flex-direction: column; /* Apila el título y la descripción verticalmente */
+}
+
+.faqs-container .faq-item h3 {
+    margin: 0;
+    color: #333;
+}
+
+.faqs-container .faq-item p {
+    margin: 10px 0 0;
+    color: #666;
+    display: none;
+}
+
+.faqs-container .faq-item.active p {
+    display: block; /* Muestra la descripción cuando el ítem está activo */
+}

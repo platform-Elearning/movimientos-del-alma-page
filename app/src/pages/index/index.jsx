@@ -6,8 +6,9 @@ import Testimonials from "../../sections/testimonials/testimonials"; // Importa 
 import VideoSection from "../../sections/videoSection/videoSection";
 import Team from "../../sections/team/team"; // Corrige la importación de Team
 import DanceBanner from "../../sections/DanceBanner/DanceBanner";
-import Cursos from "../../sections/Cursos/Cursos";
-
+import Footer from "../../sections/footer/footer";
+import Sucursales from "../../sections/sucursales/sucursales";
+import Faqs from "../../sections/faqs/faqs";
 import "./index.css";
 
 const Index = () => {
@@ -50,8 +51,13 @@ const Index = () => {
         <VideoSection />
         <Team />
         <DanceBanner />
+        <Sucursales />
+        <Faqs />
+
 
       </div>
+      <Footer />
+
     </div>
   );
 };

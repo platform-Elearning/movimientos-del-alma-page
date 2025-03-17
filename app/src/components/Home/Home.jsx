@@ -1,9 +1,11 @@
 import React from "react";
 import "./Home.css"; // Archivo CSS para estilos
+
 import Button from "../button/Button";
 const Home = () => {
   return (
     <div className="home-container">
+
             <div className="shape1"></div>
 
       <div className="home-background">
