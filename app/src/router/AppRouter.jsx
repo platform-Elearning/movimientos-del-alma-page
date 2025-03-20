@@ -3,6 +3,7 @@ import Index from "../pages/index/index";
 import Login from "../pages/login/login";
 import Register from "../pages/register/register";
 import Nosotros from "../sections/Nosotros/Nosotros"; // Importa el componente Nosotros
+import Clases from "../sections/Clases/Clases"; // Importa el componente Nosotros
 
 const AppRouter = () => {
     return (
@@ -11,6 +12,8 @@ const AppRouter = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/nosotros" element={<Nosotros />} /> {/* Agrega la ruta para "Nosotros" */}
+            <Route path="/clases" element={<Clases />} /> {/* Agrega la ruta para "Nosotros" */}
+
         </Routes>
     );
 };
