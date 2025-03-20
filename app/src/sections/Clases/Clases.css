@@ -1,0 +1,91 @@
+/* Estilos CSS */
+.clases-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.tab {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.tab.active {
+  background-color: #222;
+  font-weight: bold;
+}
+
+.clases-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.clase-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  color: rgb(0, 0, 0);
+}
+
+.clase-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.info-button {
+  display: block;
+  background-color: #555;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.info-button:hover {
+  background-color: #777;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .clases-list {
+    grid-template-columns: 1fr;
+  }
+
+  .tab {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+}
