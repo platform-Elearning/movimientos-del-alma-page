@@ -16,10 +16,11 @@
     margin-bottom: 1rem;
   }
   
-  .title {
+  .titleNosotros {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    color: white;
   }
   
   .description {

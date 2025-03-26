@@ -5,15 +5,7 @@ import Talar from '../../assets/talar.png'; // Imagen de Sucursal El Talar
 import Calera from '../../assets/calera.png'; // Imagen de Sucursal La Calera
 
 const sucursalesData = [
-  {
-    id: 1,
-    nombre: "Casa Central",
-    encargado: "Jimena De La Fuente",
-    direccion: "Almirante Brown 72, Río Ceballos",
-    telefono: "+54 9 351 3668819",
-    imagen: Central, // Usando la imagen importada
-    mapa: "https://maps.google.com/?q=Almirante+Brown+72,+Río+Ceballos",
-  },
+ 
   {
     id: 2,
     nombre: "Sucursal La Calera",
@@ -22,6 +14,15 @@ const sucursalesData = [
     telefono: "+54 9 3517 662475",
     imagen: Calera, // Usando la imagen importada
     mapa: "https://maps.google.com/?q=Jorge+Luis+Borges+662,+La+Calera",
+  },
+  {
+    id: 1,
+    nombre: "Casa Central",
+    encargado: "Jimena De La Fuente",
+    direccion: "Almirante Brown 72, Río Ceballos",
+    telefono: "+54 9 351 3668819",
+    imagen: Central, // Usando la imagen importada
+    mapa: "https://maps.google.com/?q=Almirante+Brown+72,+Río+Ceballos",
   },
   {
     id: 3,

@@ -1,4 +1,3 @@
-
 .navbar {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
@@ -43,7 +42,7 @@
 
 .navbar-links {
   display: flex;
-  gap: 50px;
+  gap: 40px; /* Reducido el espacio entre los elementos */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -61,18 +60,17 @@
 
 .navbar-links a {
   color: rgb(0, 0, 0);
-  text-decoration: none; /* Eliminar el subrayado */
-  font-size: 1.3rem;
-  transition: transform 0.3s ease; /* Mantener el efecto de zoom */
+  text-decoration: none;
+  font-size: 1.1rem; /* Tamaño de letra reducido */
+  transition: transform 0.3s ease;
 }
 
 .navbar-links a:hover {
-  transform: scale(1.1); /* Efecto de zoom */
+  transform: scale(1.1);
 }
 
-/* Eliminar pseudo-elemento de hover */
 .navbar-links li:hover::before {
-  content: none; /* Elimina la línea debajo del li */
+  content: none;
 }
 
 /* Estilos para el botón */
@@ -124,11 +122,12 @@
     color: rgb(255, 255, 255);
     margin: 0 auto 10px;
     background-color: #555;
-    padding: 10px 20px;
+    padding: 8px 20px; /* Reducido el padding */
     border-radius: 5px;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
     width: 80%;
+    font-size: 1rem; /* Tamaño de letra reducido */
   }
 
   .navbar-links a:hover {

@@ -14,34 +14,7 @@ import "./index.css";
 const Index = () => {
   const navigate = useNavigate();
 
-  const navigateToRegister = () => {
-    navigate("/register");
-  };
-
-  useEffect(() => {
-    const handleScrollToSection = () => {
-      document.querySelectorAll('nav ul li a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          e.preventDefault(); // Evita el comportamiento por defecto del enlace
-          
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Scroll suave
-          }
-        });
-      });
-    };
-
-    handleScrollToSection(); // Llamar a la función al cargar el componente
-
-    // Limpiar el evento cuando el componente se desmonta
-    return () => {
-      document.querySelectorAll('nav ul li a').forEach(anchor => {
-        anchor.removeEventListener('click', handleScrollToSection);
-      });
-    };
-  }, []);
-
+  
   return (
     <div className="page-container">
       <Navbar />
@@ -53,11 +26,8 @@ const Index = () => {
         <DanceBanner />
         <Sucursales />
         <Faqs />
-
-
       </div>
       <Footer />
-
     </div>
   );
 };

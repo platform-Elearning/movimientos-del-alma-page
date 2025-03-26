@@ -13,6 +13,9 @@ import Iniciacion from "../../assets/ClasesPresenciales/IniciacionDanza.png";
 import Acrobacia from "../../assets/ClasesPresenciales/Acrobacia.png";
 import BioDanza from "../../assets/ClasesPresenciales/BioDanza.png";
 import DanzaTerapia from "../../assets/ClasesPresenciales/DanzaTerapia.png";
+import timeIcon from "../../assets/timeIcon.png";
+import user from "../../assets/user.png";
+import wpWhite from "../../assets/wpWhite.png";
 
 const sedes = [
   { id: "rio-ceballos", name: "Casa Central Río Ceballos" },
@@ -152,15 +155,22 @@ const Clases = () => {
             <div key={clase.id} className="clase-card">
               <img src={clase.imagen} alt={clase.nombre} className="clase-img" />
               <h3>{clase.nombre}</h3>
-              <p>{clase.nivel}</p>
-              <h4>Horarios:</h4>
-              <ul>
-                {clase.horarios.map((horario, idx) => (
-                  <li key={idx}>{horario}</li>
-                ))}
-              </ul>
-              <button className="info-button">Más Información</button>
-            </div>
+              <div className="nivel-container">
+                <img src={user} alt="Icono Usuario" className="icon" />
+                <p>{clase.nivel}</p>
+              </div>
+              <div className="horarios-container">
+                  <img src={timeIcon} alt="Icono Tiempo" className="icon" />
+                  <h4>Horarios:</h4>
+                </div>
+                <ul className="horarios-list">
+                  {clase.horarios.map((horario, idx) => (
+                    <li key={idx}>{horario}</li>
+                  ))}
+                </ul>
+                <button className="info2-button">
+                <img src={wpWhite} alt="WhatsApp" className="whatsapp-icon" /> Más Información
+              </button>            </div>
           ))}
         </div>
       </div>
