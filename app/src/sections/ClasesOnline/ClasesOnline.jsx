@@ -8,7 +8,7 @@ import Clasico from "../../assets/ClasesPresenciales/Clasico.png";
 import Jazz from "../../assets/ClasesPresenciales/JazzClase.png";
 import danzaContemporanea from "../../assets/danzaContemporanea.png";
 import timeIcon from "../../assets/timeIcon.png";
-import user from "../../assets/user.png";
+import user from "../../assets/User.png";
 import wpWhite from "../../assets/wpWhite.png";
 
 const formaciones = [
