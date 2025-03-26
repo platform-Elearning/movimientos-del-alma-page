@@ -14,7 +14,7 @@ import Acrobacia from "../../assets/ClasesPresenciales/Acrobacia.png";
 import BioDanza from "../../assets/ClasesPresenciales/BioDanza.png";
 import DanzaTerapia from "../../assets/ClasesPresenciales/DanzaTerapia.png";
 import timeIcon from "../../assets/timeIcon.png";
-import user from "../../assets/user.png";
+import user from "../../assets/User.png";
 import wpWhite from "../../assets/wpWhite.png";
 
 const sedes = [
