@@ -3,7 +3,7 @@
     margin: 0 auto;
     margin: 50px;
     background-color: #252422;
-    height: 100vh;
+    height: auto;
     border-radius: 50px; /* Redondea el borde superior izquierdo */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

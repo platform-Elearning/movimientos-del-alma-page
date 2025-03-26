@@ -1,9 +1,12 @@
-/* Estilos CSS */
 .clases-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+}
+
+.title {
+  color: #222;
 }
 
 .tabs {
@@ -54,11 +57,12 @@
   object-fit: cover;
   border-radius: 10px;
 }
-/* Estilos adicionales para el botón */
+
+/* Botón de información con WhatsApp */
 .info2-button {
   display: flex;
   align-items: center;
-  background-color: #0C0C11; /* Color típico de WhatsApp */
+  background-color: #0C0C11;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -66,11 +70,11 @@
   font-weight: bold;
   margin-top: 10px;
   cursor: pointer;
-  gap: 10px; /* Espacio entre el ícono y el texto */
+  gap: 10px;
 }
 
 .info2-button:hover {
-  background-color: #128c7e; /* Color de hover para WhatsApp */
+  background-color: #128c7e;
 }
 
 .whatsapp-icon {
@@ -83,24 +87,24 @@
   align-items: center;
   margin-bottom: 10px;
 }
+
 .horarios-container {
   display: flex;
   align-items: center;
-  gap: 8px; /* Espacio entre el icono y el texto */
+  gap: 8px;
   margin-bottom: 5px;
 }
 
 .horarios-container h4 {
-  margin: 0; /* Eliminar márgenes extra */
+  margin: 0;
 }
 
 .horarios-list {
-  display: block; /* Asegurar que los horarios estén en una nueva línea */
+  display: block;
   list-style: none;
   padding: 0;
   margin-top: 5px;
 }
-
 
 .icon {
   width: 20px;
@@ -108,21 +112,7 @@
   margin-right: 8px;
 }
 
-.clase-card h4 {
-  margin-bottom: 5px;
-}
-
-.clase-card ul {
-  list-style: none;
-  padding: 0;
-}
-
-.clase-card ul li {
-  margin-bottom: 5px;
-}
-
-
-/* Media queries para responsividad */
+/* Media queries */
 @media (max-width: 768px) {
   .clases-list {
     grid-template-columns: 1fr;

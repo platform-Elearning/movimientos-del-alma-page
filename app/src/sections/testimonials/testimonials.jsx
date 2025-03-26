@@ -11,9 +11,7 @@ const Testimonials = () => {
 
       <div className="testimonials-cards">
         <div className="testimonial-card">
-          <div className="testimonial-image-container">
-            <img src="path_to_image_juan.jpg" alt="Juan Pérez" />
-          </div>
+          
           <p className="testimonial-text">
             "Las clases son increíbles, he aprendido muchísimo en poco tiempo. ¡Recomiendo totalmente!"
           </p>
@@ -21,9 +19,7 @@ const Testimonials = () => {
         </div>
 
         <div className="testimonial-card">
-          <div className="testimonial-image-container">
-            <img src="path_to_image_maria.jpg" alt="María López" />
-          </div>
+         
           <p className="testimonial-text">
             "Un ambiente muy motivador. Me siento respaldado en cada paso. ¡Excelente experiencia!"
           </p>
@@ -31,9 +27,7 @@ const Testimonials = () => {
         </div>
 
         <div className="testimonial-card">
-          <div className="testimonial-image-container">
-            <img src="path_to_image_carlos.jpg" alt="Carlos Gómez" />
-          </div>
+         
           <p className="testimonial-text">
             "¡Simplemente transformador! La pasión por enseñar es palpable en cada clase."
           </p>
