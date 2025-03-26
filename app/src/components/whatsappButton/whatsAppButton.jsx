@@ -1,5 +1,5 @@
 import React from "react";
-import "./WhatsAppButton.css"; // Archivo para los estilos
+import "./whatsAppButton.css"; // Archivo para los estilos
 
 const WhatsAppButton = () => {
   const phoneNumber = "1234567890"; // Reemplaza con tu número de WhatsApp
