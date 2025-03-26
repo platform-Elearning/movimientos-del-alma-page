@@ -4,9 +4,9 @@ import ButtonVacio from '../../components/buttonVacio/ButtonVacio';
 const VideoSection = () => {
   return (
     <div className="video-section">
-      <h1 className="title">Movimientos que inspiran</h1>
+      <h1 className="title1">Movimientos que inspiran</h1>
       <div className="video-box"></div>
-      <ButtonVacio text="Haz clic aquí" />
+      <ButtonVacio text="Descubre sus experiencias" />
     </div>
   );
 };

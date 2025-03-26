@@ -13,7 +13,7 @@ const Nosotros = () => {
       <div className="nosotros-container">
         <Link to="/" className="back-button">&larr; Volver a Inicio</Link>
         
-        <h1 className="title">Movimientos del Alma</h1>
+        <h1 className="titleNosotros">Movimientos del Alma</h1>
         <p className="description">
           Fue fundada en el año 2000 por Jimena de la Fuente en Córdoba, Argentina.
           Con el tiempo, la marca expandió su presencia en distintas regiones,

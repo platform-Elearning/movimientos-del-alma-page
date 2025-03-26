@@ -69,8 +69,16 @@
 }
 
 .footer-column li {
+  display: flex;
+  align-items: center; /* Alinea el ícono y el texto verticalmente */
   margin: 20px 0;
   color: #252422;
+}
+
+.footer-column li img {
+  margin-right: 10px; /* Espacio entre el ícono y el texto */
+  width: 18px; /* Ajusta el tamaño del ícono si es necesario */
+  height: 18px;
 }
 
 .footer-column a {
@@ -83,7 +91,8 @@
   gap: 15px;
   align-items: flex-start; /* Alinea el contenido a la izquierda */
   margin-bottom: 20px;
-  margin-right: auto; /* Empuja el logo hacia la izquierda */  justify-content: center;
+  margin-right: auto; /* Empuja el logo hacia la izquierda */ 
+   justify-content: start;
 }
 
 .footer-social img {

@@ -1,11 +1,13 @@
 import React from "react";
 import "./DanceBanner.css";
-import DanceBannerImg from '../../assets/danceBannerImg.png'; // Reemplázalo por la imagen correcta
+import DanceBannerImg from '../../assets/danceBannerImg.png'; // Imagen principal del banner
+import presencialIcono from '../../assets/iconopresencial.png'; // Icono para clases presenciales
+import onlineIcono from '../../assets/iconoonline.png'; // Icono para formaciones online
 
 const DanceBanner = () => {
   return (
     <div className="dance-banner">
-      <h2 >Desarrolla tu pasión por la danza con nuestras</h2>
+      <h2>Desarrolla tu pasión por la danza con nuestras</h2>
       <div className="dance-banner-container">
         <div className="dance-banner-image">
           <img src={DanceBannerImg} alt="Clases de danza" className="dance-img" />
@@ -13,14 +15,18 @@ const DanceBanner = () => {
         <div className="dance-banner-content">
           <h1>Clases presenciales y Formaciones Online</h1>
           <p>
-            Creamos un ambiente familiar y cercano donde la creatividad y el respeto son clave. Con clases presenciales y online para todas las edades y niveles, te ofrecemos una formación artística de calidad para que alcances tu máximo potencial.
+            Creamos un ambiente familiar y cercano donde la creatividad y el respeto son clave. 
+            Con clases presenciales y online para todas las edades y niveles, te ofrecemos una 
+            formación artística de calidad para que alcances tu máximo potencial.
           </p>
           <div className="dance-buttons">
             <button className="dance-button">
-              🏫 Ver Clases Presenciales
+              <img src={presencialIcono} alt="Presencial" className="button-icon" /> 
+              Ver Clases Presenciales
             </button>
             <button className="dance-button">
-              💻 Ver Formaciones Online
+              <img src={onlineIcono} alt="Online" className="button-icon" /> 
+              Ver Formaciones Online
             </button>
           </div>
         </div>

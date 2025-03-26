@@ -2,19 +2,25 @@ import { Route, Routes } from "react-router-dom";
 import Index from "../pages/index/index";
 import Login from "../pages/login/login";
 import Register from "../pages/register/register";
-import Nosotros from "../sections/Nosotros/Nosotros"; // Importa el componente Nosotros
-import Clases from "../sections/Clases/Clases"; // Importa el componente Nosotros
+import Nosotros from "../sections/Nosotros/Nosotros";
+import Clases from "../sections/Clases/Clases";
+import ClasesOnline from "../sections/ClasesOnline/ClasesOnline";
+import WhatsAppButton from "../components/whatsappButton/whatsAppButton"; // Importa el botón
 
 const AppRouter = () => {
     return (
-        <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/nosotros" element={<Nosotros />} /> {/* Agrega la ruta para "Nosotros" */}
-            <Route path="/clases" element={<Clases />} /> {/* Agrega la ruta para "Nosotros" */}
-
-        </Routes>
+        <>
+            <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/nosotros" element={<Nosotros />} />
+                <Route path="/clases" element={<Clases />} />
+                <Route path="/clasesOnline" element={<ClasesOnline />} />
+            </Routes>
+            
+            <WhatsAppButton /> {/* Agrega el botón flotante */}
+        </>
     );
 };
 
