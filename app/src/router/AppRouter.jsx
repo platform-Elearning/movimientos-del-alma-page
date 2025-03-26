@@ -5,7 +5,7 @@ import Register from "../pages/register/register";
 import Nosotros from "../sections/Nosotros/Nosotros";
 import Clases from "../sections/Clases/Clases";
 import ClasesOnline from "../sections/ClasesOnline/ClasesOnline";
-import WhatsAppButton from "../components/whatsappButton/whatsAppButton"; // Importa el botón
+import whatsAppButton from "../components/whatsappButton/whatsAppButton"; // Importa el botón
 
 const AppRouter = () => {
     return (
@@ -19,7 +19,7 @@ const AppRouter = () => {
                 <Route path="/clasesOnline" element={<ClasesOnline />} />
             </Routes>
             
-            <WhatsAppButton /> {/* Agrega el botón flotante */}
+            <whatsAppButton /> {/* Agrega el botón flotante */}
         </>
     );
 };
