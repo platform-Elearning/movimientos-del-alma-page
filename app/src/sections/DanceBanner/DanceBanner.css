@@ -116,11 +116,11 @@
   }
 
   .dance-banner-image {
-    justify-content: center;
+    justify-content: start;
   }
 
   .dance-img {
-    max-width: 250px;
+    max-width: 500px;
     top: -50px;
   }
 

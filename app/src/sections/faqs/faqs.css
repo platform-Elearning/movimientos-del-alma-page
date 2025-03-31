@@ -4,7 +4,7 @@
     margin: 50px;
     background-color: #252422;
     height: auto;
-    border-radius: 50px; /* Redondea el borde superior izquierdo */
+    border-radius: 50px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -32,28 +32,32 @@
 .faqs-container .faq-item {
     width: 70%;
     background-color: white;
-    margin-bottom: 10px;
+    margin: 0 auto 10px;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    display: flex; /* Usar Flexbox */
-    align-items: flex-start; /* Alinear ícono y contenido al inicio */
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faqs-container .faq-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .faqs-container .faq-item .icon {
-    width: 20px; /* Ajusta el tamaño del ícono */
-    height: 20px; /* Ajusta el tamaño del ícono */
-    margin-right: 10px; /* Espacio entre el ícono y el contenido */
-    flex-shrink: 0; /* Evita que el ícono se reduzca */
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    flex-shrink: 0;
 }
 
 .faqs-container .faq-item .content {
-    flex: 1; /* Hace que el contenido ocupe el espacio restante */
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Apila el título y la descripción verticalmente */
+    flex-direction: column;
 }
 
 .faqs-container .faq-item h3 {
@@ -65,8 +69,27 @@
     margin: 10px 0 0;
     color: #666;
     display: none;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
 }
 
 .faqs-container .faq-item.active p {
-    display: block; /* Muestra la descripción cuando el ítem está activo */
+    display: block;
+    opacity: 1;
+    max-height: 200px;
+}
+
+.faqs-container a {
+    background: none;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 5px;
+}
+
+.faqs-container a:hover {
+    background: none;
+    color: inherit;
+    text-decoration: underline;
 }

@@ -5,8 +5,7 @@ import Register from "../pages/register/register";
 import Nosotros from "../sections/Nosotros/Nosotros";
 import Clases from "../sections/Clases/Clases";
 import ClasesOnline from "../sections/ClasesOnline/ClasesOnline";
-import WhatsAppButton from "../components/whatsappButton/whatsAppButton"; // Importa el botón
-
+import WhatsAppButton from "../components/whatsappButton/whatsAppButton"; // Cambia el nombre a mayúscula
 const AppRouter = () => {
     return (
         <>
@@ -17,9 +16,10 @@ const AppRouter = () => {
                 <Route path="/nosotros" element={<Nosotros />} />
                 <Route path="/clases" element={<Clases />} />
                 <Route path="/clasesOnline" element={<ClasesOnline />} />
+
             </Routes>
             
-            <WhatsAppButton /> {/* Agrega el botón flotante */}
+            <WhatsAppButton /> {/* Cambia el uso del componente */}
         </>
     );
 };

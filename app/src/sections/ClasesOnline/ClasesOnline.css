@@ -18,8 +18,8 @@
 }
 
 .tab {
-  background-color: #444;
-  color: white;
+  background-color:#ffffff;
+  color: rgb(0, 0, 0);
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -29,6 +29,7 @@
 
 .tab.active {
   background-color: #222;
+  color: #fff;
   font-weight: bold;
 }
 
