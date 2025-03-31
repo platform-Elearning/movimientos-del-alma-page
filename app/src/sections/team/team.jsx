@@ -13,7 +13,7 @@ const Team = () => {
         <div className="profile">
           <img src={ale} alt="Alejandra Gherardi" className="profile-image" />
           <p className="name">Alejandra Gherardi</p>
-          <p className="role">Directora de Sucursal La Cañada</p>
+          <p className="role">Directora de Sucursal La Calera</p>
           <p>"Cada bailarín tiene su propio ritmo, su propio aprendizaje. Me entusiasma guiar a cada alumno a descubrir sus procesos y conectar con su esencia a través del movimiento."</p>
         </div>
         <div className="profile">
