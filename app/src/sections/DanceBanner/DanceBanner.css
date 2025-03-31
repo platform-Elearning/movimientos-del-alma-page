@@ -95,6 +95,7 @@
   border: none;
   transition: background-color 0.3s ease;
   min-width: 250px;
+  text-decoration: none;
 }
 
 .dance-button:hover {

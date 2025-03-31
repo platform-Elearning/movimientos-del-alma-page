@@ -17,7 +17,7 @@ const sucursalesData = [
   {
     id: 2,
     nombre: "Sucursal La Calera",
-    encargado: "Alejandra Cherradi",
+    encargado: "Alejandra Gherardi",
     direccion: "Jorge Luis Borges 662, La Calera",
     telefono: "+54 9 3517 662475",
     imagen: Calera, // Usando la imagen importada
