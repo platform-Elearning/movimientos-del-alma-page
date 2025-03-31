@@ -24,16 +24,18 @@ const Navbar = () => {
         </button>
         <ul className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
           <li>
-            <Link to="/clases">Clases</Link> {/* Enlace a la página de "Clases" */}
+            <Link to="/clases">Clases <br />presenciales</Link> {/* Enlace a la página de "Clases" */}
           </li>
           <li>
-            <Link to="/clasesOnline">Formaciones</Link> {/* Enlace a la página de "Clases Online" */}
+            <Link to="/clasesOnline">Formaciones <br />online</Link> {/* Enlace a la página de "Clases Online" */}
           </li>
           <li>
             <Link to="/nosotros">Nosotros</Link> {/* Enlace a la página de "Nosotros" */}
           </li>
           <li>
-            <Button text="Plataforma" /> {/* Botón de "Plataforma" */}
+            <a href="https://platform.mda-ifi.com/" target="_blank" rel="noopener noreferrer">
+              <Button text="Plataforma" />
+            </a>
           </li>
         </ul>
       </div>

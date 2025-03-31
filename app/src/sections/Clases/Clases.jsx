@@ -168,9 +168,18 @@ const Clases = () => {
                     <li key={idx}>{horario}</li>
                   ))}
                 </ul>
-                <button className="info2-button">
-                <img src={wpWhite} alt="WhatsApp" className="whatsapp-icon" /> Más Información
-              </button>            </div>
+                
+                <button 
+                  className="info2-button"
+                  onClick={() => {
+                    const mensaje = `Hola, estoy interesado/a en la clase de ${clase.nombre}. ¿Podrían brindarme más información?`;
+                    const url = `https://wa.me/5493513468819?text=${encodeURIComponent(mensaje)}`;
+                    window.open(url, "_blank");
+                  }}
+                >
+                  <img src={wpWhite} alt="WhatsApp" className="whatsapp-icon" /> Más Información
+                </button>
+                  </div>
           ))}
         </div>
       </div>

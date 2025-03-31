@@ -3,6 +3,7 @@ import './faqs.css';
 import masIcon from '../../assets/masIco.png'; // Imagen de Casa Central
 import ButtonVacio from '../../components/buttonVacio/ButtonVacio';
 import downloadIcon from '../../assets/download.png'; // Imagen de Casa Central
+import reglamento from '../../assets/pdf/Reglamento-MDA.jpeg'; // Ruta del reglamento
 
 const Faqs = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -53,7 +54,9 @@ const Faqs = () => {
     return (
         <div className="faqs-container">
             <h1>Todo lo que necesitas saber</h1>
-            <ButtonVacio text="Descargar reglamento" icon={downloadIcon} /> {/* Ícono agregado */}
+            <a href={reglamento} download="Reglamento-MDA.jpeg">
+                <ButtonVacio text="Descargar reglamento" icon={downloadIcon} />
+            </a>
             {faqs.map((faq, index) => (
                 <div
                     key={index}
