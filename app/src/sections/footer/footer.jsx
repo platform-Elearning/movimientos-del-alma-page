@@ -23,9 +23,9 @@ const Footer = () => {
           <div className="footer-column">
             <h3>Explorar</h3>
             <ul>
-              <li><a href="#">Nosotros</a></li>
-              <li><a href="#">Formaciones Online</a></li>
-              <li><a href="#">Clases Presenciales</a></li>
+              <li><a href="/nosotros">Nosotros</a></li>
+              <li><a href="/clasesonline">Formaciones Online</a></li>
+              <li><a href="/clases">Clases Presenciales</a></li>
             </ul>
             <div className="footer-social">
           <a href="#"><img src={tiktok} alt="TikTok" /></a>

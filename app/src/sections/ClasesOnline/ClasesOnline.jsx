@@ -69,6 +69,7 @@ const ClasesOnline = () => {
           Accede a nuestras formaciones profesionales en modalidad online y obtén tu certificación desde cualquier lugar.
         </p>
 
+        
         <div className="tabs">
           {formaciones.map((formacion) => (
             <button
@@ -80,8 +81,8 @@ const ClasesOnline = () => {
             </button>
           ))}
         </div>
-
         <div className="clases-list">
+          
           {clasesOnline[formacionSeleccionada] && clasesOnline[formacionSeleccionada].length > 0 ? (
             clasesOnline[formacionSeleccionada].map((clase) => (
               <div key={clase.id} className="clase-card">
@@ -104,7 +105,14 @@ const ClasesOnline = () => {
                   ))}
                 </ul>
 
-                <button className="info2-button">
+                <button 
+                  className="info2-button"
+                  onClick={() => {
+                    const mensaje = `Hola, estoy interesado/a en la clase de ${clase.nombre}. ¿Podrían brindarme más información?`;
+                    const url = `https://wa.me/5493513468819?text=${encodeURIComponent(mensaje)}`;
+                    window.open(url, "_blank");
+                  }}
+                >
                   <img src={wpWhite} alt="WhatsApp" className="whatsapp-icon" /> Más Información
                 </button>
               </div>
