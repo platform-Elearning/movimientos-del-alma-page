@@ -23,8 +23,8 @@ import instructoradoFlexibilidad from "../../assets/pdf/instructorado-Flexibilid
 import jazz from "../../assets/pdf/jazz.pdf";
 import ritmosCaribenos from "../../assets/pdf/ritmos-caribeños-nueva modalidad.pdf";
 import pilatesPDF from "../../assets/pdf/Instructorado-Pilates.pdf";
-import user from "../../assets/user.png"; // Importación del ícono de usuario
-import iconoDetalle from "../../assets/user.png"; // Importación del ícono de detalle
+import user from "../../assets/User.png"; // Importación del ícono de usuario
+import iconoDetalle from "../../assets/User.png"; // Importación del ícono de detalle
 
 const formaciones = [
   { id: "profesorado", name: "Profesorado" },
