@@ -23,20 +23,8 @@ import instructoradoFlexibilidad from "../../assets/pdf/instructorado-Flexibilid
 import jazz from "../../assets/pdf/jazz.pdf";
 import ritmosCaribenos from "../../assets/pdf/ritmos-caribeños-nueva modalidad.pdf";
 import pilatesPDF from "../../assets/pdf/Instructorado-Pilates.pdf";
-
-import user from "../../assets/user.png";
-import reloj from "../../assets/reloj.png";
-import book from "../../assets/libro.png";
-import claseGrabada from "../../assets/claseGrabada.png";
-
-// Mapeo de íconos para los detalles
-const iconosDetalles = {
-  "Contenido teórico y práctico.": book,
-  "Clases grabadas y en vivo.": claseGrabada,
-  "Clases grabadas.": claseGrabada,
-  "Pedagogía y práctica docente.": pedagogiaIcon, // Verifica si `pedagogiaIcon` está importado correctamente
-  "Clases online.": enVivoIcon, // Verifica si `enVivoIcon` está importado correctamente
-};
+import user from "../../assets/user.png"; // Importación del ícono de usuario
+import iconoDetalle from "../../assets/user.png"; // Importación del ícono de detalle
 
 const formaciones = [
   { id: "profesorado", name: "Profesorado" },
@@ -216,7 +204,7 @@ const ClasesOnline = () => {
                   {clase.detalles?.map((detalle, idx) => (
                     <li key={idx} className="detalle-item">
                       <img
-                        src={iconosDetalles[detalle]}
+                        src={iconoDetalle}
                         alt="Icono detalle"
                         className="detalle-icon"
                       />
