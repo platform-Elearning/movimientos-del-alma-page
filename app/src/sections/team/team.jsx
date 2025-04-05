@@ -20,7 +20,7 @@ const Team = () => {
           <img src={jime} alt="Jimena De La Fuente" className="profile-image" />
           <p className="name">Jimena De La Fuente</p>
           <p className="role">Directora de la Casa Central</p>
-          <p>"Un gran maestro de danza no solo quiere transmitirnos, sino que despierta a nuestro hijo a bailar el espíritu."</p>
+          <p>"Un gran maestro de danza no solo enseña movimientos, sino que despierta almas y hace bailar el espíritu."</p>
         </div>
         <div className="profile">
           <img src={lola} alt="Lola Abrego" className="profile-image" />
