@@ -121,8 +121,123 @@ const clases = {
       ],
     }
   ],
-  "calera": [],
-  "talar": [],
+ "calera": [
+    {
+      id: 1,
+      nombre: "Clásico",
+      imagen: Clasico,
+      nivel: "Infantil.",
+      horarios: [
+        "Lun. 18:00hs a 19:00hs - 20:00hs a 21:00hs.",
+        "Mar. 18:00hs a 19:00hs - 20:00hs a 21:00hs.",
+      ],
+    },
+    {
+      id: 2,
+      nombre: "Jazz",
+      imagen: Jazz,
+      nivel: "Infantil y Teens.",
+      horarios: [
+        "Lun. 19:00hs a 20:00hs.",
+        "Mar. 17:30hs a 19:00hs - 19:00hs a 20:30hs.",
+        "Mie. 19:00hs a 20:00hs.",
+        "Jue. 17:30hs a 19:00hs - 19:00hs a 20:30hs.",
+      ],
+    },
+    {
+      id: 3,
+      nombre: "Urbano",
+      imagen: HipHop,
+      nivel: "Juvenil y Adultos.",
+      horarios: [
+        "Lun. 19:00hs a 20:00hs - 20:00hs a 21:00hs.",
+      ],
+    },
+    {
+      id: 4,
+      nombre: "Folklore",
+      imagen: DanceMoms,
+      nivel: "Juvenil y Adultos.",
+      horarios: [
+        "Lun. 21:00hs a 22:00hs.",
+        "Mie. 21:00hs a 22:00hs.",
+      ],
+    },
+    {
+      id: 5,
+      nombre: "Yoga",
+      imagen: Yoga,
+      nivel: "Juvenil y Adultos.",
+      horarios: [
+        "Mar. 08:00hs a 09:30hs - 20:30hs a 22:00hs.",
+        "Jue. 08:00hs a 09:30hs - 20:30hs a 22:00hs.",
+      ],
+    },
+    {
+      id: 6,
+      nombre: "Iniciación a la Danza",
+      imagen: Iniciacion,
+      nivel: "Infantil, Teens, Juvenil y Adultos.",
+      horarios: [
+        "Mie. 17:00hs a 18:00hs.",
+        "Vie. 18:00hs a 19:00hs.",
+      ],
+    },
+  ],
+  "talar": [
+    {
+      id: 1,
+      nombre: "Clásico",
+      imagen: Clasico,
+      nivel: "Infantil y Teens.",
+      horarios: [
+        "Mie. 17:00hs a 18:00hs.",
+        "Vie. 17:00hs a 18:00hs - 20:00hs a 21:30hs.",
+      ],
+    },
+    {
+      id: 2,
+      nombre: "Jazz",
+      imagen: Jazz,
+      nivel: "Infantil, Teens y Adultos.",
+      horarios: [
+        "Lun. 18:00hs a 19:00hs.",
+        "Mar. 15:00hs a 16:00hs - 19:00hs a 20:00hs.",
+        "Mie. 18:00hs a 19:00hs - 19:00hs a 20:00hs - 20:00hs a 21:00hs.",
+        "Jue. 15:00hs a 16:00hs - 19:00hs a 20:00hs.",
+      ],
+    },
+    {
+      id: 3,
+      nombre: "Urbano",
+      imagen: HipHop,
+      nivel: "Juvenil y Adultos.",
+      horarios: [
+        "Lun. 19:30hs a 21:30hs.",
+      ],
+    },
+    {
+      id: 4,
+      nombre: "Yoga",
+      imagen: Yoga,
+      nivel: "Juvenil y Adultos.",
+      horarios: [
+        "Lun. 09:00hs a 10:30hs - 15:00hs a 16:30hs.",
+        "Mie. 15:00hs a 16:00hs.",
+        "Vie. 09:00hs a 10:30hs.",
+      ],
+    },
+    {
+      id: 5,
+      nombre: "Iniciación a la Danza",
+      imagen: Iniciacion,
+      nivel: "Juvenil y Adultos.",
+      horarios: [
+        "Mar. 18:00hs a 19:00hs.",
+        "Jue. 18:00hs a 19:00hs.",
+      ],
+    },
+  ],
 };
 
 const Clases = () => {

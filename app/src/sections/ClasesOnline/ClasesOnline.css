@@ -18,7 +18,7 @@
 }
 
 .tab {
-  background-color:#ffffff;
+  background-color: #ffffff;
   color: rgb(0, 0, 0);
   border: none;
   padding: 10px 20px;
@@ -59,7 +59,6 @@
   border-radius: 10px;
 }
 
-/* Botón de información con WhatsApp */
 .info2-button {
   display: flex;
   align-items: center;
@@ -78,33 +77,22 @@
   background-color: #128c7e;
 }
 
-.whatsapp-icon {
-  width: 20px;
-  height: 20px;
-}
-
 .nivel-container {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.horarios-container {
+.detalle-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
-.horarios-container h4 {
-  margin: 0;
-}
-
-.horarios-list {
-  display: block;
-  list-style: none;
-  padding: 0;
-  margin-top: 5px;
+.detalle-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
 }
 
 .icon {
@@ -113,7 +101,6 @@
   margin-right: 8px;
 }
 
-/* Media queries */
 @media (max-width: 768px) {
   .clases-list {
     grid-template-columns: 1fr;
