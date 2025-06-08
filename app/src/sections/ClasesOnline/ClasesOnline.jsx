@@ -77,7 +77,7 @@ const clasesOnline = {
       id: 1,
       nombre: "Matriz Afro",
       imagen: matriz,
-      nivel: "10 meses de duración.",
+      nivel: "4 meses de duración.",
       detalles: [
         "Contenido teórico y práctico.",
         "Clases grabadas y en vivo.",
@@ -88,7 +88,7 @@ const clasesOnline = {
       id: 2,
       nombre: "Ritmos Latinos",
       imagen: ritmosLatinos,
-      nivel: "7 meses de duración.",
+      nivel: "3 meses de duración.",
       detalles: [
         "Contenido teórico y práctico.",
         "Clases grabadas y en vivo.",
@@ -123,7 +123,7 @@ const clasesOnline = {
       id: 1,
       nombre: "Danza Clásica",
       imagen: Clasico,
-      nivel: "6 meses de duración.",
+      nivel: "Acceso completo y flexible.",
       detalles: [
         "Contenido teórico y práctico.",
         "Clases grabadas y en vivo.",
@@ -135,7 +135,7 @@ const clasesOnline = {
       id: 2,
       nombre: "Composición Coreográfica",
       imagen: composicion,
-      nivel: "2 meses de duración.",
+      nivel: "Acceso completo y flexible.",
       detalles: [
         "Contenido teórico y práctico.",
         "Clases grabadas.",
