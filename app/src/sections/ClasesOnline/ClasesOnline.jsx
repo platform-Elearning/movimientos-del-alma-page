@@ -23,8 +23,12 @@ import instructoradoFlexibilidad from "../../assets/pdf/instructorado-Flexibilid
 import jazz from "../../assets/pdf/jazz.pdf";
 import ritmosCaribenos from "../../assets/pdf/ritmos-caribeños-nueva modalidad.pdf";
 import pilatesPDF from "../../assets/pdf/Instructorado-Pilates.pdf";
-import user from "../../assets/User.png"; // Importación del ícono de usuario
-import iconoDetalle from "../../assets/User.png"; // Importación del ícono de detalle
+
+// ICONOS
+import iconoPersona from "../../assets/User.png"; // Importación del ícono de persona
+import iconoReloj from "../../assets/reloj.png"; // Importación del ícono de reloj
+import iconoLibro from "../../assets/libro.png"; // Importación del ícono de libro
+import iconoClaseTv from "../../assets/claseGrabada.png"; // Importación del ícono de clase grabada
 
 const formaciones = [
   { id: "profesorado", name: "Profesorado" },
@@ -196,21 +200,31 @@ const ClasesOnline = () => {
                 <h3>{clase.nombre}</h3>
 
                 <div className="nivel-container">
-                  <img src={user} alt="Icono Usuario" className="icon" />
+                  <img src={iconoReloj} alt="Icono Reloj" className="icon" />
                   <p>{clase.nivel}</p>
                 </div>
 
                 <ul className="detalles-list">
-                  {clase.detalles?.map((detalle, idx) => (
-                    <li key={idx} className="detalle-item">
+                  {clase.detalles?.map((detalle, idx) => {
+                    
+                    // condicional para asignar el icono segun la posicion
+                    let icono;
+                    if (idx === 0) icono = iconoLibro
+                    else if (idx === 1) icono = iconoClaseTv
+                    else if (idx === 2) icono = iconoPersona
+                    else icono = iconoPersona; // por defecto
+
+                    return(
+                      <li key={idx} className="detalle-item">
                       <img
-                        src={iconoDetalle}
+                        src={icono}
                         alt="Icono detalle"
                         className="detalle-icon"
                       />
                       {detalle}
-                    </li>
-                  ))}
+                      </li>
+                    )
+                    })}
                 </ul>
 
                 <div className="buttons-container">
