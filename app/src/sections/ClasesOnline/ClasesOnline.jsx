@@ -43,10 +43,10 @@ const clasesOnline = {
       id: 1,
       nombre: "Danza Jazz",
       imagen: Jazz,
-      nivel: "12 meses de duración.",
+      nivel: "Acceso completo y flexible.",
       detalles: [
         "Contenido teórico y práctico.",
-        "Clases grabadas y en vivo.",
+        "Clases grabadas.",
         "Pedagogía y práctica docente.",
       ],
       pdf: jazz,
@@ -55,10 +55,10 @@ const clasesOnline = {
       id: 2,
       nombre: "Danza Clásica",
       imagen: Clasico,
-      nivel: "12 meses de duración.",
+      nivel: "Acceso completo y flexible.",
       detalles: [
         "Contenido teórico y práctico.",
-        "Clases grabadas y en vivo.",
+        "Clases grabadas.",
         "Pedagogía y práctica docente.",
       ],
       pdf: clasicaNuevaModalidad,
@@ -67,10 +67,10 @@ const clasesOnline = {
       id: 3,
       nombre: "Danza Contemporánea",
       imagen: danzaContemporanea,
-      nivel: "12 meses de duración.",
+      nivel: "Acceso completo y flexible.",
       detalles: [
         "Contenido teórico y práctico.",
-        "Clases grabadas y en vivo.",
+        "Clases grabadas.",
         "Pedagogía y práctica docente.",
       ],
       pdf: contemporanea,
@@ -125,12 +125,12 @@ const clasesOnline = {
   "diplomatura": [
     {
       id: 1,
-      nombre: "Danza Clásica",
+      nombre: "Técnica de la Danza Clásica",
       imagen: Clasico,
       nivel: "Acceso completo y flexible.",
       detalles: [
         "Contenido teórico y práctico.",
-        "Clases grabadas y en vivo.",
+        "Clases grabadas.",
         "Pedagogía y práctica docente.",
       ],
       pdf: diploClasica,
