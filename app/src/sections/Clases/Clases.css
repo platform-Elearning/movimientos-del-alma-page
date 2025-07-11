@@ -123,6 +123,51 @@
   margin-bottom: 5px;
 }
 
+.class-schedules {
+  background-color:  #222;
+  padding: 5px 5px;
+  border-radius: 12px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.class-schedules h1 {
+  color: white;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.horarios {
+  background-color: #222;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* espacio entre imágenes cuando hay mas de una */
+  width: fit-content;
+  margin: auto;
+}
+
+.datos-sede {
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+}
+
+.class-schedules p {
+  color: white;
+  text-align: left;
+}
+
+.datos-sede-seleccionada {
+  font-weight: bold;
+}
+
+.horario-img {
+  color: white;
+  max-width: 100%;
+  height: auto;
+}
+
 
 /* Media queries para responsividad */
 @media (max-width: 768px) {

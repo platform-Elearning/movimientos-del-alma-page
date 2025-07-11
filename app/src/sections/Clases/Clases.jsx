@@ -4,18 +4,12 @@ import Footer from "../../sections/footer/footer";
 import { Link } from "react-router-dom";
 import "./Clases.css";
 
-import Clasico from "../../assets/ClasesPresenciales/Clasico.png";
-import Jazz from "../../assets/ClasesPresenciales/JazzClase.png";
-import HipHop from "../../assets/ClasesPresenciales/ClaseHipHop.png";
-import DanceMoms from "../../assets/ClasesPresenciales/DanceMoms.png";
-import Yoga from "../../assets/ClasesPresenciales/Yoga.png";
-import Iniciacion from "../../assets/ClasesPresenciales/IniciacionDanza.png";
-import Acrobacia from "../../assets/ClasesPresenciales/Acrobacia.png";
-import BioDanza from "../../assets/ClasesPresenciales/BioDanza.png";
-import DanzaTerapia from "../../assets/ClasesPresenciales/DanzaTerapia.png";
-import timeIcon from "../../assets/timeIcon.png";
-import user from "../../assets/User.png";
-import wpWhite from "../../assets/wpWhite.png";
+/* HORARIOS EN IMAGEN */
+import horariosRio1 from "../../assets/Horarios-RioCeballos1.png"
+import horariosRio2 from "../../assets/Horarios-RioCeballos2.png"
+import horariosCalera from "../../assets/Horarios-LaCalera.png"
+import horariosTalar from "../../assets/Horarios-ElTalar.png"
+
 
 const sedes = [
   { id: "rio-ceballos", name: "Casa Central Río Ceballos" },
@@ -23,225 +17,20 @@ const sedes = [
   { id: "talar", name: "Sede El Talar" },
 ];
 
-const clases = {
-  "rio-ceballos": [
-    {
-      id: 1,
-      nombre: "Clásico",
-      imagen: Clasico,
-      nivel: "Infantil, Teens y Avanzado.",
-      horarios: [
-        "Mar. 18:00hs a 19:30hs - 19:30hs a 21:00hs.",
-        "Jue. 18:00hs a 19:30hs - 19:30hs a 21:00hs.",
-      ],
-    },
-    {
-      id: 2,
-      nombre: "Jazz",
-      imagen: Jazz,
-      nivel: "Infantil, Teens y Juvenil.",
-      horarios: [
-        "Lun. 17:00hs - 19:00hs - 19:00hs a 21:00hs.",
-        "Mar. 19:30hs a 21:00hs.",
-        "Jue. 19:30hs a 21:00hs.",
-      ],
-    },
-    {
-      id: 3,
-      nombre: "Hip Hop",
-      imagen: HipHop,
-      nivel: "Teens y Juvenil.",
-      horarios: [
-        "Vie. 19:00hs a 21:00hs."
-      ],
-    },
-    {
-      id: 4,
-      nombre: "Dance Moms",
-      imagen: DanceMoms,
-      nivel: "Juvenil y Adultos.",
-      horarios: [
-        "Mar. 18:00hs a 19:00hs.",
-        "Jue. 18:00hs a 19:00hs."
-      ],
-    },
-    {
-      id: 5,
-      nombre: "Yoga",
-      imagen: Yoga,
-      nivel: "Juvenil y Adultos.",
-      horarios: [
-        "Lun. 09:00hs a 10:30hs.",
-        "Mar. 14:30hs a 16:00hs.",
-        "Mie. 09:30hs a 11:00hs.",
-        "Jue. 09:00hs a 10:30hs - 14:30hs a 16:00hs.",
-        "Vie. 09:30hs a 11:00hs."
-      ],
-    },
-    {
-      id: 6,
-      nombre: "Iniciación a la Danza",
-      imagen: Iniciacion,
-      nivel: "Infantil, Teens, Juvenil y Adultos.",
-      horarios: [
-        "Lun. 18:00hs a 19:00hs.",
-        "Mar. 18:00hs a 19:00hs.",
-        "Mie. 18:00hs a 19:00hs.",
-        "Vie. 18:00hs a 19:00hs."
-      ],
-    },
-    {
-      id: 7,
-      nombre: "Acrobacia",
-      imagen: Acrobacia,
-      nivel: "Infantil y Juvenil.",
-      horarios: [
-        "Mar. 17:00hs a 18:30hs.",
-        "Jue. 17:00hs a 18:30hs."
-      ],
-    },
-    {
-      id: 8,
-      nombre: "Bio Danza",
-      imagen: BioDanza,
-      nivel: "Adultos.",
-      horarios: [
-        "Lun. 19:30hs a 21:00hs.",
-        "Vie. 19:30hs a 21:00hs."
-      ],
-    },
-    {
-      id: 9,
-      nombre: "Danza Terapia",
-      imagen: DanzaTerapia,
-      nivel: "Adultos y Tercera Edad.",
-      horarios: [
-        "Mie. 10:00hs a 11:30hs.",
-        "Jue. 18:30hs a 20:00hs."
-      ],
-    }
-  ],
- "calera": [
-    {
-      id: 1,
-      nombre: "Clásico",
-      imagen: Clasico,
-      nivel: "Infantil.",
-      horarios: [
-        "Lun. 18:00hs a 19:00hs - 20:00hs a 21:00hs.",
-        "Mar. 18:00hs a 19:00hs - 20:00hs a 21:00hs.",
-      ],
-    },
-    {
-      id: 2,
-      nombre: "Jazz",
-      imagen: Jazz,
-      nivel: "Infantil y Teens.",
-      horarios: [
-        "Lun. 19:00hs a 20:00hs.",
-        "Mar. 17:30hs a 19:00hs - 19:00hs a 20:30hs.",
-        "Mie. 19:00hs a 20:00hs.",
-        "Jue. 17:30hs a 19:00hs - 19:00hs a 20:30hs.",
-      ],
-    },
-    {
-      id: 3,
-      nombre: "Urbano",
-      imagen: HipHop,
-      nivel: "Juvenil y Adultos.",
-      horarios: [
-        "Lun. 19:00hs a 20:00hs - 20:00hs a 21:00hs.",
-      ],
-    },
-    {
-      id: 4,
-      nombre: "Folklore",
-      imagen: DanceMoms,
-      nivel: "Juvenil y Adultos.",
-      horarios: [
-        "Lun. 21:00hs a 22:00hs.",
-        "Mie. 21:00hs a 22:00hs.",
-      ],
-    },
-    {
-      id: 5,
-      nombre: "Yoga",
-      imagen: Yoga,
-      nivel: "Juvenil y Adultos.",
-      horarios: [
-        "Mar. 08:00hs a 09:30hs - 20:30hs a 22:00hs.",
-        "Jue. 08:00hs a 09:30hs - 20:30hs a 22:00hs.",
-      ],
-    },
-    {
-      id: 6,
-      nombre: "Iniciación a la Danza",
-      imagen: Iniciacion,
-      nivel: "Infantil, Teens, Juvenil y Adultos.",
-      horarios: [
-        "Mie. 17:00hs a 18:00hs.",
-        "Vie. 18:00hs a 19:00hs.",
-      ],
-    },
-  ],
-  "talar": [
-    {
-      id: 1,
-      nombre: "Clásico",
-      imagen: Clasico,
-      nivel: "Infantil y Teens.",
-      horarios: [
-        "Mie. 17:00hs a 18:00hs.",
-        "Vie. 17:00hs a 18:00hs - 20:00hs a 21:30hs.",
-      ],
-    },
-    {
-      id: 2,
-      nombre: "Jazz",
-      imagen: Jazz,
-      nivel: "Infantil, Teens y Adultos.",
-      horarios: [
-        "Lun. 18:00hs a 19:00hs.",
-        "Mar. 15:00hs a 16:00hs - 19:00hs a 20:00hs.",
-        "Mie. 18:00hs a 19:00hs - 19:00hs a 20:00hs - 20:00hs a 21:00hs.",
-        "Jue. 15:00hs a 16:00hs - 19:00hs a 20:00hs.",
-      ],
-    },
-    {
-      id: 3,
-      nombre: "Urbano",
-      imagen: HipHop,
-      nivel: "Juvenil y Adultos.",
-      horarios: [
-        "Lun. 19:30hs a 21:30hs.",
-      ],
-    },
-    {
-      id: 4,
-      nombre: "Yoga",
-      imagen: Yoga,
-      nivel: "Juvenil y Adultos.",
-      horarios: [
-        "Lun. 09:00hs a 10:30hs - 15:00hs a 16:30hs.",
-        "Mie. 15:00hs a 16:00hs.",
-        "Vie. 09:00hs a 10:30hs.",
-      ],
-    },
-    {
-      id: 5,
-      nombre: "Iniciación a la Danza",
-      imagen: Iniciacion,
-      nivel: "Juvenil y Adultos.",
-      horarios: [
-        "Mar. 18:00hs a 19:00hs.",
-        "Jue. 18:00hs a 19:00hs.",
-      ],
-    },
-  ],
-};
-
 const Clases = () => {
   const [sedeSeleccionada, setSedeSeleccionada] = useState("rio-ceballos");
+
+  const imagenesHorarios = {
+            "rio-ceballos" : [horariosRio1, horariosRio2],
+            "calera" : [horariosCalera],
+            "talar" : [horariosTalar],
+          }
+  
+  const datosSedes = {
+            "rio-ceballos" : ["Casa Central", "Almirante Brown 72, Río Ceballos", "+54 9 351 3468819"],
+            "calera" : ["Sede La Calera", "Jorge Luis Borges 662, La Calera", "+54 9 3517 664275"],
+            "talar" : ["Sede El Talar", "Las Zinninas 209, El Talar", "+54 9 351 356 9967"],
+          }
 
   return (
     <div className="page-container">
@@ -265,37 +54,25 @@ const Clases = () => {
           ))}
         </div>
         
-        <div className="clases-list">
-          {clases[sedeSeleccionada].map((clase, index) => (
-            <div key={clase.id} className="clase-card">
-              <img src={clase.imagen} alt={clase.nombre} className="clase-img" />
-              <h3>{clase.nombre}</h3>
-              <div className="nivel-container">
-                <img src={user} alt="Icono Usuario" className="icon" />
-                <p>{clase.nivel}</p>
-              </div>
-              <div className="horarios-container">
-                  <img src={timeIcon} alt="Icono Tiempo" className="icon" />
-                  <h4>Horarios:</h4>
-                </div>
-                <ul className="horarios-list">
-                  {clase.horarios.map((horario, idx) => (
-                    <li key={idx}>{horario}</li>
-                  ))}
-                </ul>
-                
-                <button 
-                  className="info2-button"
-                  onClick={() => {
-                    const mensaje = `Hola, estoy interesado/a en la clase de ${clase.nombre}. ¿Podrían brindarme más información?`;
-                    const url = `https://wa.me/5493513468819?text=${encodeURIComponent(mensaje)}`;
-                    window.open(url, "_blank");
-                  }}
-                >
-                  <img src={wpWhite} alt="WhatsApp" className="whatsapp-icon" /> Más Información
-                </button>
-                  </div>
-          ))}
+        <div className="class-schedules">
+
+          <h1>Horarios 2025</h1>
+          <div className="horarios">
+            {imagenesHorarios[sedeSeleccionada].map((imgSrc, index)=> (
+              <img
+              key={index}
+              src={imgSrc} 
+              alt={`Horarios ${sedes.find(s => s.id === sedeSeleccionada).name}`} 
+              className="horario-img"
+              />
+            ))}
+          </div>
+          
+          <div className="datos-sede">
+            <p className="datos-sede-seleccionada">{datosSedes[sedeSeleccionada][0]}</p>
+            <p>{datosSedes[sedeSeleccionada][1]}</p>
+            <p>{datosSedes[sedeSeleccionada][2]}</p>
+          </div>
         </div>
       </div>
       <Footer />
