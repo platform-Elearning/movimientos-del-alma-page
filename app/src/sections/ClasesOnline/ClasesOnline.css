@@ -86,7 +86,16 @@
 .detalle-item {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 18px;
+}
+
+.clase-card ul li.detalle-item {
+  margin-bottom: 18px;
+}
+
+.clase-card ul {
+  margin-bottom: 25px;
+  margin-top: 24px;
 }
 
 .detalle-icon {
