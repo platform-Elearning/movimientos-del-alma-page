@@ -23,14 +23,17 @@ import instructoradoFlexibilidad from "../../assets/pdf/instructorado-Flexibilid
 import jazz from "../../assets/pdf/jazz.pdf";
 import ritmosCaribenos from "../../assets/pdf/ritmos-caribeños-nueva modalidad.pdf";
 import pilatesPDF from "../../assets/pdf/Instructorado-Pilates.pdf";
-import user from "../../assets/User.png"; // Importación del ícono de usuario
-import iconoDetalle from "../../assets/User.png"; // Importación del ícono de detalle
+
+// ICONOS
+import iconoPersona from "../../assets/User.png"; // Importación del ícono de persona
+import iconoReloj from "../../assets/reloj.png"; // Importación del ícono de reloj
+import iconoLibro from "../../assets/libro.png"; // Importación del ícono de libro
+import iconoClaseTv from "../../assets/claseGrabada.png"; // Importación del ícono de clase grabada
 
 const formaciones = [
   { id: "profesorado", name: "Profesorado" },
   { id: "instructorado", name: "Instructorados" },
   { id: "diplomatura", name: "Diplomaturas" },
-  { id: "formacion", name: "Formación" },
 ];
 
 const clasesOnline = {
@@ -39,36 +42,36 @@ const clasesOnline = {
       id: 1,
       nombre: "Danza Jazz",
       imagen: Jazz,
-      nivel: "12 meses de duración.",
-      detalles: [
-        "Contenido teórico y práctico.",
-        "Clases grabadas y en vivo.",
-        "Pedagogía y práctica docente.",
-      ],
+      detalles: {
+        tiempo: "Acceso completo y flexible.",
+        contenido: "Contenido teórico y práctico.",
+        modalidad: "Clases grabadas.",
+        pedagogia: "Pedagogía y práctica docente.",
+      },
       pdf: jazz,
     },
     {
       id: 2,
       nombre: "Danza Clásica",
       imagen: Clasico,
-      nivel: "12 meses de duración.",
-      detalles: [
-        "Contenido teórico y práctico.",
-        "Clases grabadas y en vivo.",
-        "Pedagogía y práctica docente.",
-      ],
+      detalles: {
+        tiempo: "Acceso completo y flexible.",
+        contenido: "Contenido teórico y práctico.",
+        modalidad: "Clases grabadas.",
+        pedagogia: "Pedagogía y práctica docente.",
+      },
       pdf: clasicaNuevaModalidad,
     },
     {
       id: 3,
       nombre: "Danza Contemporánea",
       imagen: danzaContemporanea,
-      nivel: "12 meses de duración.",
-      detalles: [
-        "Contenido teórico y práctico.",
-        "Clases grabadas y en vivo.",
-        "Pedagogía y práctica docente.",
-      ],
+      detalles: {
+        tiempo: "Acceso completo y flexible.",
+        contenido: "Contenido teórico y práctico.",
+        modalidad: "Clases grabadas.",
+        pedagogia: "Pedagogía y práctica docente.",
+      },
       pdf: contemporanea,
     },
   ],
@@ -77,84 +80,71 @@ const clasesOnline = {
       id: 1,
       nombre: "Matriz Afro",
       imagen: matriz,
-      nivel: "10 meses de duración.",
-      detalles: [
-        "Contenido teórico y práctico.",
-        "Clases grabadas y en vivo.",
-      ],
+      detalles: {
+        tiempo: "Acceso completo y flexible.",
+        contenido: "Contenido teórico y práctico.",
+        modalidad: "Clases grabadas y en vivo.",
+      },
       pdf: danzaMatrizAfro,
     },
     {
       id: 2,
       nombre: "Ritmos Latinos",
       imagen: ritmosLatinos,
-      nivel: "7 meses de duración.",
-      detalles: [
-        "Contenido teórico y práctico.",
-        "Clases grabadas y en vivo.",
-      ],
+      detalles: {
+        tiempo: "Acceso completo y flexible.",
+        contenido: "Contenido teórico y práctico.",
+        modalidad: "Clases grabadas y en vivo.",
+      },
       pdf: ritmosCaribenos,
     },
     {
       id: 3,
       nombre: "Pilates",
       imagen: pilates,
-      nivel: "12 meses de duración.",
-      detalles: [
-        "Contenido teórico y práctico.",
-        "Clases grabadas y en vivo.",
-      ],
+      detalles: {
+        tiempo: "12 meses de duración.",
+        contenido: "Contenido teórico y práctico.",
+        modalidad: "Clases grabadas y en vivo.",
+      },
       pdf: pilatesPDF,
     },
     {
       id: 4,
-      nombre: "Flexibilidad & ADM",
+      nombre: "Amplitud de Movimiento",
       imagen: flexibilidad,
-      nivel: "4 módulos.",
-      detalles: [
-        "Contenido teórico y práctico.",
-        "Clases online.",
-      ],
+      detalles: {
+        tiempo: "4 meses.",
+        contenido: "Contenido teórico y práctico.",
+        modalidad: "Clases online.",
+      },
       pdf: instructoradoFlexibilidad,
     },
   ],
   "diplomatura": [
     {
       id: 1,
-      nombre: "Danza Clásica",
+      nombre: "Técnica de la Danza Clásica",
       imagen: Clasico,
-      nivel: "6 meses de duración.",
-      detalles: [
-        "Contenido teórico y práctico.",
-        "Clases grabadas y en vivo.",
-        "Pedagogía y práctica docente.",
-      ],
+      detalles: {
+        tiempo: "Acceso completo y flexible.",
+        contenido: "Contenido teórico y práctico.",
+        modalidad: "Clases grabadas.",
+        pedagogia: "Pedagogía y práctica docente.",
+      },
       pdf: diploClasica,
     },
     {
       id: 2,
       nombre: "Composición Coreográfica",
       imagen: composicion,
-      nivel: "2 meses de duración.",
-      detalles: [
-        "Contenido teórico y práctico.",
-        "Clases grabadas.",
-        "Pedagogía y práctica docente.",
-      ],
+      detalles: {
+        tiempo: "Acceso completo y flexible.",
+        contenido: "Contenido teórico y práctico.",
+        modalidad: "Clases grabadas.",
+        pedagogia: "Pedagogía y práctica docente.",
+      },
       pdf: composicionPDF,
-    },
-  ],
-  "formacion": [
-    {
-      id: 1,
-      nombre: "Danza Terapia Transpersonal",
-      imagen: transpersonal,
-      nivel: "12 meses de duración.",
-      detalles: [
-        "Contenido teórico y práctico.",
-        "Clases grabadas y en vivo.",
-      ],
-      pdf: formacionDanzaTranspersonal,
     },
   ],
 };
@@ -194,25 +184,28 @@ const ClasesOnline = () => {
               <div key={clase.id} className="clase-card">
                 <img src={clase.imagen} alt={clase.nombre} className="clase-img" />
                 <h3>{clase.nombre}</h3>
+                  <ul className="detalles-list">
+                    {Object.entries(clase.detalles).map(([clave, valor], idx) => {
+                      // condicional para asignar el icono según la clave
+                      let icono;
+                      if (clave === "tiempo") icono = iconoReloj;
+                      else if (clave === "contenido") icono = iconoLibro;
+                      else if (clave === "modalidad") icono = iconoClaseTv;
+                      else if (clave === "pedagogia") icono = iconoPersona;
+                      else icono = iconoPersona; // Por defecto
 
-                <div className="nivel-container">
-                  <img src={user} alt="Icono Usuario" className="icon" />
-                  <p>{clase.nivel}</p>
-                </div>
-
-                <ul className="detalles-list">
-                  {clase.detalles?.map((detalle, idx) => (
-                    <li key={idx} className="detalle-item">
-                      <img
-                        src={iconoDetalle}
-                        alt="Icono detalle"
-                        className="detalle-icon"
-                      />
-                      {detalle}
-                    </li>
-                  ))}
-                </ul>
-
+                      return (
+                        <li key={idx} className="detalle-item">
+                          <img
+                            src={icono}
+                            alt={`Icono ${clave}`}
+                            className="detalle-icon"
+                          />
+                          {valor}
+                        </li>
+                      );
+                    })}
+                  </ul>
                 <div className="buttons-container">
                   <a
                     href={clase.pdf}
