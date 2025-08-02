@@ -19,14 +19,8 @@ const Team = () => {
         <div className="profile">
           <img src={jime} alt="Jimena De La Fuente" className="profile-image" />
           <p className="name">Jimena De La Fuente</p>
-          <p className="role">Directora de la Casa Central</p>
+          <p className="role">Directora de la Casa Central <br/> y Sucursal el Talar</p>
           <p>"Un gran maestro de danza no solo enseña movimientos, sino que despierta almas y hace bailar el espíritu."</p>
-        </div>
-        <div className="profile">
-          <img src={lola} alt="Lola Abrego" className="profile-image" />
-          <p className="name">Lola Abrego</p>
-          <p className="role">Directora de Sucursal El Talar</p>
-          <p>"La danza es la emoción que sale del alma, un instante único y profundo. Ayuda a crecer a nuestros niños, les da nuevas herramientas, nuevas bases, y les permite encontrarse y expresarse sin restricciones ni temores."</p>
         </div>
       </div>
     </div>

@@ -6,7 +6,6 @@ import "./Clases.css";
 
 /* HORARIOS EN IMAGEN */
 import horariosRio1 from "../../assets/Horarios-RioCeballos1.png"
-import horariosRio2 from "../../assets/Horarios-RioCeballos2.png"
 import horariosCalera from "../../assets/Horarios-LaCalera.png"
 import horariosTalar from "../../assets/Horarios-ElTalar.png"
 
@@ -21,7 +20,7 @@ const Clases = () => {
   const [sedeSeleccionada, setSedeSeleccionada] = useState("rio-ceballos");
 
   const imagenesHorarios = {
-            "rio-ceballos" : [horariosRio1, horariosRio2],
+            "rio-ceballos" : [horariosRio1],
             "calera" : [horariosCalera],
             "talar" : [horariosTalar],
           }

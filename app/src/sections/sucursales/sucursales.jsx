@@ -37,9 +37,9 @@ const sucursalesData = [
   {
     id: 3,
     nombre: "Sucursal El Talar",
-    encargado: "Lola Abrego",
+    encargado: "Martina Muñoz",
     direccion: "Las Zinnias 209, El Talar",
-    telefono: "+54 9 3543 68808",
+    telefono: "+54 9 351 356 9967",
     imagen: Talar,
     mapa: "https://www.google.com.ar/maps/place/Las+Zinnias+209,+Mendiolaza,+C%C3%B3rdoba/@-31.2546288,-64.269602,17z/data=!3m1!4b1!4m5!3m4!1s0x943283360c77df89:0x1f7b566e7ca08240!8m2!3d-31.2546334!4d-64.2670271?hl=es&entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D",
     imagenesPopup: [
