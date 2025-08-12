@@ -103,7 +103,6 @@
   margin-top: 5px;
 }
 
-
 .icon {
   width: 20px;
   height: 20px;
@@ -145,7 +144,7 @@
   flex-direction: column;
   gap: 20px; /* espacio entre imágenes cuando hay mas de una */
   width: fit-content;
-  margin: auto;
+  margin: 35px;
 }
 
 .datos-sede {
@@ -166,6 +165,7 @@
   color: white;
   max-width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
 
