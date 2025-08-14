@@ -14,7 +14,7 @@ const sucursalesData = [
     nombre: "Casa Central",
     encargado: "Jimena De La Fuente",
     direccion: "Almirante Brown 72, Río Ceballos",
-    telefono: "+54 9 351 3668819",
+    telefono: "+54 9 351 366 8819",
     imagen: Central,
     mapa: "https://www.google.com.ar/maps/place/Almte.+Brown+72,+X5111BKB+R%C3%ADo+Ceballos,+C%C3%B3rdoba/@-31.1673959,-64.3251689,17z/data=!3m1!4b1!4m6!3m5!1s0x943281e8ff707b4b:0xbb4ca20ca10ce5ef!8m2!3d-31.1674005!4d-64.322594!16s%2Fg%2F11svhq3xvw?hl=es&entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D",
     imagenesPopup: [ 
@@ -27,7 +27,7 @@ const sucursalesData = [
     nombre: "Sucursal La Calera",
     encargado: "Alejandra Gherardi",
     direccion: "Jorge Luis Borges 662, La Calera",
-    telefono: "+54 9 3517 662475",
+    telefono: "+54 9 351 766 2475",
     imagen: Calera,
     mapa: "https://www.google.com.ar/maps/place/Jorge+Luis+Borges+662,+X5151+La+Calera,+C%C3%B3rdoba/@-31.3633711,-64.3459262,17z/data=!3m1!4b1!4m6!3m5!1s0x942d61f8d24f1167:0xf0f45e7d55c2a3e!8m2!3d-31.3633757!4d-64.3433513!16s%2Fg%2F11vcbmltxy?hl=es&entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D",
     imagenesPopup: [
@@ -39,7 +39,7 @@ const sucursalesData = [
     nombre: "Sucursal El Talar",
     encargado: "Martina Muñoz",
     direccion: "Las Zinnias 209, El Talar",
-    telefono: "+54 9 351 356 9967",
+    telefono: "+54 9 351 804 3087",
     imagen: Talar,
     mapa: "https://www.google.com.ar/maps/place/Las+Zinnias+209,+Mendiolaza,+C%C3%B3rdoba/@-31.2546288,-64.269602,17z/data=!3m1!4b1!4m5!3m4!1s0x943283360c77df89:0x1f7b566e7ca08240!8m2!3d-31.2546334!4d-64.2670271?hl=es&entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D",
     imagenesPopup: [
