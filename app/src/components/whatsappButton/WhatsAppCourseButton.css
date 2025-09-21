@@ -1,0 +1,61 @@
+.whatsapp-course-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.whatsapp-course-button:hover {
+  background-color: #128C7E;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  text-decoration: none;
+  color: white;
+}
+
+.whatsapp-course-button:active {
+  transform: translateY(0);
+}
+
+.whatsapp-course-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .whatsapp-course-button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  
+  .whatsapp-course-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-course-button {
+    font-size: 11px;
+    padding: 6px 10px;
+    gap: 6px;
+  }
+  
+  .whatsapp-course-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
