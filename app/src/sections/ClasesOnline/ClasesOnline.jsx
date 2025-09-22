@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../sections/footer/footer";
 import { Link } from "react-router-dom";
+import WhatsAppCourseButton from "../../components/whatsappButton/WhatsAppCourseButton";
 import "./ClasesOnline.css";
 
 import Clasico from "../../assets/ClasesPresenciales/Clasico.png";
@@ -214,6 +215,12 @@ const ClasesOnline = () => {
                   >
                     Descargar Información
                   </a>
+                  <WhatsAppCourseButton 
+                    courseName={clase.nombre} 
+                    courseType={formacionSeleccionada === "profesorado" ? "profesorado" : 
+                               formacionSeleccionada === "instructorado" ? "instructorado" : 
+                               "diplomatura"} 
+                  />
                 </div>
               </div>
             ))

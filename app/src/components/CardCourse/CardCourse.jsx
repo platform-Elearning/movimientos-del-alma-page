@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './CardCourse.css';
 import Button from '../button/Button';
 import ButtonVacio from '../buttonVacio/ButtonVacio';
+import WhatsAppCourseButton from '../whatsappButton/WhatsAppCourseButton';
 import liveImage from '../../assets/live.png';
 import book from '../../assets/book.png';
 import person from '../../assets/person.png';
@@ -17,6 +18,7 @@ const CardCourse = ({
   recordedClasses,
   liveClasses,
   personalizedAdvice,
+  courseType = "formación", // Nuevo prop para el tipo de curso
 }) => {
   // Estado para controlar si la tarjeta está volteada
   const [isFlipped, setIsFlipped] = useState(false);
@@ -61,8 +63,11 @@ const CardCourse = ({
               <img src={person} alt="Personalized Advice" className="card-course-icon" /> {personalizedAdvice}
             </li>
           </ul>
-          <Button text="Inscribirme" />
-          <ButtonVacio text="Descargar info" />
+          <div className="card-course-buttons">
+            <Button text="Inscribirme" />
+            <ButtonVacio text="Descargar info" />
+            <WhatsAppCourseButton courseName={title} courseType={courseType} />
+          </div>
         </div>
       </div>
     </div>
