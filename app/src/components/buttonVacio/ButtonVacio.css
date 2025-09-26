@@ -1,20 +1,29 @@
 .button-vacio {
-    border: 1px solid #000000; /* Color dorado */
-    background-color: #ffffff;
-    color: #000000; /* Color dorado */
-    padding: 12px 36px; /* Ajuste de tamaño según imagen */
-    border-radius: 1rempx; /* Bordes redondeados */
-    font-family: 'Arial', sans-serif; /* Fuente básica */
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .button-vacio:hover {
-    background-image: linear-gradient(to right, #83711B, #FFBB80, #83711B);
-    color: white;
-    border: solid 1px black;
-  }
+  border: 2px solid #c08c44;
+  background-color: transparent;
+  color: #c08c44;
+  padding: 12px 36px;
+  border-radius: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.button-vacio:hover {
+  background-color: #c08c44;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-vacio-link {
+  text-decoration: none;
+}
   

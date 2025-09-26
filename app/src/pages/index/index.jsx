@@ -9,6 +9,7 @@ import DanceBanner from "../../sections/DanceBanner/DanceBanner";
 import Footer from "../../sections/footer/footer";
 import Sucursales from "../../sections/sucursales/sucursales";
 import Faqs from "../../sections/faqs/faqs";
+import InfoJime from "../../sections/infoJime/infoJime";
 import "./index.css";
 
 const Index = () => {

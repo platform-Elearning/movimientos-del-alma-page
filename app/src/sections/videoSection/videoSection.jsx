@@ -18,7 +18,7 @@ const VideoSection = () => {
           allowFullScreen
         ></iframe>
       </div>
-      <ButtonVacio text="Descubre sus experiencias" />
+      <ButtonVacio text="Descubre sus experiencias" to="/info-jime" />
     </div>
   );
 };

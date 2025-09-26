@@ -5,10 +5,14 @@ import Register from "../pages/register/register";
 import Nosotros from "../sections/Nosotros/Nosotros";
 import Clases from "../sections/Clases/Clases";
 import ClasesOnline from "../sections/ClasesOnline/ClasesOnline";
+import InfoJimePage from "../pages/infoJime/InfoJimePage";
 import WhatsAppButton from "../components/whatsappButton/whatsAppButton"; // Cambia el nombre a mayúscula
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+
 const AppRouter = () => {
     return (
         <>
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/login" element={<Login />} />
@@ -16,6 +20,7 @@ const AppRouter = () => {
                 <Route path="/nosotros" element={<Nosotros />} />
                 <Route path="/clases" element={<Clases />} />
                 <Route path="/clasesOnline" element={<ClasesOnline />} />
+                <Route path="/info-jime" element={<InfoJimePage />} />
 
             </Routes>
             
