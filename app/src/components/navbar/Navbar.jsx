@@ -1,18 +1,35 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Importa Link de react-router-dom
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
-import Button from "../../components/button/Button"; // Asegúrate de que Button esté correctamente importado
+import Button from "../../components/button/Button";
 import logo from "../../assets/logo2.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         <div className="navbar-logo">
           <Link to="/">
@@ -20,20 +37,23 @@ const Navbar = () => {
           </Link>
         </div>
         <button className="menu-toggle" onClick={toggleMenu}>
-          ☰
+          {isMenuOpen ? "✕" : "☰"}
         </button>
         <ul className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
           <li>
-            <Link to="/clases">Clases <br />presenciales</Link> {/* Enlace a la página de "Clases" */}
+            <Link to="/clases" onClick={() => setIsMenuOpen(false)}>Clases presenciales</Link>
           </li>
           <li>
-            <Link to="/clasesOnline">Formaciones <br />online</Link> {/* Enlace a la página de "Clases Online" */}
+            <Link to="/clasesOnline" onClick={() => setIsMenuOpen(false)}>Formaciones online</Link>
           </li>
           <li>
-            <Link to="/nosotros">Nosotros</Link> {/* Enlace a la página de "Nosotros" */}
+            <Link to="/info-jime" onClick={() => setIsMenuOpen(false)}>Sobre Jime</Link> 
           </li>
           <li>
-            <a href="https://platform.mda-ifi.com/" target="_blank" rel="noopener noreferrer">
+            <Link to="/nosotros" onClick={() => setIsMenuOpen(false)}>Nosotros</Link>
+          </li>
+          <li>
+            <a href="https://platform.mda-ifi.com/" target="_blank" rel="noopener noreferrer" className="plataforma-button-link">
               <Button text="Plataforma" />
             </a>
           </li>
