@@ -1,9 +1,20 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./whatsAppButton.css";
 
 const WhatsAppButton = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const phoneNumber = "+5493513592115";
+  const location = useLocation();
+
+  // Determinar el número según la ruta
+  const getPhoneNumber = () => {
+    if (location.pathname === "/clasesOnline") {
+      return "+5493513592115"; // Número para cursos online
+    }
+    return "+5493513468819"; // Número por defecto para otras rutas
+  };
+
+  const phoneNumber = getPhoneNumber();
   const message =
     "¡Hola Movimientos del Alma! Estoy interesado/a en sus clases y formaciones. ¿Podrían brindarme más información?";
 
@@ -15,6 +26,7 @@ const WhatsAppButton = () => {
         event_category: "engagement",
         event_label: "whatsapp_floating_button",
         event_value: 1,
+        phone_number: phoneNumber,
       });
     }
     // Abrir WhatsApp después de 100ms
