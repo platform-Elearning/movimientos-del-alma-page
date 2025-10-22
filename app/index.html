@@ -1,17 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
+    <!-- Meta Tags Básicos -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movimientos del Alma</title>
-    <meta property="og:title" content="Movimientos del Alma" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- SEO Meta Tags -->
+    <title>
+      Formaciones Online Profesionales Certificadas | Movimientos del Alma
+    </title>
+    <meta
+      name="description"
+      content="Formaciones profesionales online certificadas: Profesorado, Instructorados y Diplomatura. Aprende desde cualquier lugar con expertos reconocidos. ¡Obtén tu certificación hoy!"
+    />
+    <meta
+      name="keywords"
+      content="formación online, profesorado, diplomatura, instructorado, educación virtual, certificación profesional, cursos online Argentina"
+    />
+    <meta name="author" content="Movimientos del Alma" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Spanish" />
+    <meta name="revisit-after" content="7 days" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mda-ifi.com/clasesOnline" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="../app/src/assets/logo.png" type="image/x-icon" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- Open Graph (Redes Sociales) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Formaciones Online Profesionales Certificadas | Movimientos del Alma"
+    />
     <meta
       property="og:description"
-      content="Accede a nuestras formaciones profesionales en modalidad online y obtén tu certificación desde cualquier lugar."
+      content="Accede a nuestras formaciones profesionales online: Profesorado, Instructorados y Diplomatura. Certificación reconocida desde cualquier lugar."
     />
-    <meta property="og:image" content="https://mda-ifi.com/clasesOnline" />
-    <meta property="og:url" content="https://mda-ifi.com/" />
+    <meta
+      property="og:image"
+      content="https://mda-ifi.com/assets/JazzClase-DbiIPIaA.png"
+    />
+    <meta property="og:url" content="https://mda-ifi.com/clasesOnline" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Movimientos del Alma" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Formaciones Online Certificadas | Movimientos del Alma"
+    />
+    <meta
+      name="twitter:description"
+      content="Profesorado, Instructorados y Diplomatura online con certificación profesional."
+    />
+    <meta
+      name="twitter:image"
+      content="https://mda-ifi.com/assets/JazzClase-DbiIPIaA.png"
+    />
+
+    <!-- Instagram Meta -->
+    <meta property="instagram:creator" content="@mmda.rioceballos" />
 
     <!-- Facebook -->
     <meta
@@ -19,7 +72,149 @@
       content="aglcn2ne8a9bmxktglahbkzq5djivq"
     />
 
-    <!-- Google Tag Manager -->
+    <!-- Schema Markup - Organización -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Movimientos del Alma",
+        "url": "https://mda-ifi.com/clasesOnline",
+        "logo": "https://mda-ifi.com/assets/logo2-DJMsWEZs.png",
+        "description": "Formaciones profesionales online certificadas: Profesorado, Instructorados y Diplomatura",
+        "sameAs": [
+          "https://www.facebook.com/movimientos.delalma.5?_rdc=2&_rdr#",
+          "https://www.instagram.com/movimientos_del_alma?igsh=MW40N2U5bm1hNTliag%3D%3D",
+          "https://www.tiktok.com/@movimientos_del_alma"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Tu Dirección",
+          "addressLocality": "Córdoba",
+          "addressRegion": "Córdoba",
+          "postalCode": "5111",
+          "addressCountry": "AR"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Customer Service",
+          "email": "info@tudominio.com",
+          "telephone": "+54-XXXXXXXXX"
+        },
+        "founding_date": "YYYY-MM-DD",
+        "areaServed": "AR"
+      }
+    </script>
+
+    <!-- Schema Markup - Cursos/Formaciones -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Profesorado Online",
+            "description": "Formación profesional certificada en modalidad online. Aprende a tu ritmo con expertos reconocidos.",
+            "url": "https://mda-ifi.com/clasesOnline",
+            "item": {
+              "@type": "Course",
+              "name": "Profesorado Online Certificado",
+              "description": "Obtén tu certificación profesional en Profesorado con nuestro programa online completo.",
+              "provider": {
+                "@type": "EducationalOrganization",
+                "name": "Movimientos del Alma"
+              },
+              "duration": "PT6M",
+              "inLanguage": "es",
+              "isAccessibleForFree": false,
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "ARS",
+                "price": "XXXXX",
+                "availability": "https://schema.org/InStock"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Instructorados Online",
+            "description": "Instructorados especializados con certificación profesional reconocida.",
+            "url": "https://mda-ifi.com/clasesOnline",
+            "item": {
+              "@type": "Course",
+              "name": "Instructorados Online",
+              "description": "Programa intensivo de instructorados con certificación oficial.",
+              "provider": {
+                "@type": "EducationalOrganization",
+                "name": "Movimientos del Alma"
+              },
+              "inLanguage": "es",
+              "isAccessibleForFree": false
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Diplomatura Online",
+            "description": "Diplomatura profesional completa en modalidad online.",
+            "url": "https://mda-ifi.com/clasesOnline",
+            "item": {
+              "@type": "Course",
+              "name": "Diplomatura Online Profesional",
+              "description": "Programa completo de diplomatura con certificación reconocida.",
+              "provider": {
+                "@type": "EducationalOrganization",
+                "name": "Movimientos del Alma"
+              },
+              "inLanguage": "es",
+              "isAccessibleForFree": false
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Schema Markup - Breadcrumb -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://mda-ifi.com/clasesOnline"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Formaciones",
+            "item": "https://mda-ifi.com/clasesOnline"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-17648869821"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-17648869821");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Tag Manager 2.0-->
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -30,14 +225,38 @@
         j.async = true;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-XXXXXXX");
+      })(window, document, "script", "dataLayer", "GTM-T227R6GJ");
     </script>
     <!-- End Google Tag Manager -->
 
-    <link rel="icon" href="../app/src/assets/logo.png" type="image/x-icon" />
+    <!-- Google Analytics 4 -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-T227R6GJ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
   </body>
 </html>

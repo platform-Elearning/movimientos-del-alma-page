@@ -3,7 +3,7 @@ import "./WhatsAppCourseButton.css";
 import wppIcon from "../../assets/wpp.png"; // Usando el ícono local de WhatsApp
 
 const WhatsAppCourseButton = ({ courseName, courseType = "formación" }) => {
-  const phoneNumber = "+5493513468819"; // Número de la academia
+  const phoneNumber = "+5493513592115"; // Número de la academia
   
   // Función para generar el mensaje personalizado según el curso
   const generateMessage = (courseName, courseType) => {

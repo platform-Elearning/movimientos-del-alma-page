@@ -3,7 +3,7 @@ import "./whatsAppButton.css";
 
 const WhatsAppButton = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const phoneNumber = "+5493513468819";
+  const phoneNumber = "+5493513592115";
   const message = "¡Hola Movimientos del Alma! Estoy interesado/a en sus clases y formaciones. ¿Podrían brindarme más información?";
 
   return (
