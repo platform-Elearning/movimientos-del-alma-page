@@ -1,0 +1,41 @@
+# robots.txt - Movimientos del Alma
+# Permite a todos los buscadores indexar el sitio
+
+User-agent: *
+Allow: /
+Allow: /formaciones/
+Allow: /sobre-nosotros/
+Allow: /contacto/
+
+# Desallowed paths (si tienes áreas privadas)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /node_modules/
+Disallow: /.git/
+
+# Velocidad de rastreo
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://mda-ifi.com/sitemap.xml
+
+# Reglas específicas para buscadores
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Bloquear bots molestos
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

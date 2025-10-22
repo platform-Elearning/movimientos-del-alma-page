@@ -15,7 +15,7 @@ import ritmosLatinos from "../../assets/ritmosLatinos.png";
 import flexibilidad from "../../assets/flexibilidad.png";
 import pilates from "../../assets/pilates.png";
 import clasicaNuevaModalidad from "../../assets/pdf/clasica-Nueva-Modalidad.pdf";
-import composicionPDF from "../../assets/pdf/COMPOSICIÓN.pdf";
+import composicionPDF from "../../assets/pdf/composicion-coreografica.pdf";
 import contemporanea from "../../assets/pdf/contemporanea.pdf";
 import danzaMatrizAfro from "../../assets/pdf/danza-matriz-afro.pdf";
 import diploClasica from "../../assets/pdf/diplo-CLASICA.pdf";
