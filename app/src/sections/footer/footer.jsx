@@ -23,34 +23,54 @@ const Footer = () => {
           <div className="footer-column">
             <h3>Explorar</h3>
             <ul>
-              <li><a href="/nosotros">Nosotros</a></li>
-              <li><a href="/clasesonline">Formaciones Online</a></li>
-              <li><a href="/clases">Clases Presenciales</a></li>
+              <li>
+                <a href="/nosotros">Nosotros</a>
+              </li>
+              <li>
+                <a href="/clasesonline">Formaciones Online</a>
+              </li>
+              <li>
+                <a href="/clases">Clases Presenciales</a>
+              </li>
             </ul>
             <div className="footer-social">
-          <a href="#"><img src={tiktok} alt="TikTok" /></a>
-          <a href="#"><img src={ig} alt="Instagram" /></a>
-          <a href="#"><img src={fb} alt="Facebook" /></a>
-          <a href="#"><img src={yt} alt="YouTube" /></a>
-        </div>
+              <a href="https://www.tiktok.com/@movimientos_del_alma">
+                <img src={tiktok} alt="TikTok" />
+              </a>
+              <a href="https://www.instagram.com/movimientos_del_alma?igsh=MW40N2U5bm1hNTliag== ">
+                <img src={ig} alt="Instagram" />
+              </a>
+              <a href="https://www.facebook.com/movimientos.delalma.5?_rdc=2&_rdr#">
+                <img src={fb} alt="Facebook" />
+              </a>
+              <a href="https://www.youtube.com/@movimientosdelalma575">
+                <img src={yt} alt="YouTube" />
+              </a>
+            </div>
           </div>
 
           {/* Segunda columna: Sucursales */}
           <div className="footer-column">
-  <h3>Sucursales</h3>
-  <div className="sucursal">
-    <h4><strong>Casa Central</strong></h4>
-    <p>Almirante Brown 72, Río Ceballos - +54 9 351 3468819</p>
-  </div>
-  <div className="sucursal">
-    <h4><strong>Sucursal La Calera</strong></h4>
-    <p>Jorge Luis Borges 662, La Calera - +54 9 3517 664275</p>
-  </div>
-  <div className="sucursal">
-    <h4><strong>Sucursal El Talar</strong></h4>
-    <p>Las Zinnias 209, El Talar - +54 9 3543 616808</p>
-  </div>
-</div>
+            <h3>Sucursales</h3>
+            <div className="sucursal">
+              <h4>
+                <strong>Casa Central</strong>
+              </h4>
+              <p>Almirante Brown 72, Río Ceballos - +54 9 351 3468819</p>
+            </div>
+            <div className="sucursal">
+              <h4>
+                <strong>Sucursal La Calera</strong>
+              </h4>
+              <p>Jorge Luis Borges 662, La Calera - +54 9 3517 664275</p>
+            </div>
+            <div className="sucursal">
+              <h4>
+                <strong>Sucursal El Talar</strong>
+              </h4>
+              <p>Las Zinnias 209, El Talar - +54 9 3543 616808</p>
+            </div>
+          </div>
 
           {/* Tercera columna: Desarrollado por con íconos */}
           <div className="footer-column">
@@ -73,7 +93,6 @@ const Footer = () => {
         </div>
 
         {/* Redes sociales */}
-       
       </div>
     </footer>
   );
