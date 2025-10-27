@@ -208,13 +208,13 @@ const ClasesOnline = () => {
                     })}
                   </ul>
                 <div className="buttons-container">
-                  <a
+                  {/* <a
                     href={clase.pdf}
                     download
                     className="info2-button"
                   >
                     Descargar Información
-                  </a>
+                  </a> */}
                   <WhatsAppCourseButton 
                     courseName={clase.nombre} 
                     courseType={formacionSeleccionada === "profesorado" ? "profesorado" : 
