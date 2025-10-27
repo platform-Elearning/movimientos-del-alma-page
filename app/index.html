@@ -242,6 +242,18 @@
       gtag("js", new Date());
       gtag("config", "G-XXXXXXXXXX");
     </script>
+
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+  default-src 'self';
+  script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+  connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;
+  img-src 'self' https://www.google-analytics.com https://www.googletagmanager.com data:;
+  style-src 'self' 'unsafe-inline';
+  frame-src https://www.googletagmanager.com;
+"
+    />
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -257,6 +269,5 @@
 
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-
   </body>
 </html>
