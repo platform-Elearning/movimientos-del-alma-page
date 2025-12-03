@@ -1,0 +1,214 @@
+.video-testimonials-section {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.video-testimonials-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.video-testimonials-title {
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 60px 0;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+}
+
+.video-testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.video-testimonials-grid > * {
+  flex: 0 1 380px;
+  max-width: 450px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .video-testimonials-title {
+    font-size: 36px;
+  }
+
+  .video-testimonials-grid {
+    gap: 35px;
+  }
+
+  .video-testimonials-grid > * {
+    flex: 0 1 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-testimonials-section {
+    padding: 50px 20px;
+  }
+
+  .video-testimonials-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .video-testimonials-grid {
+    gap: 30px;
+    max-width: 500px;
+  }
+
+  .video-testimonials-grid > * {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-testimonials-section {
+    padding: 40px 15px;
+  }
+
+  .video-testimonials-title {
+    font-size: 28px;
+    margin-bottom: 35px;
+  }
+
+  .video-testimonials-grid {
+    gap: 25px;
+  }
+}
+
+/* Carousel Styles */
+.video-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.video-carousel-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.video-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.video-carousel-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.carousel-arrow {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 32px;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.carousel-arrow:hover {
+  background-color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-arrow:active {
+  transform: scale(0.95);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.carousel-dot:hover {
+  background-color: #bbb;
+  transform: scale(1.2);
+}
+
+.carousel-dot.active {
+  background-color: #333;
+  width: 32px;
+  border-radius: 6px;
+}
+
+/* Responsive Carousel */
+@media (max-width: 768px) {
+  .video-carousel-wrapper {
+    gap: 15px;
+    max-width: 100%;
+  }
+
+  .carousel-arrow {
+    width: 45px;
+    height: 45px;
+    font-size: 28px;
+  }
+
+  .video-carousel-slide {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-carousel-wrapper {
+    gap: 10px;
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .carousel-dots {
+    gap: 10px;
+    margin-top: 25px;
+  }
+
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .carousel-dot.active {
+    width: 28px;
+  }
+}
