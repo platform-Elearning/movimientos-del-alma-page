@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../sections/footer/footer";
 import { Link } from "react-router-dom";
+import VideoTestimonialsSection from "../VideoTestimonialsSection/VideoTestimonialsSection";
 import "./Clases.css";
 
 /* HORARIOS EN IMAGEN */
@@ -18,6 +19,20 @@ const sedes = [
 
 const Clases = () => {
   const [sedeSeleccionada, setSedeSeleccionada] = useState("rio-ceballos");
+
+  // Testimonios de clases presenciales
+  const testimoniosPresenciales = [
+    {
+      videoId: "dstpolOgfOo",
+      personName: "Alumnas",
+      role: "Clases Presenciales"
+    },
+    {
+      videoId: "X6IYHPnlnWQ",
+      personName: "Alumnas",
+      role: "Clases Presenciales"
+    }
+  ];
 
   const imagenesHorarios = {
             "rio-ceballos" : [horariosRio1],
@@ -74,6 +89,10 @@ const Clases = () => {
           </div>
         </div>
       </div>
+      <VideoTestimonialsSection
+        title="Lo que dicen nuestras alumnas"
+        testimonials={testimoniosPresenciales}
+      />
       <Footer />
     </div>
   );

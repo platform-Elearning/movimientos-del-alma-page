@@ -3,6 +3,7 @@ import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../sections/footer/footer";
 import { Link } from "react-router-dom";
 import WhatsAppCourseButton from "../../components/whatsappButton/WhatsAppCourseButton";
+import VideoTestimonialsSection from "../VideoTestimonialsSection/VideoTestimonialsSection";
 import "./ClasesOnline.css";
 
 import Clasico from "../../assets/ClasesPresenciales/Clasico.png";
@@ -153,6 +154,25 @@ const clasesOnline = {
 const ClasesOnline = () => {
   const [formacionSeleccionada, setFormacionSeleccionada] = useState("profesorado");
 
+  // Testimonios de formaciones online
+  const testimoniosOnline = [
+    {
+      videoId: "iaShU5dgX_M",
+      personName: "Paola Rodriguez",
+      role: "Egresada"
+    },
+    {
+      videoId: "8WtERXb8MKg",
+      personName: "Luciana Amarilla",
+      role: "Egresada"
+    },
+    {
+      videoId: "qodEUzd3Oos",
+      personName: "Mailen Martinez",
+      role: "Egresada"
+    }
+  ];
+
   return (
     <div className="page-container">
       <Navbar />
@@ -229,6 +249,10 @@ const ClasesOnline = () => {
           )}
         </div>
       </div>
+      <VideoTestimonialsSection
+        title="Testimonios de formaciones"
+        testimonials={testimoniosOnline}
+      />
       <Footer />
     </div>
   );

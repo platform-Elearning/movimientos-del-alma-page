@@ -6,6 +6,7 @@ import Testimonials from "../../sections/testimonials/testimonials"; // Importa 
 import VideoSection from "../../sections/videoSection/videoSection";
 import Team from "../../sections/team/team"; // Corrige la importación de Team
 import DanceBanner from "../../sections/DanceBanner/DanceBanner";
+import ShortsTestimonialsSection from "../../sections/ShortsTestimonialsSection/ShortsTestimonialsSection";
 import Footer from "../../sections/footer/footer";
 import Sucursales from "../../sections/sucursales/sucursales";
 import Faqs from "../../sections/faqs/faqs";
@@ -15,7 +16,22 @@ import "./index.css";
 const Index = () => {
   const navigate = useNavigate();
 
-  
+  // Testimonios en formato Shorts para home
+  const shortsTestimonials = [
+    {
+      videoId: "dstpolOgfOo",
+      label: "Clases Presenciales"
+    },
+    {
+      videoId: "iaShU5dgX_M",
+      label: "Paola Rodriguez"
+    },
+    {
+      videoId: "8WtERXb8MKg",
+      label: "Luciana Amarilla"
+    }
+  ];
+
   return (
     <div className="page-container">
       <Navbar />
@@ -25,6 +41,10 @@ const Index = () => {
         <VideoSection />
         <Team />
         <DanceBanner />
+        <ShortsTestimonialsSection
+          title="Mirá lo que dicen"
+          testimonials={shortsTestimonials}
+        />
         <Sucursales />
         <Faqs />
       </div>
