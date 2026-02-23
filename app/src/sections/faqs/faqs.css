@@ -1,11 +1,11 @@
 .faqs-container {
     width: 100%;
-    margin: 0 auto;
-    margin: 50px;
+    margin: 52px;
     background-color: #252422;
     height: auto;
     border-radius: 50px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 52px 0px;
 }
 
 .faqs-container h1 {

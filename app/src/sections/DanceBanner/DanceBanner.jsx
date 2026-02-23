@@ -4,11 +4,12 @@ import "./DanceBanner.css";
 import DanceBannerImg from '../../assets/danceBannerImg.png'; // Imagen principal del banner
 import presencialIcono from '../../assets/iconopresencial.png'; // Icono para clases presenciales
 import onlineIcono from '../../assets/iconoonline.png'; // Icono para formaciones online
+import '../../components/button/Button.css'
 
 const DanceBanner = () => {
   return (
     <div className="dance-banner">
-      <h2>Desarrolla tu pasión por la danza con nuestras</h2>
+      <h2 className="dance-banner-tit" >Desarrolla tu pasión por la danza con nuestras</h2>
       <div className="dance-banner-container">
         <div className="dance-banner-image">
           <img src={DanceBannerImg} alt="Clases de danza" className="dance-img" />

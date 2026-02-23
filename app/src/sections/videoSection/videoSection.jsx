@@ -18,7 +18,10 @@ const VideoSection = () => {
           allowFullScreen
         ></iframe>
       </div>
+      <div className='btnExp' >
       <ButtonVacio text="Descubre sus experiencias" to="/info-jime" />
+
+      </div>
     </div>
   );
 };

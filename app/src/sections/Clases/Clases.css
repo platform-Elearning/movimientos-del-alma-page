@@ -30,6 +30,10 @@
   font-weight: bold;
 }
 
+.back-button{
+  border: #222 1px solid;
+}
+
 
 .clases-list {
   display: grid;

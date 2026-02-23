@@ -25,6 +25,11 @@
   overflow: hidden;
 }
 
+.btnExp{
+  margin-top:1rem;
+  margin-bottom:5rem;
+}
+
 /* Media query para pantallas medianas (tablets) */
 @media (max-width: 768px) {
   .video-box {
