@@ -7,11 +7,10 @@
   
   .sucursales-container h2 {
     font-size: 40px;
-    margin-bottom: 1.5rem;
-    color: #1c1c1c;
+    font-weight: bold;
+    color: #252422;
     margin-top: 44px;
-    margin-bottom: 52px;
-  
+    margin-bottom: 32px;
 
   }
   
@@ -23,9 +22,10 @@
   }
   
   .sucursal-card {
-    background: #1a1a1a;
+    background: #252422;
+    cursor: pointer;
     color: white;
-    border-radius: 24px;
+    border-radius: 12px;
     overflow: hidden;
     max-width: 300px;
     height: 500px;
@@ -35,13 +35,12 @@
   
   .sucursal-card img {
     width: 100%;
-    height: 180px;
+    height: 220px;
     object-fit: cover;
   }
   
   .sucursal-info {
     padding:1rem;
-
   }
   
   .sucursal-info h3 {
@@ -52,7 +51,7 @@
   .sucursal-info p {
     font-size: 0.9rem;
     /*margin: 5px 0;*/
-    margin: 12px 0;
+    margin: 16px 0;
 
   }
   
@@ -63,7 +62,7 @@
     text-align: center;
     padding: 10px;
     /* border-radius: 8px;*/
-    border-radius: 24px;
+    border-radius: 8px;
 
     text-decoration: none;
     font-weight: bold;

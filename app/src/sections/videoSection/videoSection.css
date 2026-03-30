@@ -9,9 +9,12 @@
 }
 
 .title1 {
-  color: #ffffff;
-  font-size: 2rem;
-  margin-bottom: 20px;
+ font-size: 40px;
+ font-weight: bold;
+ color: #ffffff;
+ margin-bottom: 16px;
+ margin-top: 52px;
+
   text-align: center; /* Asegura que el texto esté centrado en pantallas pequeñas */
 }
 
@@ -28,6 +31,11 @@
 .btnExp{
   margin-top:1rem;
   margin-bottom:5rem;
+}
+
+.btnExp button{
+border:  #949090 1px solid;
+  
 }
 
 /* Media query para pantallas medianas (tablets) */

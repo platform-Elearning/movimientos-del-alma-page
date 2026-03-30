@@ -13,17 +13,17 @@
 
 /* Título de la sección de testimonios */
 .testimonials-title {
-  font-size: 2.5rem;
+  font-size: 40px;
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 /* Subtítulo */
 .testimonials-subtitle {
-  font-size: 1.2rem;
+  font-size: 20px;
   color: #bbbbbb;
-  margin-bottom: 3rem;
+  margin-bottom: 64px;
   line-height: 1.5; /* Mejora la legibilidad */
 }
 
@@ -40,7 +40,7 @@
 .testimonial-card {
   background-color: #2d2d2d;
   border: 1px solid #333;
-  border-radius: 15px;
+  border-radius: 12px;
   padding: 2rem;
   width: 300px; /* Ancho fijo para consistencia */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
@@ -55,6 +55,8 @@
 .testimonial-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 30px #333;
+
 }
 
 

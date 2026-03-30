@@ -48,13 +48,29 @@
 
 }
 
+
+
+.dance-banner-content h1{
+ font-size: 40px;
+ font-weight: bold;
+ margin-bottom: 16px;
+
+}
+
+
+
+.dance-banner-content p{
+ margin: 16px 32px 32px 0px ;
+
+}
+
 .dance-banner h2 {
   font-size: 1.5rem;
   font-weight: 500;
   text-align: center;
   background-color: white;
   padding: 1rem;
-  border-radius: 28px;
+  border-radius: 12px;
   display: inline-block;
   margin: 0 auto;
   margin-bottom: 4rem;
@@ -85,9 +101,7 @@
 }
 
 .dance-button {
-  background-color: #1c1c1c;
   color: white;
-  padding: 12px 20px;
   border-radius: 24px;
   font-weight: 600;
   display: flex;
@@ -99,6 +113,9 @@
   transition: background-color 0.3s ease;
   min-width: 250px;
   text-decoration: none;
+  background-color: #252422;
+  border-radius: 12px;
+  padding: 12px 24px;
 }
 
 .dance-button:hover {
@@ -106,6 +123,37 @@
 }
 .button-icon{
   margin: 0px 8px;
+}
+
+
+.dance-button2 {
+  color:  #252422;
+  border-radius: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, border 0.3s ease  ;
+
+  min-width: 250px;
+  text-decoration: none;
+  background-color: #fff;
+  border: #252422 1px solid;
+  border-radius: 12px;
+  padding: 12px 24px;
+}
+
+.dance-button2:hover {
+  background-color: #eee;
+  border: #ccc 1px solid;
+
+}
+.button-icon2{
+  margin: 0px 8px;
+  color: #fff;
 }
 
 

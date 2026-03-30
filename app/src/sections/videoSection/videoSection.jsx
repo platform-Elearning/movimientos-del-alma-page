@@ -1,6 +1,7 @@
 import React from 'react';
 import './videoSection.css';  // Importamos el archivo CSS
-import ButtonVacio from '../../components/buttonVacio/ButtonVacio';
+import Button from '../../components/button/Button';
+import { Link } from 'react-router-dom';
 
 const VideoSection = () => {
   return (
@@ -19,7 +20,9 @@ const VideoSection = () => {
         ></iframe>
       </div>
       <div className='btnExp' >
-      <ButtonVacio text="Descubre sus experiencias" to="/info-jime" />
+        <Link  to="/info-jime" >
+      <Button text="Descubre sus experiencias"  />
+        </Link>
 
       </div>
     </div>

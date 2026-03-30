@@ -22,11 +22,16 @@
     margin-bottom: 1rem;
     color: white;
   }
+
+  .title-nuestro-valores{
+    color: #000;
+    font-size: 3rem;
+  }
   
   .description {
     font-size: 1.5rem;
     max-width: 800px;
-    margin: 0 auto 2rem auto;
+    margin: 2rem auto 4rem auto;
   }
   
   .content-box {
