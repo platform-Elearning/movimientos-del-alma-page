@@ -177,7 +177,7 @@ const ClasesOnline = () => {
     <div className="page-container">
       <Navbar />
       <div className="clases-container">
-        <Link to="/" className="back-button">
+        <Link to="/" className="back-button borde">
           &larr; Volver a inicio
         </Link>
         <h1 className="title">Formaciones Online</h1>

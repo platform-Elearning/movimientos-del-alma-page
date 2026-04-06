@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import './faqs.css';
 import masIcon from '../../assets/masIco.png'; // Imagen de Casa Central
 import ButtonVacio from '../../components/buttonVacio/ButtonVacio';
+import Button from '../../components/button/Button';
 import downloadIcon from '../../assets/download.png'; // Imagen de Casa Central
+import downloadIcon2 from '../../assets/download2.png'
 import reglamento from '../../assets/pdf/Reglamento-MDA.jpeg'; // Ruta del reglamento
 
 const Faqs = () => {
@@ -54,8 +56,8 @@ const Faqs = () => {
     return (
         <div className="faqs-container">
             <h1>Todo lo que necesitas saber</h1>
-            <a href={reglamento} download="Reglamento-MDA.jpeg">
-                <ButtonVacio text="Descargar reglamento" icon={downloadIcon} />
+            <a href={reglamento} download="Reglamento-MDA.jpeg"  className='btn' >
+                <Button className='btn' text="Descargar reglamento" icon={downloadIcon2} />
             </a>
             {faqs.map((faq, index) => (
                 <div

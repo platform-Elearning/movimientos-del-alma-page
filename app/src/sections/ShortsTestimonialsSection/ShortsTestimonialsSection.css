@@ -10,18 +10,19 @@
 }
 
 .shorts-testimonials-title {
-  font-size: 42px;
-  font-weight: 700;
-  text-align: center;
-  margin: 0 0 50px 0;
-  color: #333;
+ font-size: 40px;
+ font-weight: bold;
+ margin: 0 0 52px 0;
+ margin-bottom: 32px;
+  color: #252422;
+
   font-family: "Montserrat", sans-serif;
 }
 
 .shorts-testimonials-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   justify-content: center;
   align-items: flex-start;
 }

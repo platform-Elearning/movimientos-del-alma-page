@@ -4,17 +4,20 @@ import "./DanceBanner.css";
 import DanceBannerImg from '../../assets/danceBannerImg.png'; // Imagen principal del banner
 import presencialIcono from '../../assets/iconopresencial.png'; // Icono para clases presenciales
 import onlineIcono from '../../assets/iconoonline.png'; // Icono para formaciones online
+import onlineIcono2 from '../../assets/iconoonline2.png'; // Icono para formaciones online
+
+import '../../components/button/Button.css'
 
 const DanceBanner = () => {
   return (
     <div className="dance-banner">
-      <h2>Desarrolla tu pasión por la danza con nuestras</h2>
+      <h2 className="dance-banner-tit" >Desarrolla tu pasión por la danza con nuestras</h2>
       <div className="dance-banner-container">
         <div className="dance-banner-image">
-          <img src={DanceBannerImg} alt="Clases de danza" className="dance-img" />
+          <img src={DanceBannerImg} alt="Clases de danza" className="dance-img"/>
         </div>
         <div className="dance-banner-content">
-          <h1>Clases presenciales y Formaciones Online</h1>
+          <h1 className="dance-banner-content-tittle" >Clases presenciales y Formaciones Online</h1>
           <p>
             Creamos un ambiente familiar y cercano donde la creatividad y el respeto son clave. 
             Con clases presenciales y online para todas las edades y niveles, te ofrecemos una 
@@ -28,8 +31,8 @@ const DanceBanner = () => {
             </Link>
 
             {/* Botón para Formaciones Online */}
-            <Link to="/clasesOnline" className="dance-button">
-              <img src={onlineIcono} alt="Online" className="button-icon" /> 
+            <Link to="/clasesOnline" className="dance-button2">
+              <img src={onlineIcono2} alt="Online" className="button-icon" /> 
               Ver Formaciones Online
             </Link>
           </div>
