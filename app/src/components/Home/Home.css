@@ -27,18 +27,25 @@
   padding-top: 5rem; /* Añadido espacio arriba para el título */
 }
 
+
 /* Título */
 .home-title {
   margin-top: 13rem;
   font-size: 3rem;
   font-weight: bold;
   color: #252422; /* Color de respaldo para navegadores antiguos */
-  padding: 10px;
+  /*padding: 10px;*/
   border-radius: 2rem;
+  background-color: #02f;
   background-color: #ffffff54;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destacar el texto */
   margin-bottom: 2rem; /* Ajusta el espacio debajo del título */
   display: inline-block; /* Asegura que el degradado cubra toda la frase */
+  /*agregado*/
+  padding: 20px 32px;
+  margin-left: 1rem; /* Ajusta el espacio debajo del título */
+  margin-right: 1rem; /* Ajusta el espacio debajo del título */
+
 }
 
 /* Botón */

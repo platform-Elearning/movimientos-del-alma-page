@@ -10,8 +10,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 80px; /*60px*/
+  height: 80px;
   background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
   border-radius: 50%;
   text-decoration: none;
@@ -22,6 +22,10 @@
   cursor: pointer;
   animation: gentle-bounce 3s ease-in-out infinite;
 }
+
+
+
+
 
 .whatsapp-floating-button:hover {
   transform: scale(1.1) translateY(-2px);

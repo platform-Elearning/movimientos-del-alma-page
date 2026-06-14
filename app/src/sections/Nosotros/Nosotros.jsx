@@ -42,7 +42,7 @@ const Nosotros = () => {
 
         {/* Sección de Valores */}
         <div className="valores-container">
-          <h2 className="title">Nuestros Valores</h2>
+          <h2 className="title-nuestro-valores">Nuestros Valores</h2>
           <div className="valores-box">
             <div className="valor">
               <h3>Excelencia</h3>

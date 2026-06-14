@@ -1,13 +1,15 @@
 .short-testimonial-card {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #252422;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
   width: 100%;
-  max-width: 280px;
+  max-width: 300px;
+  height: auto;
 }
+
 
 .short-testimonial-card:hover {
   transform: translateY(-8px) scale(1.02);
@@ -71,7 +73,9 @@
 .short-card-label {
   padding: 12px 16px;
   text-align: center;
-  background-color: #fff;
+  /*background-color: #fff;*/
+  background-color: #252422;
+  
 }
 
 .short-card-label p {
@@ -79,6 +83,7 @@
   font-size: 15px;
   font-weight: 600;
   color: #333;
+  color: #fff;
   font-family: "Montserrat", sans-serif;
 }
 

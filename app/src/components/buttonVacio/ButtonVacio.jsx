@@ -1,5 +1,6 @@
 import React from "react";
 import "./ButtonVacio.css";
+import '../button/Button.css'
 
 const ButtonVacio = ({ text, icon, to }) => {
   const buttonContent = (
@@ -11,14 +12,14 @@ const ButtonVacio = ({ text, icon, to }) => {
 
   if (to) {
     return (
-      <a href={to} target="_blank" rel="noopener noreferrer" className="button-vacio">
+      <a href={to} target="_blank" rel="noopener noreferrer" className="button">
         {buttonContent}
       </a>
     );
   }
 
   return (
-    <button className="button-vacio">
+    <button className="button">
       {buttonContent}
     </button>
   );

@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-
 import "./Home.css"; // Archivo CSS para estilos
-
 import Button from "../button/Button";
+
 const Home = () => {
   return (
     <div className="home-container">

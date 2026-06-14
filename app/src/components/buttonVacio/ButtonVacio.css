@@ -1,9 +1,10 @@
 .button-vacio {
   border: 2px solid #c08c44;
   background-color: transparent;
-  color: #c08c44;
+  /*color: #c08c44;*/
+  color: #252422;
   padding: 12px 36px;
-  border-radius: 30px;
+  border-radius: 38px;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 600;
