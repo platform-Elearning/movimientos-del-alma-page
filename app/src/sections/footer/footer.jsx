@@ -12,87 +12,88 @@ import wp from "../../assets/wpp.png";
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-logo">
-          <img src={logo} alt="Movimientos del Alma" />
-          <h2>Movimientos del Alma</h2>
-        </div>
+      <div className="footer-inner">
 
-        <div className="footer-columns">
-          {/* Primera columna: Explorar */}
-          <div className="footer-column">
-            <h3>Explorar</h3>
-            <ul>
-              <li>
-                <a href="/nosotros">Nosotros</a>
-              </li>
-              <li>
-                <a href="/clasesonline">Formaciones Online</a>
-              </li>
-              <li>
-                <a href="/clases">Clases Presenciales</a>
-              </li>
-            </ul>
+        <div className="footer-top">
+          {/* Columna brand */}
+          <div className="footer-brand">
+            <img src={logo} alt="Movimientos del Alma" className="footer-brand-logo" />
+            <h2 className="footer-brand-name">Movimientos del Alma</h2>
+            <p className="footer-brand-desc">Escuela de danza con amor, técnica y comunidad.</p>
             <div className="footer-social">
-              <a href="https://www.tiktok.com/@movimientos_del_alma">
+              <a href="https://www.tiktok.com/@movimientos_del_alma" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
                 <img src={tiktok} alt="TikTok" />
               </a>
-              <a href="https://www.instagram.com/movimientos_del_alma?igsh=MW40N2U5bm1hNTliag== ">
+              <a href="https://www.instagram.com/movimientos_del_alma?igsh=MW40N2U5bm1hNTliag==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <img src={ig} alt="Instagram" />
               </a>
-              <a href="https://www.facebook.com/movimientos.delalma.5?_rdc=2&_rdr#">
+              <a href="https://www.facebook.com/movimientos.delalma.5" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <img src={fb} alt="Facebook" />
               </a>
-              <a href="https://www.youtube.com/@movimientosdelalma575">
+              <a href="https://www.youtube.com/@movimientosdelalma575" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                 <img src={yt} alt="YouTube" />
               </a>
             </div>
           </div>
 
-          {/* Segunda columna: Sucursales */}
-          <div className="footer-column">
-            <h3>Sucursales</h3>
-            <div className="sucursal">
-              <h4>
-                <strong>Casa Central</strong>
-              </h4>
-              <p>Almirante Brown 72, Río Ceballos - +54 9 351 3468819</p>
+          {/* Columna Explorar */}
+          <div className="footer-col">
+            <h3 className="footer-col-title">Explorar</h3>
+            <ul className="footer-col-list">
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/nosotros">Nosotros</a></li>
+              <li><a href="/clasesOnline">Formaciones Online</a></li>
+              <li><a href="/clases">Clases Presenciales</a></li>
+              <li><a href="/pack-clases">Pack de Clases</a></li>
+            </ul>
+          </div>
+
+          {/* Columna Sucursales */}
+          <div className="footer-col">
+            <h3 className="footer-col-title">Sucursales</h3>
+            <div className="footer-sucursal">
+              <span className="footer-sucursal-name">Casa Central</span>
+              <span className="footer-sucursal-info">Almirante Brown 72, Río Ceballos</span>
+              <span className="footer-sucursal-tel">+54 9 351 3468819</span>
             </div>
-            <div className="sucursal">
-              <h4>
-                <strong>Sucursal La Calera</strong>
-              </h4>
-              <p>Jorge Luis Borges 662, La Calera - +54 9 3517 664275</p>
+            <div className="footer-sucursal">
+              <span className="footer-sucursal-name">La Calera</span>
+              <span className="footer-sucursal-info">Jorge Luis Borges 662, La Calera</span>
+              <span className="footer-sucursal-tel">+54 9 3517 664275</span>
             </div>
-            <div className="sucursal">
-              <h4>
-                <strong>Sucursal El Talar</strong>
-              </h4>
-              <p>Las Zinnias 209, El Talar - +54 9 3543 616808</p>
+            <div className="footer-sucursal">
+              <span className="footer-sucursal-name">El Talar</span>
+              <span className="footer-sucursal-info">Las Zinnias 209, El Talar</span>
+              <span className="footer-sucursal-tel">+54 9 3543 616808</span>
             </div>
           </div>
 
-          {/* Tercera columna: Desarrollado por con íconos */}
-          <div className="footer-column">
-            <h3>Desarrollado por</h3>
-            <ul>
+          {/* Columna Contacto */}
+          <div className="footer-col">
+            <h3 className="footer-col-title">Desarrollado por</h3>
+            <ul className="footer-col-list footer-dev-list">
               <li>
-                <img src={asUser} alt="AsUser" className="footer-icon" />
-                AsUser - Software Engineering
+                <img src={asUser} alt="AsUser" />
+                <span>AsUser - Software Engineering</span>
               </li>
               <li>
-                <img src={iconWeb} alt="Conócenos" className="footer-icon" />
-                Conócenos
+                <img src={iconWeb} alt="Web" />
+                <span>Conócenos</span>
               </li>
               <li>
-                <img src={wp} alt="WhatsApp" className="footer-icon" />
-                +54 9 3543 313903
+                <img src={wp} alt="WhatsApp" />
+                <span>+54 9 3543 313903</span>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Redes sociales */}
+        <div className="footer-divider" />
+
+        <div className="footer-bottom">
+          <span>© {new Date().getFullYear()} Movimientos del Alma. Todos los derechos reservados.</span>
+        </div>
+
       </div>
     </footer>
   );

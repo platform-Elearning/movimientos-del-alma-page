@@ -1,0 +1,494 @@
+.pack-hero {
+  width: 100%;
+  min-height: 280px;
+  background: linear-gradient(135deg, #c08c44 0%, #d4a45a 35%, #b07838 65%, #c08c44 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pack-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 15% 80%, rgba(255,255,255,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 20%, rgba(37,36,34,0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.pack-hero::after {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.12);
+  pointer-events: none;
+}
+
+.pack-hero-deco-left {
+  position: absolute;
+  left: -60px;
+  bottom: -60px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.1);
+  pointer-events: none;
+}
+
+.pack-hero-deco-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.03) 40px,
+      rgba(255,255,255,0.03) 41px
+    );
+  pointer-events: none;
+}
+
+.pack-hero-overlay {
+  text-align: center;
+  padding: 48px 24px;
+  z-index: 1;
+  position: relative;
+}
+
+.pack-hero-eyebrow {
+  display: inline-block;
+  background-color: rgba(37, 36, 34, 0.2);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(4px);
+}
+
+.pack-hero-title {
+  font-size: 3.6rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  text-shadow: 0 2px 16px rgba(37,36,34,0.25);
+}
+
+.pack-hero-title span {
+  color: #ffffff;
+}
+
+.pack-hero-divider {
+  width: 60px;
+  height: 3px;
+  background-color: rgba(37,36,34,0.35);
+  border-radius: 2px;
+  margin: 0 auto 20px;
+}
+
+.pack-hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255,255,255,0.92);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+/* Container */
+.pack-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 40px 60px;
+}
+
+/* Tabs */
+.pack-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.pack-tab {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  padding: 12px 28px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 30px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+
+.pack-tab:hover {
+  background-color: #e0d4c0;
+  color: #252422;
+}
+
+.pack-tab.active {
+  background-color: #252422;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(37, 36, 34, 0.3);
+}
+
+/* Grid */
+.pack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+/* Card */
+.pack-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.pack-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+}
+
+.pack-card--destacado {
+  border-color: #c08c44;
+  box-shadow: 0 6px 28px rgba(192, 140, 68, 0.22);
+}
+
+.pack-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: #c08c44;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  z-index: 2;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.pack-card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 170px;
+}
+
+.pack-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pack-nivel-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 12px;
+  letter-spacing: 0.4px;
+}
+
+/* Card body */
+.pack-card-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pack-card-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.pack-card-desc {
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.pack-card-details {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pack-card-details li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.pack-detail-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Footer */
+.pack-card-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pack-precio {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.pack-mp-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #009ee3;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+  letter-spacing: 0.3px;
+}
+
+.pack-mp-button:hover {
+  background-color: #007ab8;
+  transform: scale(1.02);
+}
+
+.pack-mp-logo {
+  font-size: 1rem;
+}
+
+.pack-wpp-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #ffffff;
+  color: #252422;
+  border: 1.5px solid #e0e0e0;
+  padding: 11px 20px;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  letter-spacing: 0.2px;
+}
+
+.pack-wpp-button:hover {
+  background-color: #f0faf2;
+  border-color: #25D366;
+  color: #1a6630;
+}
+
+.pack-wpp-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* How it works */
+.pack-info-section {
+  background: #f8f6f2;
+  border-radius: 16px;
+  padding: 50px 40px;
+  text-align: center;
+}
+
+.pack-info-section h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 36px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pack-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.pack-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.pack-step-number {
+  width: 52px;
+  height: 52px;
+  background-color: #252422;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.pack-step h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.pack-step p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive tablet */
+@media (max-width: 900px) {
+  .pack-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .pack-container {
+    padding: 32px 24px 50px;
+  }
+}
+
+/* Responsive mobile */
+@media (max-width: 600px) {
+  .pack-hero {
+    min-height: 220px;
+  }
+
+  .pack-hero-overlay {
+    padding: 32px 16px;
+  }
+
+  .pack-hero-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+  }
+
+  .pack-hero-title {
+    font-size: 2rem;
+  }
+
+  .pack-hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .pack-container {
+    padding: 24px 14px 36px;
+  }
+
+  .pack-tabs {
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .pack-tab {
+    padding: 9px 16px;
+    font-size: 0.82rem;
+    letter-spacing: 0.3px;
+  }
+
+  .pack-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .pack-card-img-wrapper {
+    height: 180px;
+  }
+
+  .pack-precio {
+    font-size: 1.5rem;
+  }
+
+  .pack-mp-button,
+  .pack-wpp-button {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+
+  .pack-info-section {
+    padding: 32px 16px;
+    border-radius: 12px;
+  }
+
+  .pack-steps {
+    gap: 14px;
+  }
+
+  .pack-step {
+    padding: 18px 16px;
+  }
+
+  .pack-step-number {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .pack-step h3 {
+    font-size: 1rem;
+  }
+
+  .pack-step p {
+    font-size: 0.85rem;
+  }
+}

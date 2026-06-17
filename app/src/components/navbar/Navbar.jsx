@@ -47,6 +47,9 @@ const Navbar = () => {
             <Link to="/clasesOnline" onClick={() => setIsMenuOpen(false)}>Formaciones online</Link>
           </li>
           <li>
+            <Link to="/pack-clases" onClick={() => setIsMenuOpen(false)}>Pack clases</Link>
+          </li>
+          <li>
             <Link to="/info-jime" onClick={() => setIsMenuOpen(false)}>Sobre Jime</Link> 
           </li>
           <li>

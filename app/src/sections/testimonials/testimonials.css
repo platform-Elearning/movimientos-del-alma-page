@@ -1,9 +1,9 @@
 /* Contenedor de la sección de testimonios */
 .testimonials-container {
   width: 100%;
-  min-height: 100vh; /* Ajusta la altura al contenido */
-  background-color: #252422; /* Fondo oscuro */
-  padding: 4rem 1rem;
+  min-height: 100vh;
+  background-color: #252422;
+  padding: 4rem 20px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -22,33 +22,37 @@
 /* Subtítulo */
 .testimonials-subtitle {
   font-size: 20px;
-  color: #bbbbbb;
+  color: #dddddd;
   margin-bottom: 64px;
-  line-height: 1.5; /* Mejora la legibilidad */
+  line-height: 1.5;
+  max-width: 700px;
 }
 
 /* Contenedor de las cartas de testimonios */
 .testimonials-cards {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap; /* Asegura que se ajusten bien en pantallas pequeñas */
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1400px;
 }
 
 /* Estilo de cada carta de testimonio */
 /* Estilo de cada carta de testimonio */
 .testimonial-card {
   background-color: #2d2d2d;
-  border: 1px solid #333;
+  border: 1px solid #3a3a3a;
   border-radius: 12px;
   padding: 2rem;
-  width: 300px; /* Ancho fijo para consistencia */
+  flex: 1 1 280px;
+  max-width: 360px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   display: flex;
-  flex-direction: column; /* Asegura que el texto y el autor se apilen verticalmente */
+  flex-direction: column;
 }
 
 /* Efecto hover */
