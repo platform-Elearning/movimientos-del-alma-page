@@ -52,9 +52,12 @@ const Navbar = () => {
           <li>
             <Link to="/nosotros" onClick={() => setIsMenuOpen(false)}>Nosotros</Link>
           </li>
-          <li>
-            <a href="https://platform.mda-ifi.com/" target="_blank" rel="noopener noreferrer" className="plataforma-button-link">
-              <Button text="Plataforma" />
+          <li className="navbar-auth-buttons">
+            <a href="https://platform.mda-ifi.com/login" target="_blank" rel="noopener noreferrer" className="auth-button-link login-button-link">
+              <Button text="Iniciar sesión" />
+            </a>
+            <a href="https://platform.mda-ifi.com/register" target="_blank" rel="noopener noreferrer" className="auth-button-link register-button-link">
+              <Button text="Crear usuario" />
             </a>
           </li>
         </ul>
