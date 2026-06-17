@@ -15,7 +15,10 @@
 .testimonials-title {
   font-size: 40px;
   font-weight: bold;
-  color: #ffffff;
+  background: linear-gradient(to right, #83711B, #FFBB80, #c08c44);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 16px;
 }
 
@@ -23,9 +26,17 @@
 .testimonials-subtitle {
   font-size: 20px;
   color: #dddddd;
-  margin-bottom: 64px;
+  margin-bottom: 16px;
   line-height: 1.5;
   max-width: 700px;
+}
+
+.testimonials-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #83711B, #c08c44);
+  border-radius: 2px;
+  margin: 0 auto 56px;
 }
 
 /* Contenedor de las cartas de testimonios */
@@ -43,6 +54,7 @@
 .testimonial-card {
   background-color: #2d2d2d;
   border: 1px solid #3a3a3a;
+  border-top: 2px solid #c08c44;
   border-radius: 12px;
   padding: 2rem;
   flex: 1 1 280px;
@@ -57,10 +69,9 @@
 
 /* Efecto hover */
 .testimonial-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 10px 30px #333;
-
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(192, 140, 68, 0.15);
+  border-top-color: #d4a45a;
 }
 
 
@@ -72,16 +83,28 @@
   color: #ffffff;
   margin-bottom: 1.5rem;
   font-style: italic;
-  line-height: 1.5; /* Mejora la legibilidad */
+  line-height: 1.5;
+}
+
+.testimonial-text::before {
+  content: '\201C';
+  font-size: 2.5rem;
+  color: #c08c44;
+  line-height: 0;
+  vertical-align: -0.6rem;
+  margin-right: 4px;
+  font-style: normal;
 }
 
 /* Nombre del autor */
 .testimonial-author {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #ffffff;
-  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #c08c44;
+  margin-top: auto;
+  padding-top: 1rem;
   text-align: center;
+  border-top: 1px solid rgba(192, 140, 68, 0.2);
 }
 
 /* Responsividad */
