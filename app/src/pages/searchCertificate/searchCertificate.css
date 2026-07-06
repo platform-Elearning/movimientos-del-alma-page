@@ -1,0 +1,135 @@
+.search-certificate-page{
+    margin: 26px 100px;
+}
+
+.search{
+    height: 400px;
+    width: 100%;
+    background-color: #fff;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-title{
+    color: #c08c44;
+    font-size: 48px;
+}
+
+.search-form{
+    width: 90%;
+    height: auto;
+    padding : 48px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+
+
+}   
+
+.search-form-form{
+    height: auto;
+    padding : 48px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2d2d2d;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}   
+
+.search-form-form label{
+    color: #fff;
+    font-size: 24px;
+    margin: 8px;
+}
+
+input{
+    padding: 8px;
+    margin: 8px;  
+    border:  #c08c44 1px solid;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.cont-list{
+    width: 100%;
+    background-color: #fff;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.no-result{
+    width: 100%;
+    background-color: #252422;
+    margin:18px 0px;  
+    padding: 28px;
+    border-radius: 8px;
+
+}
+
+.cont-el{
+    width: 100%;
+    background-color: #252422;
+    margin:18px 0px;  
+    padding: 28px;
+    border-radius: 8px;
+}
+.cont-el-sub{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-
+}
+
+
+
+.cont-el-2{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cont-el-2 p{
+    margin-right: 18px;
+}
+.cont-el-2-tit{
+    font-weight: 700;
+}
+.cont-el-2-certi{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cont-el h3{
+    color: #c08c44;
+}
+
+.cont-el p{
+    color: #fff;
+}
+
+.cont-el a{
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    transition: font-weight 0.5s ease, color 0.5s ease;
+}
+.cont-el a:hover{
+    font-weight: 600;
+    color: #c08c44;
+
+    text-decoration: none;
+}
+
+.no-result-p{
+    color: #fff;
+}
