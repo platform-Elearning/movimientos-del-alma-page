@@ -9,6 +9,7 @@ import InfoJimePage from "../pages/infoJime/InfoJimePage";
 import PackClases from "../pages/packClases/PackClases";
 import WhatsAppButton from "../components/whatsappButton/whatsAppButton"; // Cambia el nombre a mayúscula
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import SearchCertificate from "../pages/searchCertificate/searchCertificate";
 
 const AppRouter = () => {
     return (
@@ -23,7 +24,7 @@ const AppRouter = () => {
                 <Route path="/clasesOnline" element={<ClasesOnline />} />
                 <Route path="/info-jime" element={<InfoJimePage />} />
                 <Route path="/pack-clases" element={<PackClases />} />
-
+                <Route path="/buscar-certificado" element={<SearchCertificate />} />
             </Routes>
             
             <WhatsAppButton /> {/* Cambia el uso del componente */}

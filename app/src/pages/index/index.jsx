@@ -11,6 +11,8 @@ import Footer from "../../sections/footer/footer";
 import Sucursales from "../../sections/sucursales/sucursales";
 import Faqs from "../../sections/faqs/faqs";
 import InfoJime from "../../sections/infoJime/infoJime";
+import StudentList from "../searchCertificate/searchCertificate";
+import ToCertificate from "../../components/toCertificate/toCertificate.jsx"; // Importa el nuevo componente ToCertificate
 import "./index.css";
 
 const Index = () => {
@@ -41,6 +43,7 @@ const Index = () => {
         <VideoSection />
         <Team />
         <DanceBanner />
+        <ToCertificate/>
         <ShortsTestimonialsSection
           title="Mirá lo que dicen"
           testimonials={shortsTestimonials}
