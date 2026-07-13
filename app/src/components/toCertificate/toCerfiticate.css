@@ -1,60 +1,87 @@
-.cont_to{
-    margin:  0px;
-    height: 400px;
+/* Estilos Base (Mobile First - para pantallas pequeñas) */
+.cont_to {
     width: 100%;
+    margin: 0;
     background-color: #252422;
     display: flex;
-    flex-direction: row;
-    justify-content:space-around;
+    flex-direction: column;
     align-items: center;
-
-}
-.div1{
-    height: 40%;
-
-    border-radius: 8px;
-    padding: 28px;
-    border: 1px solid transparent;
-    transition: border 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-.div2{
-    height: 40%;
-    padding: 28px;
-    border-radius: 8px;
-
-    background-color: #2d2d2d;
-    border: 1px solid #3a3a3a;
-    transition: border 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-
+    justify-content: center;
 }
 
-.div2:hover{
-    padding: 28px;
-    background-color:transparent;
+.div1 {
+    margin: 0;
+    padding: 40px 20px; /* Reducimos padding para móviles */
+    width: 100%;
+    box-sizing: border-box; /* Importante para que el padding no rompa el width */
+    background-color: #252422;
+    border: 1px solid #c08c44;
+    border-left: 1px solid #252422;
+    border-right: 1px solid #252422;
+
+    border-bottom: 1px solid #252422;
+    transition: all 0.3s ease;
 }
 
-.to_h2{
-    color:  #c08c44;
-    font-size: 48px;
+.div2 {
+    padding: 24px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #c08c44;
+    transition: all 0.3s ease;
 }
 
-.to_h4{
-    color:  #c08c44;
-    font-size: 16px;
-}
-
-button{
-    background-color:#252422 !important;
+.to_h2 {
     color: #fff;
-    padding: 8px 16px;
-    border: 1px solid #2d2d2d!important;
+    font-size: 28px; /* Tamaño más legible en móviles */
+    margin: 0 0 10px 0;
+}
 
-    border-radius: 4px !important;
+.to_h4 {
+    color: #c08c44;
+    font-size: 14px;
+}
+
+.button-cert {
+    background-color: #c08c44 !important;
+    color: #252422;
+    padding: 12px 32px; /* Ajustado */
+    border-radius: 8px !important;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    border: solid 1px #252422 !important;
+    transition: all 0.5s ease;
+    display: inline-block;
+    text-align: center;
 }
 
-button:hover{
-    background-color: #3a3a3a !important;
+/* Tablet (desde 768px) */
+@media (min-width: 768px) {
+    .div1 {
+        padding: 60px 40px;
+    }
+    .to_h2 {
+        font-size: 36px;
+    }
 }
 
+/* Desktop (desde 1024px) */
+@media (min-width: 1024px) {
+    .div1 {
+        padding: 88px 0; /* Padding original grande */
+    }
+    .to_h2 {
+        font-size: 42px;
+    }
+    .button-cert {
+        padding: 12px 48px;
+    }
+}
+
+/* Hover effect */
+.button-cert:hover {
+    background-color: #252422 !important;
+    color: #c08c44 !important;
+    font-weight: bold;
+    border: solid 1px #c08c44 !important; /* Cambié el borde a c08c44 para que se note el hover */
+}

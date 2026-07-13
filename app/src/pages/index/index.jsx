@@ -41,9 +41,9 @@ const Index = () => {
         <Home />
         <Testimonials />
         <VideoSection />
+        <ToCertificate/>
         <Team />
         <DanceBanner />
-        <ToCertificate/>
         <ShortsTestimonialsSection
           title="Mirá lo que dicen"
           testimonials={shortsTestimonials}
