@@ -8,6 +8,7 @@ const Testimonials = () => {
       <p className="testimonials-subtitle">
         Somos un espacio donde la creatividad, la disciplina y el desarrollo humano se encuentran para inspirar a <br /> bailarines de todas las edades.
       </p>
+      <div className="testimonials-divider" />
 
       <div className="testimonials-cards">
         <div className="testimonial-card">

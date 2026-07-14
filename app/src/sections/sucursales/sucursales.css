@@ -1,9 +1,10 @@
 .sucursales-container {
   width: 100%;
   height: auto;
-    text-align: center;
-    padding: 2rem;
-  }
+  text-align: center;
+  padding: 3rem 20px;
+  box-sizing: border-box;
+}
   
   .sucursales-container h2 {
     font-size: 40px;
@@ -15,23 +16,27 @@
   }
   
   .sucursales-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
   
-  .sucursal-card {
-    background: #252422;
-    cursor: pointer;
-    color: white;
-    border-radius: 12px;
-    overflow: hidden;
-    max-width: 300px;
-    height: 500px;
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+.sucursal-card {
+  background: #252422;
+  cursor: pointer;
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 340px;
+  max-width: 100%;
+  height: auto;
+  min-height: 480px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
   
   .sucursal-card img {
     width: 100%;
@@ -39,21 +44,19 @@
     object-fit: cover;
   }
   
-  .sucursal-info {
-    padding:1rem;
-  }
-  
-  .sucursal-info h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .sucursal-info p {
-    font-size: 0.9rem;
-    /*margin: 5px 0;*/
-    margin: 16px 0;
+.sucursal-info {
+  padding: 1.2rem 1.4rem;
+}
 
-  }
+.sucursal-info h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.6rem;
+}
+
+.sucursal-info p {
+  font-size: 0.95rem;
+  margin: 14px 0;
+}
   
   .sucursal-info a {
     display: block;

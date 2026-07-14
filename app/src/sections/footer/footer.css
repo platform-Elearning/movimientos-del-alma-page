@@ -1,167 +1,213 @@
 .footer {
-  width: 100%;
-  background-color: #fff;
-  padding: 40px 20px;
-  text-align: left;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
-  margin: 30px;
+  background-color: #ffffff;
+  color: #252422;
+  margin: 24px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
 }
 
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.footer-inner {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 56px 64px 32px;
 }
 
-.footer-logo {
+/* TOP: 4 columnas */
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.4fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* Brand column */
+.footer-brand {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinea el contenido a la izquierda */
-  margin-bottom: 20px;
-  margin-right: auto; /* Empuja el logo hacia la izquierda */
+  gap: 10px;
 }
 
-.footer-logo img {
-  width: 60px;
+.footer-brand-logo {
+  width: 56px;
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
+  filter: none;
+  opacity: 1;
 }
 
-.footer-logo h2 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  background-image: linear-gradient(to right, #83711B, #FFBB80, #83711B);
-  background-size: 100% 1.5px;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  padding-bottom: 5px;
+.footer-brand-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.3px;
 }
 
-.footer-columns {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 20px;
+.footer-brand-desc {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #333333;
+  line-height: 1.5;
+  margin-bottom: 16px;
 }
 
-.footer-column {
-  flex: 1;
-  margin: 0 20px;
-  text-align: left;
-}
-
-.footer-column h3 {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 50px;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column li {
-  display: flex;
-  align-items: center; /* Alinea el ícono y el texto verticalmente */
-  margin: 20px 0;
-  color: #252422;
-}
-
-.footer-column li img {
-  margin-right: 10px; /* Espacio entre el ícono y el texto */
-  width: 18px; /* Ajusta el tamaño del ícono si es necesario */
-  height: 18px;
-}
-
-.footer-column a {
-  text-decoration: none;
-  color: #252422;
-}
-
+/* Social icons */
 .footer-social {
   display: flex;
-  gap: 15px;
-  align-items: flex-start; /* Alinea el contenido a la izquierda */
-  margin-bottom: 20px;
-  margin-right: auto; /* Empuja el logo hacia la izquierda */ 
-   justify-content: start;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.footer-social a:hover {
+  background-color: rgba(192,140,68,0.2);
 }
 
 .footer-social img {
-  width: 40px;
-  height: 40px;
+  width: 18px;
+  height: 18px;
+  filter: none;
+  opacity: 1;
 }
 
-/* ...existing code... */
+/* Generic columns */
+.footer-col-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #c08c44;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
+}
 
-/* Media query para pantallas pequeñas (tablets y móviles) */
-@media (max-width: 768px) {
+.footer-col-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col-list li {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  transition: color 0.2s ease;
+}
+
+.footer-col-list a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #1a1a1a;
+  transition: color 0.2s ease;
+}
+
+.footer-col-list a:hover,
+.footer-col-list li:hover {
+  color: #c08c44;
+}
+
+/* Dev list with icons */
+.footer-dev-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-dev-list img {
+  width: 16px;
+  height: 16px;
+  filter: none;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+/* Sucursales */
+.footer-sucursal {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 16px;
+}
+
+.footer-sucursal:last-child {
+  margin-bottom: 0;
+}
+
+.footer-sucursal-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.footer-sucursal-info {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333333;
+}
+
+.footer-sucursal-tel {
+  font-size: 0.82rem;
+  color: #c08c44;
+}
+
+/* Divider */
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #eeeeee;
+  margin-bottom: 24px;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-bottom span {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #555555;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
   .footer {
-    flex-direction: column;
-    padding: 20px 10px;
-    margin: 20px;
+    margin: 12px;
+    border-radius: 14px;
   }
 
-  .footer-container {
-    padding: 0 10px;
+  .footer-inner {
+    padding: 40px 24px 24px;
   }
 
-  .footer-logo {
-    align-items: center; /* Centra el logo */
-    margin-bottom: 15px;
-    margin-right: 0; /* Elimina el margen derecho */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 
-  .footer-logo h2 {
-    text-align: center; /* Centra el texto del logo */
-  }
-
-  .footer-columns {
-    flex-direction: column; /* Cambia a diseño en columna */
-    align-items: center;
-    margin-bottom: 10px;
-  }
-
-  .footer-column {
-    margin: 10px 0; /* Reduce el margen entre columnas */
-    text-align: center; /* Centra el texto */
-  }
-
-  .footer-column h3 {
-    margin-bottom: 20px; /* Reduce el margen inferior */
-  }
-
-  .footer-social {
-    justify-content: center; /* Centra los íconos sociales */
-    margin-right: 0;
-  }
-}
-
-/* Media query para pantallas muy pequeñas (móviles) */
-@media (max-width: 480px) {
-  .footer-logo img {
-    width: 50px; /* Ajusta el tamaño del logo */
-  }
-
-  .footer-column li {
-    margin: 10px 0; /* Reduce el margen entre elementos */
-  }
-
-  .footer-column li img {
-    width: 16px; /* Ajusta el tamaño del ícono */
-    height: 16px;
-  }
-
-  .footer-social img {
-    width: 30px; /* Ajusta el tamaño de los íconos sociales */
-    height: 30px;
+  .footer-bottom {
+    text-align: center;
   }
 }

@@ -1,16 +1,23 @@
 {
-  "name": "prodepadel-app",
+  "name": "Movimientos-del-Alma-page",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev-local": "cp .local .env && vite --host",
+    "start-dev": "cp .dev .env && vite --host",
+    "start-prod": "cp .prod .env && vite --host",
+    "start-local": "cp .local .env && vite --host",
     "build": "vite build",
+    "build-dev": "cp .dev .env && vite build",
+    "build-prod": "cp .prod .env && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "npm run dev"
   },
   "dependencies": {
+    "axios": "^1.18.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0"

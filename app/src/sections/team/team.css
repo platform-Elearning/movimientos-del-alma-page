@@ -5,9 +5,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+  padding: 60px 20px;
   text-align: center;
-  background-color: #f9f9f9; /* Color de fondo suave */
+  background-color: #f9f9f9;
+  box-sizing: border-box;
 }
 
 .team-title {
@@ -20,9 +21,10 @@
 .profiles-container {
   display: flex;
   justify-content: center;
-  gap: 60px; /* Espaciado mayor entre perfiles */
-  flex-wrap: wrap; /* Permite adaptarse a pantallas pequeñas */
-  max-width: 1200px;
+  gap: 80px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  width: 100%;
 }
 
 .profile {
@@ -45,17 +47,16 @@
 }
 
 .name {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   margin: 10px 0;
   color: #333;
-  max-width: 250px;
+  max-width: 260px;
   line-height: 1.4;
-
 }
 
 .role {
-  font-size: 16px;
+  font-size: 17px;
   color: #000000;
   margin-bottom: 10px;
   font-style: italic;

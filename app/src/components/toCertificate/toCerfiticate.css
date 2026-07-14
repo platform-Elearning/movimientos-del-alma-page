@@ -1,0 +1,87 @@
+/* Estilos Base (Mobile First - para pantallas pequeñas) */
+.cont_to {
+    width: 100%;
+    margin: 0;
+    background-color: #252422;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div1 {
+    margin: 0;
+    padding: 40px 20px; /* Reducimos padding para móviles */
+    width: 100%;
+    box-sizing: border-box; /* Importante para que el padding no rompa el width */
+    background-color: #252422;
+    border: 1px solid #c08c44;
+    border-left: 1px solid #252422;
+    border-right: 1px solid #252422;
+
+    border-bottom: 1px solid #252422;
+    transition: all 0.3s ease;
+}
+
+.div2 {
+    padding: 24px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #c08c44;
+    transition: all 0.3s ease;
+}
+
+.to_h2 {
+    color: #fff;
+    font-size: 28px; /* Tamaño más legible en móviles */
+    margin: 0 0 10px 0;
+}
+
+.to_h4 {
+    color: #c08c44;
+    font-size: 14px;
+}
+
+.button-cert {
+    background-color: #c08c44 !important;
+    color: #252422;
+    padding: 12px 32px; /* Ajustado */
+    border-radius: 8px !important;
+    cursor: pointer;
+    font-weight: 600;
+    border: solid 1px #252422 !important;
+    transition: all 0.5s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Tablet (desde 768px) */
+@media (min-width: 768px) {
+    .div1 {
+        padding: 60px 40px;
+    }
+    .to_h2 {
+        font-size: 36px;
+    }
+}
+
+/* Desktop (desde 1024px) */
+@media (min-width: 1024px) {
+    .div1 {
+        padding: 88px 0; /* Padding original grande */
+    }
+    .to_h2 {
+        font-size: 42px;
+    }
+    .button-cert {
+        padding: 12px 48px;
+    }
+}
+
+/* Hover effect */
+.button-cert:hover {
+    background-color: #252422 !important;
+    color: #c08c44 !important;
+    font-weight: bold;
+    border: solid 1px #c08c44 !important; /* Cambié el borde a c08c44 para que se note el hover */
+}

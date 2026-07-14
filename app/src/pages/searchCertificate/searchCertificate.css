@@ -1,0 +1,229 @@
+/* Estilos Base (Mobile First) */
+.search-certificate-page {
+    margin: 26px 20px; /* Reducimos márgenes laterales en móvil */
+}
+
+.search {
+    height: auto; /* Cambiado de 400px a auto para que se ajuste al contenido */
+    padding: 40px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-title {
+    color: #c08c44;
+    font-size: 32px; /* Más pequeño en móviles */
+    text-align: center;
+}
+
+.search-form {
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+}
+
+.search-form-form {
+    padding: 40px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Cambiado a columna en móviles */
+    align-items: center;
+    justify-content: center;
+}
+
+.search-form-form label {
+    color: #fff;
+    padding: 0px 12px !important;    
+    margin: 12px 0px;
+
+}
+
+input {
+    padding: 10px;
+    margin: 8px 0;
+    border: #c08c44 1px solid;
+    border-radius: 8px;
+    width: 100%; /* Ajuste a 100% para mejor uso del espacio */
+    max-width: 300px;
+}
+
+/* Resultados */
+.cont-list {
+    padding: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cont-el-2 {
+    display: flex;
+    flex-direction: column; /* Apilamos certificado y título en móviles */
+    gap: 10px;
+    text-align: center;
+}
+
+ .no-result{
+
+width: 100%;
+
+background-color: #252422;
+    padding: 20px 0;
+    width: 100%;
+
+
+
+
+border-radius: 8px;
+
+
+}
+
+.cont-list p{
+    padding: 16px;
+}
+.cont-list h3{
+    padding: 16px;
+}
+
+
+.cont-el{
+
+width: 100%;
+
+background-color: #252422;
+
+margin:18px 0px;
+
+padding: 28px;
+
+border-radius: 8px;
+
+}
+
+.cont-el-sub{
+
+width: 100%;
+
+display:flex;
+
+flex-direction: row;
+
+justify-content: space-
+
+}
+
+
+
+
+.cont-el-2{
+
+display:flex;
+
+flex-direction: row;
+
+justify-content: space-between;
+
+}
+
+.cont-el-2 p{
+
+margin-right: 18px;
+
+}
+
+.cont-el-2-tit{
+
+font-weight: 700;
+
+}
+
+.cont-el-2-certi{
+
+display: flex;
+
+flex-direction: row;
+
+justify-content: center;
+
+align-items: center;
+
+
+}
+
+
+.cont-el h3{
+
+color: #c08c44;
+
+}
+
+
+.cont-el p{
+
+color: #fff;
+
+}
+
+
+.cont-el a{
+
+font-weight: 400;
+
+color: #fff;
+
+text-decoration: none;
+
+transition: font-weight 0.5s ease, color 0.5s ease;
+
+}
+
+.cont-el a:hover{
+
+font-weight: 600;
+
+color: #c08c44;
+
+
+text-decoration: none;
+
+}
+
+
+.no-result-p{
+
+color: #fff;
+
+} 
+
+.search-form-form label{
+    padding:0px 8px;
+}
+
+/* --- Media Queries --- */
+
+/* Tablet y Desktop */
+@media (min-width: 768px) {
+    .search-certificate-page {
+        margin: 26px 100px;
+    }
+    
+    .search-title {
+        font-size: 48px;
+    }
+
+    .search-form-form {
+        flex-direction: row; /* Volvemos a horizontal en pantallas grandes */
+    }
+
+    .cont-el-2 {
+        flex-direction: row; /* Volvemos a horizontal */
+        justify-content: space-between;
+        text-align: left;
+    }
+}
