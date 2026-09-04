@@ -111,6 +111,7 @@ const clasesOnline = {
       },
       pdf: pilatesPDF,
     },
+    /* 
     {
       id: 4,
       nombre: "Amplitud de Movimiento",
@@ -121,7 +122,7 @@ const clasesOnline = {
         modalidad: "Clases online.",
       },
       pdf: instructoradoFlexibilidad,
-    },
+    }*/
   ],
   "diplomatura": [
     {

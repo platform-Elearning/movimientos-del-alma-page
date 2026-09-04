@@ -12,6 +12,7 @@ import Sucursales from "../../sections/sucursales/sucursales";
 import Faqs from "../../sections/faqs/faqs";
 import InfoJime from "../../sections/infoJime/infoJime";
 import StudentList from "../searchCertificate/searchCertificate";
+import BackgroundVideo from "../../sections/BackgroundVideo/BackgroundVideo.jsx"
 import ToCertificate from "../../components/toCertificate/toCertificate.jsx"; // Importa el nuevo componente ToCertificate
 import "./index.css";
 
@@ -41,6 +42,7 @@ const Index = () => {
         <Home />
         <Testimonials />
         <VideoSection />
+        <BackgroundVideo/>
         <ToCertificate/>
         <Team />
         <DanceBanner />
