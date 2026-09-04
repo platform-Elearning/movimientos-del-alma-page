@@ -1,0 +1,79 @@
+.promo-section-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  min-height: 80vh;
+  padding: 40px 80px;
+  background-color: #121212; /* Fondo oscuro elegante */
+  box-sizing: border-box;
+  gap: 40px;
+}
+
+.promo-text-column {
+  flex: 1;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.promo-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.promo-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+.promo-btn {
+  align-self: flex-start;
+  padding: 12px 24px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.promo-btn:hover {
+  background-color: #4338ca;
+}
+
+.promo-video-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-iframe {
+  width: 100%;
+  max-width: 315px; /* Ancho típico para mantener proporción vertical */
+  height: 560px;    /* Altura vertical para que luzca como Short */
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsivo para celulares: pasa a una sola columna */
+@media (max-width: 768px) {
+  .promo-section-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .promo-title {
+    font-size: 2rem;
+  }
+  .promo-iframe {
+    width: 100%;
+    height: 250px;
+  }
+}
