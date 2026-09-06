@@ -101,14 +101,29 @@ es lo único que hace que las rutas de app funcionen.
 
 | Fase | Qué | Estado |
 |---|---|---|
-| 1 | `page`: prerender + función. Catch-all intacto. | listo en local, falta aplicar |
-| 2 | Verificar `page` en producción con los `curl` de abajo | pendiente |
-| 3 | `cursos`: auditar SSR-safety, prerender de rutas públicas, declarar `spa_prefixes` | pendiente |
-| 4 | Catch-all → 404 real en ambos. `enable_prerender_routing` pasa a `true` y se elimina | pendiente |
+| 1 | `page`: prerender + función, en dev | **hecho y verificado** (2026-09-06) |
+| 2 | `page`: promover a producción por PR `develop → main` y verificar | pendiente |
+| 3 | `page`: catch-all → 404 real, con página 404 propia | pendiente |
+| 4 | `cursos`: auditar SSR-safety, prerender de rutas públicas, declarar `spa_prefixes` | pendiente |
+| 5 | `cursos`: catch-all → 404 real. `enable_prerender_routing` pasa a default y se elimina | pendiente |
 
-En la fase 4 la variable deja de tener sentido: si todos los proyectos prerenderizan y
-declaran sus prefijos, la función es siempre correcta y el flag sobra. Ese es el momento
-de que el default sea `true`, no antes.
+**Corrección sobre el orden del catch-all.** Cada proyecto tiene su propia distribution
+con su propio `custom_error_response`: son independientes. `page` no tiene que esperar a
+`cursos` para pasar a 404 real — le alcanza con estar verificado en producción, porque
+todas sus rutas tienen archivo. Lo que sí no se puede es tocar el de `cursos` antes de
+que `cursos` prerenderice.
+
+Para la fase 3 hacen falta dos cosas que todavía no están:
+
+- **Una variable de opt-in más.** El `custom_error_response` está hardcodeado en el
+  `cloudfront.tf` compartido; hacerlo por proyecto necesita el mismo tratamiento que la
+  función.
+- **Una página 404 generada por el build.** Sin eso, una URL inexistente devuelve el error
+  crudo de S3 (con OAI, un XML de AccessDenied), que para una persona es peor que la home.
+
+Recién en la fase 5, con los dos proyectos prerenderizando y declarando sus prefijos, la
+variable `enable_prerender_routing` deja de tener sentido y se elimina. Ese es el momento
+del default, no antes.
 
 **Riesgo conocido para la fase 3:** `cursos` tiene al menos un componente que lee
 `localStorage` durante el render (`pages/alumnos/clase/clase.jsx`). Es una ruta
