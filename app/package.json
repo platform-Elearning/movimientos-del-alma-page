@@ -10,8 +10,8 @@
     "start-prod": "cp .prod .env && vite --host",
     "start-local": "cp .local .env && vite --host",
     "build": "vite build && vite build --config vite.ssr.config.js && node scripts/prerender.mjs",
-    "build-dev": "cp .dev .env && npm run build",
-    "build-prod": "cp .prod .env && npm run build",
+    "build-dev": "cp .dev .env && SITE_ENV=dev npm run build",
+    "build-prod": "cp .prod .env && SITE_ENV=prod npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "npm run dev"

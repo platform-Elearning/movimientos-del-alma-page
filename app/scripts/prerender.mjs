@@ -22,6 +22,12 @@ const { routes, SITE_URL, SITE_NAME } = await import(join(APP, "src", "routes.js
 
 const template = readFileSync(join(DIST, "index.html"), "utf8");
 
+// Solo el build de produccion se deja indexar. dev sirve el mismo contenido real
+// desde que existe el prerender, asi que sin esto le estaria ofreciendo a
+// buscadores y agentes una copia entera del sitio en otro dominio. El default es
+// el seguro: si nadie declara el entorno, no se indexa.
+const IS_PROD = process.env.SITE_ENV === "prod";
+
 // --- guardarrail: que AppRouter y routes.js no se separen ------------------
 // El sitemap del sitio tenia una sola URL de nueve porque nadie lo actualizaba a
 // mano. Si vuelve a pasar, que reviente el build y no en produccion.
@@ -114,7 +120,9 @@ function buildPage(route, markup) {
     `<meta property="og:description" content="${esc(description)}" />`);
   html = setTag(html, /<meta\s+property="og:url"[^>]*\/>/i, `<meta property="og:url" content="${url}" />`);
 
-  if (route.index === false) {
+  if (!IS_PROD) {
+    html = setTag(html, /<meta\s+name="robots"[^>]*\/>/i, `<meta name="robots" content="noindex, nofollow" />`);
+  } else if (route.index === false) {
     html = setTag(html, /<meta\s+name="robots"[^>]*\/>/i, `<meta name="robots" content="noindex, follow" />`);
   }
 
@@ -162,6 +170,36 @@ ${indexable.map((r) => `  <url>
 `;
 writeFileSync(join(DIST, "sitemap.xml"), sitemap);
 
+// --- robots.txt ------------------------------------------------------------
+// Se genera junto al sitemap y por la misma razon: mantenido a mano se
+// desincroniza, y en dev tiene que decir lo contrario que en produccion.
+const robots = IS_PROD
+  ? `# robots.txt - ${SITE_NAME}
+# ${SITE_URL}
+
+# Content-Signal declara tres permisos distintos, y son distintos a proposito:
+#   search    = aparecer en resultados de busqueda y ser citado con link
+#   ai-input  = que un asistente lea la pagina para responder una pregunta ahora
+#   ai-train  = que el contenido se use para entrenar un modelo
+# Para una escuela que vive de que la encuentren, los dos primeros traen gente.
+# El tercero no devuelve nada.
+User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+${routes.filter((r) => r.index === false).map((r) => `Disallow: ${r.path}`).join("\n")}
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+Sitemap: ${SITE_URL}/sitemap.xml
+`
+  : `# Entorno de prueba. No indexar: el contenido real vive en ${SITE_URL}
+User-agent: *
+Content-Signal: search=no, ai-input=no, ai-train=no
+Disallow: /
+`;
+writeFileSync(join(DIST, "robots.txt"), robots);
+
 // --- llms.txt --------------------------------------------------------------
 // Indice en markdown para agentes: que es el sitio y donde esta cada cosa.
 const llms = `# ${SITE_NAME}
@@ -184,6 +222,7 @@ writeFileSync(join(DIST, "llms-full.txt"), `# ${SITE_NAME}\n\n${full}`);
 const htmlTotal = report.reduce((a, r) => a + r.htmlBytes, 0);
 const mdTotal = report.reduce((a, r) => a + r.mdBytes, 0);
 console.log(`\n[prerender] ${routes.length} páginas, sitemap con ${indexable.length} URLs, llms.txt y llms-full.txt generados.`);
+console.log(`[prerender] entorno: ${IS_PROD ? "prod (indexable)" : "no-prod (noindex, robots.txt con Disallow: /)"}`);
 console.log(`[prerender] markdown vs html: ${(mdTotal / 1024).toFixed(0)} kB vs ${(htmlTotal / 1024).toFixed(0)} kB (${(100 - (mdTotal / htmlTotal) * 100).toFixed(0)}% menos).`);
 const flacas = report.filter((r) => r.chars < 200);
 if (flacas.length) {
