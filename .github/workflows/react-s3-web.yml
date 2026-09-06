@@ -34,7 +34,7 @@ jobs:
 
       - name: Checkout
         if: github.ref == 'refs/heads/develop'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: develop
 
@@ -45,7 +45,7 @@ jobs:
           mv * ../temp-dev/
 
       - name: Checkout private tools
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: platform-Elearning/s3-react-app-infra-cloud
           token: ${{ secrets.GH_PAT }}
@@ -157,8 +157,11 @@ jobs:
           cd aws-s3
           terraform init
           terraform apply -auto-approve \
+            -var="enable_prerender_routing=true" \
             -target=aws_s3_bucket.bucket_web \
-            -target=aws_s3_bucket_object.site_files
+            -target=aws_s3_bucket_object.site_files \
+            -target=aws_cloudfront_function.spa_router \
+            -target=aws_cloudfront_distribution.s3_distribution
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_JULIMAXSOFT }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_JULIMAXSOFT }}
@@ -169,8 +172,11 @@ jobs:
           cd aws-s3
           terraform init
           terraform apply -auto-approve \
+            -var="enable_prerender_routing=true" \
             -target=aws_s3_bucket.bucket_web_dev \
-            -target=aws_s3_bucket_object.site_files_dev
+            -target=aws_s3_bucket_object.site_files_dev \
+            -target=aws_cloudfront_function.spa_router \
+            -target=aws_cloudfront_distribution.s3_distribution_dev
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_JULIMAXSOFT }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_JULIMAXSOFT }}
