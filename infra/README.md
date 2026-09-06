@@ -102,10 +102,28 @@ es lo único que hace que las rutas de app funcionen.
 | Fase | Qué | Estado |
 |---|---|---|
 | 1 | `page`: prerender + función, en dev | **hecho y verificado** (2026-09-06) |
-| 2 | `page`: promover a producción por PR `develop → main` y verificar | pendiente |
-| 3 | `page`: catch-all → 404 real, con página 404 propia | **implementado**, falta desplegar |
-| 4 | `cursos`: auditar SSR-safety, prerender de rutas públicas, declarar `spa_prefixes` | pendiente |
+| 2 | `page`: promover a producción por PR `develop → main` y verificar | **hecho** (2026-09-06) |
+| 3 | `page`: catch-all → 404 real, con página 404 propia | **hecho y verificado en producción** |
+| 4 | `cursos`: auditar SSR-safety, prerender de rutas públicas, declarar `spa_prefixes` | siguiente |
 | 5 | `cursos`: catch-all → 404 real. `enable_prerender_routing` pasa a default y se elimina | pendiente |
+
+### Estado de `mda-ifi.com` al cerrar la fase 3
+
+Auditoría en producción: **12 OK / 6 faltan**, contra 1 OK al empezar.
+
+| | Antes | Ahora |
+|---|---|---|
+| Texto en la home | 68 caracteres | 6.836 |
+| URLs en el sitemap | 1, a mano, de octubre 2025 | 7, generadas en cada build |
+| Canonical | `/clasesOnline` en las 9 rutas | uno por página |
+| Markdown por ruta | no existía | 42 kB contra 235 kB de HTML |
+| Postura frente a la IA | ninguna declarada | `search=yes, ai-input=yes, ai-train=no` |
+| URL inexistente | 200 con la home | 404 real con página propia |
+
+Los 6 `FALTA` que quedan son ausencias correctas: cinco `.well-known` de capacidades
+(API Catalog, Agent Skills, MCP Server Card, OAuth ×2) que solo aplican a un sitio con una
+API que un agente deba operar, y los `Link:` headers, que ni `developers.cloudflare.com`
+publica. Ese es el techo del sitio y ya está alcanzado.
 
 **Corrección sobre el orden del catch-all.** Cada proyecto tiene su propia distribution
 con su propio `custom_error_response`: son independientes. `page` no tiene que esperar a
