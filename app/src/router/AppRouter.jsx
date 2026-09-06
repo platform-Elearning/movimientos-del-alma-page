@@ -9,7 +9,7 @@ import InfoJimePage from "../pages/infoJime/InfoJimePage";
 import PackClases from "../pages/packClases/PackClases";
 import WhatsAppButton from "../components/whatsappButton/whatsAppButton"; // Cambia el nombre a mayúscula
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
-import SearchCertificate from "../pages/searchCertificate/searchCertificate";
+import VerifyCredential from "../pages/verifyCredential/VerifyCredential";
 
 const AppRouter = () => {
     return (
@@ -24,7 +24,13 @@ const AppRouter = () => {
                 <Route path="/clasesOnline" element={<ClasesOnline />} />
                 <Route path="/info-jime" element={<InfoJimePage />} />
                 <Route path="/pack-clases" element={<PackClases />} />
-                <Route path="/buscar-certificado" element={<SearchCertificate />} />
+                {/* La credencial publica. El :code no se puede prerenderizar -- el
+                    conjunto de codigos no se conoce en build time -- asi que
+                    /verificar va declarada en spa_prefixes y la resuelve el router.
+                    El shell si se prerenderiza: es el formulario. */}
+                <Route path="/verificar" element={<VerifyCredential />} />
+                <Route path="/verificar/:code" element={<VerifyCredential />} />
+
             </Routes>
             
             <WhatsAppButton /> {/* Cambia el uso del componente */}

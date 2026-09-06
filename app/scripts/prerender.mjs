@@ -32,7 +32,12 @@ const IS_PROD = process.env.SITE_ENV === "prod";
 // El sitemap del sitio tenia una sola URL de nueve porque nadie lo actualizaba a
 // mano. Si vuelve a pasar, que reviente el build y no en produccion.
 const appRouter = readFileSync(join(APP, "src", "router", "AppRouter.jsx"), "utf8");
-const declared = [...appRouter.matchAll(/path="([^"]+)"/g)].map((m) => m[1]);
+// Las rutas con parametro (/verificar/:code) quedan fuera por definicion: no se
+// pueden prerenderizar porque el conjunto de valores no se conoce en build time.
+// Se resuelven en el navegador y su prefijo va declarado en spa_prefixes.
+const declared = [...appRouter.matchAll(/path="([^"]+)"/g)]
+  .map((m) => m[1])
+  .filter((path) => !path.includes(":"));
 const known = new Set(routes.map((r) => r.path));
 const missing = declared.filter((p) => !known.has(p));
 if (missing.length) {

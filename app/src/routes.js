@@ -15,7 +15,7 @@ export const routes = [
   { path: "/nosotros",           title: "Quiénes somos | Movimientos del Alma" },
   { path: "/pack-clases",        title: "Pack de clases | Movimientos del Alma" },
   { path: "/info-jime",          title: "Jimena Rodríguez | Movimientos del Alma" },
-  { path: "/buscar-certificado", title: "Verificar certificado | Movimientos del Alma" },
+  { path: "/verificar",          title: "Verificar una credencial | Movimientos del Alma" },
   { path: "/login",              title: "Ingresar | Movimientos del Alma",  index: false },
   { path: "/register",           title: "Crear cuenta | Movimientos del Alma", index: false },
 ];

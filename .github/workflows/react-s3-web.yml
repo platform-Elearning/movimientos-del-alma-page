@@ -159,6 +159,8 @@ jobs:
           terraform apply -auto-approve \
             -var="enable_prerender_routing=true" \
             -var="not_found_page=/404.html" \
+            -var='spa_prefixes=["/verificar"]' \
+            -var='redirects={"/buscar-certificado":"/verificar"}' \
             -target=aws_s3_bucket.bucket_web \
             -target=aws_s3_bucket_object.site_files \
             -target=aws_cloudfront_function.spa_router \
@@ -175,6 +177,8 @@ jobs:
           terraform apply -auto-approve \
             -var="enable_prerender_routing=true" \
             -var="not_found_page=/404.html" \
+            -var='spa_prefixes=["/verificar"]' \
+            -var='redirects={"/buscar-certificado":"/verificar"}' \
             -target=aws_s3_bucket.bucket_web_dev \
             -target=aws_s3_bucket_object.site_files_dev \
             -target=aws_cloudfront_function.spa_router \
