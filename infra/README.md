@@ -36,12 +36,24 @@ Una CloudFront Function no tiene red, así que no puede preguntarle a S3 si un o
 existe: la tabla va horneada. Cada proyecto declara sus rutas de app en
 `var.spa_prefixes`, y **todo lo que no declare tiene que estar prerenderizado**.
 
-- `movimientos-del-alma-page`: `spa_prefixes = []`. Todo el sitio es contenido.
+- `movimientos-del-alma-page`: `spa_prefixes = ["/verificar"]`. Todo el sitio es
+  contenido prerenderizado salvo la credencial pública, cuya URL lleva el código del
+  certificado y por lo tanto no se conoce en build time.
 - `movimientos-del-alma-cursos`: declararía `/admin`, `/alumnos`, `/profesores` y las
   rutas de sesión, y prerenderizaría sus páginas públicas.
 
 El match es contra `prefijo + "/"` además de la igualdad exacta, para que `/admin` no
 capture `/administracion`. Está cubierto en el test.
+
+**Cada prefijo sirve su propio shell** (`<prefijo>/index.html`), no el de la raíz. Si
+sirviera el de la raíz, una credencial compartida mostraría por un instante la home de la
+escuela, con su título y sus meta, antes de repintarse. Requisito: todo prefijo declarado
+tiene que tener su shell prerenderizado — para `/verificar` es el formulario.
+
+**Los redirects van en el edge, no en el router.** `var.redirects` responde un 301 desde
+la función. Un redirect escrito en React es invisible para quien no ejecuta JavaScript —el
+crawler ve una página vacía— y además nunca comunica el 301, que es lo que hace que el
+buscador traslade la URL vieja a la nueva. Hoy: `/buscar-certificado` → `/verificar`.
 
 El origin es el REST endpoint con OAI (`s3_origin_config`), no el website endpoint de S3,
 así que no hay forma de que S3 resuelva el índice de directorio solo.
