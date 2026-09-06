@@ -103,7 +103,7 @@ es lo único que hace que las rutas de app funcionen.
 |---|---|---|
 | 1 | `page`: prerender + función, en dev | **hecho y verificado** (2026-09-06) |
 | 2 | `page`: promover a producción por PR `develop → main` y verificar | pendiente |
-| 3 | `page`: catch-all → 404 real, con página 404 propia | pendiente |
+| 3 | `page`: catch-all → 404 real, con página 404 propia | **implementado**, falta desplegar |
 | 4 | `cursos`: auditar SSR-safety, prerender de rutas públicas, declarar `spa_prefixes` | pendiente |
 | 5 | `cursos`: catch-all → 404 real. `enable_prerender_routing` pasa a default y se elimina | pendiente |
 
@@ -113,13 +113,17 @@ con su propio `custom_error_response`: son independientes. `page` no tiene que e
 todas sus rutas tienen archivo. Lo que sí no se puede es tocar el de `cursos` antes de
 que `cursos` prerenderice.
 
-Para la fase 3 hacen falta dos cosas que todavía no están:
+La fase 3 ya está resuelta en código, con dos piezas:
 
-- **Una variable de opt-in más.** El `custom_error_response` está hardcodeado en el
-  `cloudfront.tf` compartido; hacerlo por proyecto necesita el mismo tratamiento que la
-  función.
-- **Una página 404 generada por el build.** Sin eso, una URL inexistente devuelve el error
-  crudo de S3 (con OAI, un XML de AccessDenied), que para una persona es peor que la home.
+- **`var.not_found_page`** en el repo de infra. Vacío —el default— conserva el catch-all
+  tal cual para todo proyecto que no haya migrado. Con una ruta, la distribution sirve esa
+  página con un 404 de verdad. Solo se puede encender cuando **todas** las rutas del sitio
+  existen como archivo o están declaradas en `spa_prefixes`.
+- **`404.html` generado por el build.** Dos decisiones deliberadas: no carga el bundle de
+  la app (React montaría sobre una URL sin ruta que matchee, vaciaría el contenedor y
+  dejaría la pantalla en blanco, peor que no tener página de error) y no hereda el `<head>`
+  del template (su canonical, `og:url` y JSON-LD apuntan a contenido real y acá mentirían).
+  Toma prestada solo la hoja de estilos, leída del build porque el nombre lleva hash.
 
 Recién en la fase 5, con los dos proyectos prerenderizando y declarando sus prefijos, la
 variable `enable_prerender_routing` deja de tener sentido y se elimina. Ese es el momento

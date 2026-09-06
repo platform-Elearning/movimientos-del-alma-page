@@ -170,6 +170,58 @@ ${indexable.map((r) => `  <url>
 `;
 writeFileSync(join(DIST, "sitemap.xml"), sitemap);
 
+// --- 404.html --------------------------------------------------------------
+// Pagina de error autonoma, servida por CloudFront cuando S3 no encuentra la
+// clave. Dos decisiones que importan:
+//
+// 1. NO lleva el bundle de la app. Si lo llevara, React montaria sobre una URL
+//    que no matchea ninguna ruta, vaciaria el contenedor y dejaria la pantalla
+//    en blanco -- peor que no tener pagina de error.
+// 2. NO hereda el <head> del template. Ese head trae canonical, og:url y JSON-LD
+//    apuntando a contenido real; en una pagina de error todo eso miente. Se arma
+//    uno limpio y se le presta unicamente la hoja de estilos, cuyo nombre lleva
+//    hash y por eso se lee del build en vez de hardcodearse.
+const cssHref = (template.match(/<link[^>]+rel="stylesheet"[^>]+href="([^"]+)"/i) || [])[1];
+const notFound = `<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, follow" />
+    <title>Página no encontrada | ${SITE_NAME}</title>
+    ${cssHref ? `<link rel="stylesheet" href="${cssHref}" />` : ""}
+    <style>
+      body { margin: 0; min-height: 100vh; display: flex; align-items: center;
+             justify-content: center; background: #252422; color: #ffffff;
+             font-family: "Montserrat", system-ui, sans-serif; text-align: center;
+             padding: 2rem; box-sizing: border-box; }
+      .code { font-size: clamp(4rem, 18vw, 9rem); line-height: 1; color: #c08c44; margin: 0; }
+      h1 { font-size: clamp(1.25rem, 4vw, 1.75rem); font-weight: 600; margin: 1rem 0 0.5rem; }
+      p { color: #f0f0f0; margin: 0 0 2rem; }
+      a { display: inline-block; padding: 0.85rem 2rem; border: 1px solid #c08c44;
+          border-radius: 999px; color: #c08c44; text-decoration: none; font-weight: 600; }
+      a:hover { background: #c08c44; color: #252422; }
+      ul { list-style: none; padding: 0; margin: 2.5rem 0 0; }
+      li { display: inline-block; margin: 0 0.75rem; }
+      li a { padding: 0; border: 0; font-weight: 400; font-size: 0.9rem; }
+      li a:hover { background: none; text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="code">404</p>
+      <h1>Esta página no existe</h1>
+      <p>Puede que el enlace esté viejo o que la dirección tenga un error.</p>
+      <a href="/">Volver al inicio</a>
+      <ul>
+${indexable.filter((r) => r.path !== "/").map((r) => `        <li><a href="${r.path}">${r.title.split("|")[0].trim()}</a></li>`).join("\n")}
+      </ul>
+    </main>
+  </body>
+</html>
+`;
+writeFileSync(join(DIST, "404.html"), notFound);
+
 // --- robots.txt ------------------------------------------------------------
 // Se genera junto al sitemap y por la misma razon: mantenido a mano se
 // desincroniza, y en dev tiene que decir lo contrario que en produccion.
@@ -222,6 +274,7 @@ writeFileSync(join(DIST, "llms-full.txt"), `# ${SITE_NAME}\n\n${full}`);
 const htmlTotal = report.reduce((a, r) => a + r.htmlBytes, 0);
 const mdTotal = report.reduce((a, r) => a + r.mdBytes, 0);
 console.log(`\n[prerender] ${routes.length} páginas, sitemap con ${indexable.length} URLs, llms.txt y llms-full.txt generados.`);
+console.log(`[prerender] 404.html generado${cssHref ? " (con la hoja de estilos del sitio)" : " (SIN css: revisar el template)"}`);
 console.log(`[prerender] entorno: ${IS_PROD ? "prod (indexable)" : "no-prod (noindex, robots.txt con Disallow: /)"}`);
 console.log(`[prerender] markdown vs html: ${(mdTotal / 1024).toFixed(0)} kB vs ${(htmlTotal / 1024).toFixed(0)} kB (${(100 - (mdTotal / htmlTotal) * 100).toFixed(0)}% menos).`);
 const flacas = report.filter((r) => r.chars < 200);
